@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_spiny" kind="class" prot="public">
+    <compoundname>cSpiny</compoundname>
+    <basecompoundref refid="classc_enemy" prot="public" virt="non-virtual">cEnemy</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_spiny_1a16a59bd3cddb327fe0edb13846e2e640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cSpiny::cSpiny</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>cSpiny</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="73" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/spiny.cpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_spiny_1abb1eb28a0efb902dc8887329a8e87da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cSpiny::add_update</definition>
+        <argsstring>()</argsstring>
+        <name>add_update</name>
+        <reimplements refid="classc_enemy_1a8000a954f44eb0208559f6a02d5db795">add_update</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="75" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/spiny.cpp" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_spiny_1a75f95f8ea11a4da646ef2b97331b9136" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cSpiny::headbang</definition>
+        <argsstring>()</argsstring>
+        <name>headbang</name>
+        <reimplements refid="classc_enemy_1a1a2dbf310eef1e0049a7ff1dafb752e7">headbang</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="76" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/spiny.cpp" bodystart="38" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_spiny_1a34bd1800a4a066e9a7d207ec7c635872" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cSpiny::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <reimplements refid="classc_enemy_1aee66e696e7c0555e9d7e6ba20a6643c8">draw</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="77" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/spiny.cpp" bodystart="45" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="61">
+        <label>cSpiny</label>
+        <link refid="classc_spiny"/>
+        <childnode refid="62" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="62">
+        <label>cEnemy</label>
+        <link refid="classc_enemy"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="63">
+        <label>cSpiny</label>
+        <link refid="classc_spiny"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>cEnemy</label>
+        <link refid="classc_enemy"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="71" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="70" bodyend="78"/>
+    <listofallmembers>
+      <member refid="classc_spiny_1abb1eb28a0efb902dc8887329a8e87da4" prot="public" virt="virtual"><scope>cSpiny</scope><name>add_update</name></member>
+      <member refid="classc_enemy_1aba356ad9f8eecfa4865ba8dca5cf9408" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>cEnemy</name></member>
+      <member refid="classc_spiny_1a16a59bd3cddb327fe0edb13846e2e640" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>cSpiny</name></member>
+      <member refid="classc_enemy_1a33bf693a2332448380c6cd6a90d912d9" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>dead</name></member>
+      <member refid="classc_enemy_1a9c7ad2992fc5059f8423915a1403e22e" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>DEATHcount</name></member>
+      <member refid="classc_enemy_1ac0fba8e404a517668470400f425d8425" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>die</name></member>
+      <member refid="classc_enemy_1aa9769b2dbb121388e7a6c68ba648cb44" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>dir</name></member>
+      <member refid="classc_enemy_1a0e85969c0340180542c3e710141625e7" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>down_touch</name></member>
+      <member refid="classc_spiny_1a34bd1800a4a066e9a7d207ec7c635872" prot="public" virt="virtual"><scope>cSpiny</scope><name>draw</name></member>
+      <member refid="classc_enemy_1a9657c7559a8746c9f71ea12d6837ea7f" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>dying</name></member>
+      <member refid="classc_enemy_1aa04d0a92d0bc248452124baff543ceca" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>H</name></member>
+      <member refid="classc_spiny_1a75f95f8ea11a4da646ef2b97331b9136" prot="public" virt="virtual"><scope>cSpiny</scope><name>headbang</name></member>
+      <member refid="classc_enemy_1a7a909263d0b4e60499d9244e90396129" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>left_touch</name></member>
+      <member refid="classc_enemy_1a4429e5ae0936da6d9ec63eac96b178c3" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>MakeMyWalk</name></member>
+      <member refid="classc_enemy_1a28c6d80036d4777c0fc6d6dd9307ed19" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>playerTouchLeft</name></member>
+      <member refid="classc_enemy_1a36271ede720016d735beb8940235e3b9" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>playerTouchRight</name></member>
+      <member refid="classc_enemy_1a7dc52f3ab092c60457ac8058dcf49934" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>rect</name></member>
+      <member refid="classc_enemy_1aab15da51d678192dc3ab06e6b037cb98" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>right_touch</name></member>
+      <member refid="classc_enemy_1adb32067fcfc51dd19d2505af4fd1ed40" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>scoring</name></member>
+      <member refid="classc_enemy_1abd9666583c7a384298397b5eec383aa6" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>speed</name></member>
+      <member refid="classc_enemy_1a27804f111e0581503ba38f341aba18f8" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>update</name></member>
+      <member refid="classc_enemy_1a57e5514f538de84533b9974683a2847f" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>W</name></member>
+      <member refid="classc_enemy_1afce148cf9d214fcac58519406164bd4b" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>walkadd</name></member>
+      <member refid="classc_enemy_1adc4cb1c3aa049e0dfa0ee97e00744f96" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>walkcount</name></member>
+      <member refid="classc_enemy_1a003e15ffccf6e452346022e3d252d259" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>walkcount2</name></member>
+      <member refid="classc_enemy_1a1737e0cf715ac8628c3b7ec40d9d6c36" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>x</name></member>
+      <member refid="classc_enemy_1af5fb882d22d1d16179675f115586e368" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>y</name></member>
+      <member refid="classc_enemy_1a3f7570bc4fedef4a8fb60908161d44e3" prot="public" virt="non-virtual"><scope>cSpiny</scope><name>y_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

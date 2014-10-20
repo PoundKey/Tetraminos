@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_bowser" kind="class" prot="public">
+    <compoundname>cBowser</compoundname>
+    <innerclass refid="structc_bowser_1_1hamma" prot="public">cBowser::hamma</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_bowser_1a03ab383a76ccd804575893fb6698771b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a3cc3a8ce57eefaf35cf2f20c06247402" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1aa39eae01149953fb112f0bd64cb773df" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::W</definition>
+        <argsstring></argsstring>
+        <name>W</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a853ffc08766b1412ab2a1154c87585b5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1adccfce0067cc16f6f88c0ba40db57e36" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::fx</definition>
+        <argsstring></argsstring>
+        <name>fx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1af434482a64ccc3fa1e4daa95df6744be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::fy</definition>
+        <argsstring></argsstring>
+        <name>fy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a2ecb98cf529645737d448a51b26ac760" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::static_x</definition>
+        <argsstring></argsstring>
+        <name>static_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1abd678338d30f8b6ee879954eb93937a2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::static_y</definition>
+        <argsstring></argsstring>
+        <name>static_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="160" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a130eddd93b7f7bfcab4733134ceb9f1a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="161" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a92043c8c1d1230f9a8331b7f0c8ba62b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::count2</definition>
+        <argsstring></argsstring>
+        <name>count2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="161" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1ae242ddd99e9fe5159e71a1bb2c337bf2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::getX</definition>
+        <argsstring></argsstring>
+        <name>getX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="161" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a1c61034bd6a3660845b98ecccddb576d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cBowser::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="162" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a3ef06c665428646fbd1cacabac5e78bd" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cBowser::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="163" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1aeb01f33b685ec5cbd9450a414172d190" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cBowser::down_touch</definition>
+        <argsstring></argsstring>
+        <name>down_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="164" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1afe2300b94387f2274870f3d2ca6606ab" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cBowser::arrived</definition>
+        <argsstring></argsstring>
+        <name>arrived</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="164" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a899d949dfcd617b886234103304ae0a5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cBowser::godown</definition>
+        <argsstring></argsstring>
+        <name>godown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="165" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1ac131f561e725eda3d411ac9574ba7768" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::health</definition>
+        <argsstring></argsstring>
+        <name>health</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="166" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1aaf8fa65eea0f29ff069cdb3568ab9d13" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cBowser::BOWSER_SURFACE[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>BOWSER_SURFACE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="167" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1aefab9ac1834cc62d7d59f539db293970" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface * cBowser::HAMMER_SURFACE[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>HAMMER_SURFACE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="167" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1ab8f8dd12a343cae02bdec0a60c1fa813" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cBowser::fire_flying</definition>
+        <argsstring></argsstring>
+        <name>fire_flying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="169" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1ac3b0436cf3d8828bf380c203d11991ad" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::hammers</definition>
+        <argsstring></argsstring>
+        <name>hammers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="172" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a000a103f65c84820a0ee87eeba5e26a9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBowser::HAMMERcount</definition>
+        <argsstring></argsstring>
+        <name>HAMMERcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="172" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_bowser_1a676ec285ef75fec8383a4012af64f29c" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structc_bowser_1_1hamma" kindref="compound">cBowser::hamma</ref></type>
+        <definition>struct cBowser::hamma cBowser::HAMMERS[30]</definition>
+        <argsstring>[30]</argsstring>
+        <name>HAMMERS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="177" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_bowser_1ab8568e2867d5549eee2fc44b8cf7bfdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cBowser::cBowser</definition>
+        <argsstring>(int _x, int _y, int _hammers)</argsstring>
+        <name>cBowser</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_hammers</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="157" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bowser.cpp" bodystart="11" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_bowser_1a8af50dee633315f5742dba215786486c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cBowser::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>HIT THE AXE JACK :_ </para>        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="159" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bowser.cpp" bodystart="68" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_bowser_1a035532fa1b0ba84a2273ea1a6ab20038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cBowser::hit</definition>
+        <argsstring>()</argsstring>
+        <name>hit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="170" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bowser.cpp" bodystart="215" bodyend="239"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="12">
+        <label>cBowser::hamma</label>
+        <link refid="structc_bowser_1_1hamma"/>
+      </node>
+      <node id="11">
+        <label>cBowser</label>
+        <link refid="classc_bowser"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>HAMMERS</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="155" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="154" bodyend="178"/>
+    <listofallmembers>
+      <member refid="classc_bowser_1afe2300b94387f2274870f3d2ca6606ab" prot="public" virt="non-virtual"><scope>cBowser</scope><name>arrived</name></member>
+      <member refid="classc_bowser_1aaf8fa65eea0f29ff069cdb3568ab9d13" prot="public" virt="non-virtual"><scope>cBowser</scope><name>BOWSER_SURFACE</name></member>
+      <member refid="classc_bowser_1ab8568e2867d5549eee2fc44b8cf7bfdf" prot="public" virt="non-virtual"><scope>cBowser</scope><name>cBowser</name></member>
+      <member refid="classc_bowser_1a130eddd93b7f7bfcab4733134ceb9f1a" prot="public" virt="non-virtual"><scope>cBowser</scope><name>count</name></member>
+      <member refid="classc_bowser_1a92043c8c1d1230f9a8331b7f0c8ba62b" prot="public" virt="non-virtual"><scope>cBowser</scope><name>count2</name></member>
+      <member refid="classc_bowser_1aeb01f33b685ec5cbd9450a414172d190" prot="public" virt="non-virtual"><scope>cBowser</scope><name>down_touch</name></member>
+      <member refid="classc_bowser_1ab8f8dd12a343cae02bdec0a60c1fa813" prot="public" virt="non-virtual"><scope>cBowser</scope><name>fire_flying</name></member>
+      <member refid="classc_bowser_1adccfce0067cc16f6f88c0ba40db57e36" prot="public" virt="non-virtual"><scope>cBowser</scope><name>fx</name></member>
+      <member refid="classc_bowser_1af434482a64ccc3fa1e4daa95df6744be" prot="public" virt="non-virtual"><scope>cBowser</scope><name>fy</name></member>
+      <member refid="classc_bowser_1ae242ddd99e9fe5159e71a1bb2c337bf2" prot="public" virt="non-virtual"><scope>cBowser</scope><name>getX</name></member>
+      <member refid="classc_bowser_1a899d949dfcd617b886234103304ae0a5" prot="public" virt="non-virtual"><scope>cBowser</scope><name>godown</name></member>
+      <member refid="classc_bowser_1a853ffc08766b1412ab2a1154c87585b5" prot="public" virt="non-virtual"><scope>cBowser</scope><name>H</name></member>
+      <member refid="classc_bowser_1aefab9ac1834cc62d7d59f539db293970" prot="public" virt="non-virtual"><scope>cBowser</scope><name>HAMMER_SURFACE</name></member>
+      <member refid="classc_bowser_1a000a103f65c84820a0ee87eeba5e26a9" prot="public" virt="non-virtual"><scope>cBowser</scope><name>HAMMERcount</name></member>
+      <member refid="classc_bowser_1a676ec285ef75fec8383a4012af64f29c" prot="public" virt="non-virtual"><scope>cBowser</scope><name>HAMMERS</name></member>
+      <member refid="classc_bowser_1ac3b0436cf3d8828bf380c203d11991ad" prot="public" virt="non-virtual"><scope>cBowser</scope><name>hammers</name></member>
+      <member refid="classc_bowser_1ac131f561e725eda3d411ac9574ba7768" prot="public" virt="non-virtual"><scope>cBowser</scope><name>health</name></member>
+      <member refid="classc_bowser_1a035532fa1b0ba84a2273ea1a6ab20038" prot="public" virt="non-virtual"><scope>cBowser</scope><name>hit</name></member>
+      <member refid="classc_bowser_1a3ef06c665428646fbd1cacabac5e78bd" prot="public" virt="non-virtual"><scope>cBowser</scope><name>rect</name></member>
+      <member refid="classc_bowser_1a2ecb98cf529645737d448a51b26ac760" prot="public" virt="non-virtual"><scope>cBowser</scope><name>static_x</name></member>
+      <member refid="classc_bowser_1abd678338d30f8b6ee879954eb93937a2" prot="public" virt="non-virtual"><scope>cBowser</scope><name>static_y</name></member>
+      <member refid="classc_bowser_1a1c61034bd6a3660845b98ecccddb576d" prot="public" virt="non-virtual"><scope>cBowser</scope><name>timer</name></member>
+      <member refid="classc_bowser_1a8af50dee633315f5742dba215786486c" prot="public" virt="non-virtual"><scope>cBowser</scope><name>update</name></member>
+      <member refid="classc_bowser_1aa39eae01149953fb112f0bd64cb773df" prot="public" virt="non-virtual"><scope>cBowser</scope><name>W</name></member>
+      <member refid="classc_bowser_1a03ab383a76ccd804575893fb6698771b" prot="public" virt="non-virtual"><scope>cBowser</scope><name>x</name></member>
+      <member refid="classc_bowser_1a3cc3a8ce57eefaf35cf2f20c06247402" prot="public" virt="non-virtual"><scope>cBowser</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

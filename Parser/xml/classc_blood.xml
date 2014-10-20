@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_blood" kind="class" prot="public">
+    <compoundname>cBlood</compoundname>
+    <innerclass refid="structc_blood_1_1bloodparts___s_t_r_u_c_t" prot="private">cBlood::bloodparts_STRUCT</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classc_blood_1a9acece783221f0e8db83e0aac4e82987" prot="private" static="no" mutable="no">
+        <type>struct cBlood::bloodparts_STRUCT</type>
+        <definition>struct cBlood::bloodparts_STRUCT cBlood::bloodparts[MAX_FIRE]</definition>
+        <argsstring>[MAX_FIRE]</argsstring>
+        <name>bloodparts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_blood_1a67df2de3acfd57ca74a69fe049950900" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBlood::BLOODcount</definition>
+        <argsstring></argsstring>
+        <name>BLOODcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="60" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_blood_1a2eb3bf9d015941b7a33432ed5e2aaf6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cBlood::cBlood</definition>
+        <argsstring>()</argsstring>
+        <name>cBlood</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="46" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_blood_1ac1e10e41f9f6c5b39f667b2412e92085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cBlood::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="47" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="177" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_blood_1a0b62405e461a88c29bbc0f871fd5ad97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cBlood::newBlood</definition>
+        <argsstring>(int _x, int _y)</argsstring>
+        <name>newBlood</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="48" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="143" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_blood_1a854e5d356b3c9b57e475aaf6a760ff3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cBlood::oneNewBlood</definition>
+        <argsstring>(int _x, int _y)</argsstring>
+        <name>oneNewBlood</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="49" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="160" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_blood_1a957e95610eb50f4f15086c1fc0d3b99c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cBlood::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="50" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="126" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="44" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="43" bodyend="62"/>
+    <listofallmembers>
+      <member refid="classc_blood_1a67df2de3acfd57ca74a69fe049950900" prot="private" virt="non-virtual"><scope>cBlood</scope><name>BLOODcount</name></member>
+      <member refid="classc_blood_1a9acece783221f0e8db83e0aac4e82987" prot="private" virt="non-virtual"><scope>cBlood</scope><name>bloodparts</name></member>
+      <member refid="classc_blood_1a2eb3bf9d015941b7a33432ed5e2aaf6c" prot="public" virt="non-virtual"><scope>cBlood</scope><name>cBlood</name></member>
+      <member refid="classc_blood_1a0b62405e461a88c29bbc0f871fd5ad97" prot="public" virt="non-virtual"><scope>cBlood</scope><name>newBlood</name></member>
+      <member refid="classc_blood_1a854e5d356b3c9b57e475aaf6a760ff3e" prot="public" virt="non-virtual"><scope>cBlood</scope><name>oneNewBlood</name></member>
+      <member refid="classc_blood_1a957e95610eb50f4f15086c1fc0d3b99c" prot="public" virt="non-virtual"><scope>cBlood</scope><name>reset</name></member>
+      <member refid="classc_blood_1ac1e10e41f9f6c5b39f667b2412e92085" prot="public" virt="non-virtual"><scope>cBlood</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

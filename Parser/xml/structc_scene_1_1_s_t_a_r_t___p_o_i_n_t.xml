@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t" kind="struct" prot="public">
+    <compoundname>cScene::START_POINT</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t_1a728da0f03c059b12f5880926cf3cf742" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::START_POINT::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="85" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t_1aa5834992360921f0e61eb427e228a75d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::START_POINT::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="85" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t_1a9829d196e1b8c31488c7e6defd39a017" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::START_POINT::type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="86" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="84" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="83" bodyend="87"/>
+    <listofallmembers>
+      <member refid="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t_1a9829d196e1b8c31488c7e6defd39a017" prot="public" virt="non-virtual"><scope>cScene::START_POINT</scope><name>type</name></member>
+      <member refid="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t_1a728da0f03c059b12f5880926cf3cf742" prot="public" virt="non-virtual"><scope>cScene::START_POINT</scope><name>x</name></member>
+      <member refid="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t_1aa5834992360921f0e61eb427e228a75d" prot="public" virt="non-virtual"><scope>cScene::START_POINT</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

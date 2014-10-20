@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_fire" kind="class" prot="public">
+    <compoundname>cFire</compoundname>
+    <innerclass refid="structc_fire_1_1fireparts___s_t_r_u_c_t" prot="private">cFire::fireparts_STRUCT</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_fire_1a43e07cce983a9a52ea034c9d31806d11" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cFire::FIRESURF</definition>
+        <argsstring></argsstring>
+        <name>FIRESURF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classc_fire_1a9b6a741cc24ae0a51003083c4d3a7232" prot="private" static="no" mutable="no">
+        <type>struct cFire::fireparts_STRUCT</type>
+        <definition>struct cFire::fireparts_STRUCT cFire::fireparts[MAX_FIRE]</definition>
+        <argsstring>[MAX_FIRE]</argsstring>
+        <name>fireparts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_1afa5c9830add4e7640ee084171e146ad5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFire::super_y</definition>
+        <argsstring></argsstring>
+        <name>super_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="31" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_1a48f2699a76a8edd847016a630b8413d5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFire::super_x</definition>
+        <argsstring></argsstring>
+        <name>super_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_1a6a274a01d3a1e6547c8038797979bbb8" prot="private" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cFire::SURFACE</definition>
+        <argsstring></argsstring>
+        <name>SURFACE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="34" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_1adf88a23d38ef634affd05fa4ade31558" prot="private" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cFire::RECT</definition>
+        <argsstring></argsstring>
+        <name>RECT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="36" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_1a01b65528f489853878e94684cab8c629" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFire::x[300]</definition>
+        <argsstring>[300]</argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="38" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_1ae5a3fe2a22460609bb945bb11541044c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFire::y[300]</definition>
+        <argsstring>[300]</argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="38" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_1aa7390b8ca40e39a72f400bcbb3521b60" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFire::FIREcount</definition>
+        <argsstring></argsstring>
+        <name>FIREcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="38" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_fire_1a3b2c96616695f5ffd473caefef61253d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cFire::cFire</definition>
+        <argsstring>()</argsstring>
+        <name>cFire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="17" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="13" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_fire_1a6cb2e51999f6bd08dd5f485611fc6be3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cFire::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="18" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="63" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_fire_1a3a56fb0a59738d5c67f73f9b5d6ae6e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cFire::newFire</definition>
+        <argsstring>(int _x, int _y)</argsstring>
+        <name>newFire</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="19" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="57" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_fire_1a602b109cf9bb130642a1820f6ffb924b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cFire::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="20" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.cpp" bodystart="53" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" line="15" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/particle.h" bodystart="14" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classc_fire_1a3b2c96616695f5ffd473caefef61253d" prot="public" virt="non-virtual"><scope>cFire</scope><name>cFire</name></member>
+      <member refid="classc_fire_1aa7390b8ca40e39a72f400bcbb3521b60" prot="private" virt="non-virtual"><scope>cFire</scope><name>FIREcount</name></member>
+      <member refid="classc_fire_1a9b6a741cc24ae0a51003083c4d3a7232" prot="private" virt="non-virtual"><scope>cFire</scope><name>fireparts</name></member>
+      <member refid="classc_fire_1a43e07cce983a9a52ea034c9d31806d11" prot="public" virt="non-virtual"><scope>cFire</scope><name>FIRESURF</name></member>
+      <member refid="classc_fire_1a3a56fb0a59738d5c67f73f9b5d6ae6e1" prot="public" virt="non-virtual"><scope>cFire</scope><name>newFire</name></member>
+      <member refid="classc_fire_1adf88a23d38ef634affd05fa4ade31558" prot="private" virt="non-virtual"><scope>cFire</scope><name>RECT</name></member>
+      <member refid="classc_fire_1a602b109cf9bb130642a1820f6ffb924b" prot="public" virt="non-virtual"><scope>cFire</scope><name>reset</name></member>
+      <member refid="classc_fire_1a48f2699a76a8edd847016a630b8413d5" prot="private" virt="non-virtual"><scope>cFire</scope><name>super_x</name></member>
+      <member refid="classc_fire_1afa5c9830add4e7640ee084171e146ad5" prot="private" virt="non-virtual"><scope>cFire</scope><name>super_y</name></member>
+      <member refid="classc_fire_1a6a274a01d3a1e6547c8038797979bbb8" prot="private" virt="non-virtual"><scope>cFire</scope><name>SURFACE</name></member>
+      <member refid="classc_fire_1a6cb2e51999f6bd08dd5f485611fc6be3" prot="public" virt="non-virtual"><scope>cFire</scope><name>update</name></member>
+      <member refid="classc_fire_1a01b65528f489853878e94684cab8c629" prot="private" virt="non-virtual"><scope>cFire</scope><name>x</name></member>
+      <member refid="classc_fire_1ae5a3fe2a22460609bb945bb11541044c" prot="private" virt="non-virtual"><scope>cFire</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

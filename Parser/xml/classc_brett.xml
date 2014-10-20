@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_brett" kind="class" prot="public">
+    <compoundname>cBrett</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_brett_1a37dda343db9e22b81d9f4808266fde83" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBrett::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="148" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_brett_1af24a22875bcb4d7ce9acc33c4a0f484b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBrett::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="148" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_brett_1ad3954cc1a9939fd57c8ba777b977d0e9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBrett::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="149" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_brett_1ae860984aa8b741d6cda9cdacb4e1e802" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cBrett::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="150" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_brett_1ae4962e3321c97fd91782777b84d8e22a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cBrett::cBrett</definition>
+        <argsstring>(int _x, int _y)</argsstring>
+        <name>cBrett</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="145" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/flybrett.cpp" bodystart="18" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_brett_1af838874c45f3cec99ade51f9f8a33797" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cBrett::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="147" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/flybrett.cpp" bodystart="25" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="143" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="142" bodyend="151"/>
+    <listofallmembers>
+      <member refid="classc_brett_1ae4962e3321c97fd91782777b84d8e22a" prot="public" virt="non-virtual"><scope>cBrett</scope><name>cBrett</name></member>
+      <member refid="classc_brett_1ad3954cc1a9939fd57c8ba777b977d0e9" prot="public" virt="non-virtual"><scope>cBrett</scope><name>count</name></member>
+      <member refid="classc_brett_1ae860984aa8b741d6cda9cdacb4e1e802" prot="public" virt="non-virtual"><scope>cBrett</scope><name>dir</name></member>
+      <member refid="classc_brett_1af838874c45f3cec99ade51f9f8a33797" prot="public" virt="non-virtual"><scope>cBrett</scope><name>update</name></member>
+      <member refid="classc_brett_1a37dda343db9e22b81d9f4808266fde83" prot="public" virt="non-virtual"><scope>cBrett</scope><name>x</name></member>
+      <member refid="classc_brett_1af24a22875bcb4d7ce9acc33c4a0f484b" prot="public" virt="non-virtual"><scope>cBrett</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

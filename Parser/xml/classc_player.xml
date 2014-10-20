@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_player" kind="class" prot="public">
+    <compoundname>cPlayer</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_player_1adc5cf219b4532119d4f379cc8503642f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="21" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a3360868741ab66e2e232a3915063eeba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::W</definition>
+        <argsstring></argsstring>
+        <name>W</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="21" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a367874447ea3be44af57718e60221c22" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::invincible</definition>
+        <argsstring></argsstring>
+        <name>invincible</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="21" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a6d22d22474419ef3d833fca6362ba7fd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1afd4e0d4e97092d00664a3ca836844c2c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::top_touch</definition>
+        <argsstring></argsstring>
+        <name>top_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ade467a44c79bcc4e3fdc902422667a17" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::top_bonus_touch</definition>
+        <argsstring></argsstring>
+        <name>top_bonus_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1aa11a360b6b261f0d8601d8fcf326ec32" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::down_touch</definition>
+        <argsstring></argsstring>
+        <name>down_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a402930ab109a837fe09a9d09c06b832d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::left_touch</definition>
+        <argsstring></argsstring>
+        <name>left_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a42a32f288151f5f13bb05848d54aa39d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::right_touch</definition>
+        <argsstring></argsstring>
+        <name>right_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1abb58ed485b03f52f71ee627eac70106a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::touch_now</definition>
+        <argsstring></argsstring>
+        <name>touch_now</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a98705158bae0aa63290d1b2a13e9bcf6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::Aed</definition>
+        <argsstring></argsstring>
+        <name>Aed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="24" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a662831e901c5a08de277195ec709c0a7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::Bed</definition>
+        <argsstring></argsstring>
+        <name>Bed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="24" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a32a91d3ced7de81e33f57352211e99a6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::KeyDown_down</definition>
+        <argsstring></argsstring>
+        <name>KeyDown_down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="24" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1aa74cd82b12aaab60b83c288b65f3a424" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cPlayer::y_speed</definition>
+        <argsstring></argsstring>
+        <name>y_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="25" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a05f57a6d3ee282579334a951d883f6db" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cPlayer::x_speed</definition>
+        <argsstring></argsstring>
+        <name>x_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="25" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a6cfe20215447459b423b2b4ebae5aaed" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cPlayer::max_speed</definition>
+        <argsstring></argsstring>
+        <name>max_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="25" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a9c480d55a60f71e625ed1b0140f4e6f0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::dead</definition>
+        <argsstring></argsstring>
+        <name>dead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a0fe1780f0c66802f6a9c7074721524cd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::incincible</definition>
+        <argsstring></argsstring>
+        <name>incincible</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a7c4161310cb761a4f8d55d629dd5ce81" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cPlayer::STARPOWER_OVER</definition>
+        <argsstring></argsstring>
+        <name>STARPOWER_OVER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ac716864ca58cca9d7fd3cb4e0e81ff4e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cPlayer::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="28" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a702df26bfd1459eae52fd161cc439fe0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cPlayer::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="28" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ae58900f320e84fc6019e048e2cc99d2c" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cPlayer::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="29" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a7587693aa283c71ad496cd0137be5398" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cPlayer::Surface_R[3][4]</definition>
+        <argsstring>[3][4]</argsstring>
+        <name>Surface_R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="30" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ab63d11d6d4949c28137d3cccd1a668f8" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface * cPlayer::Surface_L[3][4]</definition>
+        <argsstring>[3][4]</argsstring>
+        <name>Surface_L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="30" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ad4100c414b4a767412d5db25409a6db0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::walkcount</definition>
+        <argsstring></argsstring>
+        <name>walkcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ac9cbfe0dd7d61be45fc0f8971b7cf7c6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::walkcount2</definition>
+        <argsstring></argsstring>
+        <name>walkcount2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a77d8f9987283588e898bc194b1f919a2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::walkadd</definition>
+        <argsstring></argsstring>
+        <name>walkadd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a8024fda21e04e7f521ca57746ccac4c9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::JUMPcount</definition>
+        <argsstring></argsstring>
+        <name>JUMPcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ad327250bda4781d623f70bf6b059f136" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::jumpheight</definition>
+        <argsstring></argsstring>
+        <name>jumpheight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="33" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a69c1efec5a4acd36d840bd7b8afb7bba" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::STARPOWER</definition>
+        <argsstring></argsstring>
+        <name>STARPOWER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="33" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1af2bc4cfa264c2769ca42cbb76db8e267" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::stat</definition>
+        <argsstring></argsstring>
+        <name>stat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="34" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a649949458875311c8914926805fd5f57" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::speed_jump_height</definition>
+        <argsstring></argsstring>
+        <name>speed_jump_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="34" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a5c774d29570a003cc39c48f8f36c07d6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::K_LEFT</definition>
+        <argsstring></argsstring>
+        <name>K_LEFT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="36" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a86215e98e12d3ca5d5394ba264254934" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::K_RIGHT</definition>
+        <argsstring></argsstring>
+        <name>K_RIGHT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="36" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a507e307e1da51151729059ee0841d170" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::K_UP</definition>
+        <argsstring></argsstring>
+        <name>K_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="36" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1ab3156afab9c2a0841dc5f3eff7b9192e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::K_DOWN</definition>
+        <argsstring></argsstring>
+        <name>K_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="36" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1a765a75999a23d8f8c1e24bf23f9b1e94" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::K_B</definition>
+        <argsstring></argsstring>
+        <name>K_B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="36" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_player_1afe6783fdb67aabe3669ee786d2adcb8c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cPlayer::K_A</definition>
+        <argsstring></argsstring>
+        <name>K_A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="36" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_player_1a87c7a1cd3847e9d87417075b8d4dbef8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cPlayer::cPlayer</definition>
+        <argsstring>(int LEFT, int RIGHT, int UP, int DOWN, int B, int A, int _speed_jump_height)</argsstring>
+        <name>cPlayer</name>
+        <param>
+          <type>int</type>
+          <declname>LEFT</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>RIGHT</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>UP</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>DOWN</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>B</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>A</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_speed_jump_height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="11" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="21" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_player_1a774ea6710c3b4a8d46f9ac653183043d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cPlayer::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>SHOOOOOOOOOT N RUUUUUUUUUUUUUUUUN</para><para>JUUUUUUUUMP </para>        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="13" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="113" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_player_1a4109985b1bf6bf3b8b9da897970f4196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cPlayer::changeStat</definition>
+        <argsstring>(int staty)</argsstring>
+        <name>changeStat</name>
+        <param>
+          <type>int</type>
+          <declname>staty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="14" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="402" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_player_1a8cfaa8a62cf6d3329099cc9f032ff6f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cPlayer::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="15" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="439" bodyend="483"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_player_1a3c4c8a4e266f156e97e752f95076794d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cPlayer::die</definition>
+        <argsstring>()</argsstring>
+        <name>die</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="16" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="485" bodyend="555"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_player_1af4796b48a2c8869fbc06bee7f3b569ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cPlayer::movecam</definition>
+        <argsstring>()</argsstring>
+        <name>movecam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="17" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="87" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_player_1a411df6e6b4c520117d583c2b9dc1efbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cPlayer::MakeMyWalk</definition>
+        <argsstring>()</argsstring>
+        <name>MakeMyWalk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="19" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="386" bodyend="400"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="9" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="8" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classc_player_1a98705158bae0aa63290d1b2a13e9bcf6" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>Aed</name></member>
+      <member refid="classc_player_1a662831e901c5a08de277195ec709c0a7" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>Bed</name></member>
+      <member refid="classc_player_1a4109985b1bf6bf3b8b9da897970f4196" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>changeStat</name></member>
+      <member refid="classc_player_1a87c7a1cd3847e9d87417075b8d4dbef8" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>cPlayer</name></member>
+      <member refid="classc_player_1a9c480d55a60f71e625ed1b0140f4e6f0" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>dead</name></member>
+      <member refid="classc_player_1a3c4c8a4e266f156e97e752f95076794d" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>die</name></member>
+      <member refid="classc_player_1a6d22d22474419ef3d833fca6362ba7fd" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>dir</name></member>
+      <member refid="classc_player_1aa11a360b6b261f0d8601d8fcf326ec32" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>down_touch</name></member>
+      <member refid="classc_player_1a8cfaa8a62cf6d3329099cc9f032ff6f9" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>draw</name></member>
+      <member refid="classc_player_1adc5cf219b4532119d4f379cc8503642f" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>H</name></member>
+      <member refid="classc_player_1a0fe1780f0c66802f6a9c7074721524cd" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>incincible</name></member>
+      <member refid="classc_player_1a367874447ea3be44af57718e60221c22" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>invincible</name></member>
+      <member refid="classc_player_1a8024fda21e04e7f521ca57746ccac4c9" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>JUMPcount</name></member>
+      <member refid="classc_player_1ad327250bda4781d623f70bf6b059f136" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>jumpheight</name></member>
+      <member refid="classc_player_1afe6783fdb67aabe3669ee786d2adcb8c" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>K_A</name></member>
+      <member refid="classc_player_1a765a75999a23d8f8c1e24bf23f9b1e94" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>K_B</name></member>
+      <member refid="classc_player_1ab3156afab9c2a0841dc5f3eff7b9192e" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>K_DOWN</name></member>
+      <member refid="classc_player_1a5c774d29570a003cc39c48f8f36c07d6" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>K_LEFT</name></member>
+      <member refid="classc_player_1a86215e98e12d3ca5d5394ba264254934" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>K_RIGHT</name></member>
+      <member refid="classc_player_1a507e307e1da51151729059ee0841d170" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>K_UP</name></member>
+      <member refid="classc_player_1a32a91d3ced7de81e33f57352211e99a6" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>KeyDown_down</name></member>
+      <member refid="classc_player_1a402930ab109a837fe09a9d09c06b832d" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>left_touch</name></member>
+      <member refid="classc_player_1a411df6e6b4c520117d583c2b9dc1efbf" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>MakeMyWalk</name></member>
+      <member refid="classc_player_1a6cfe20215447459b423b2b4ebae5aaed" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>max_speed</name></member>
+      <member refid="classc_player_1af4796b48a2c8869fbc06bee7f3b569ed" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>movecam</name></member>
+      <member refid="classc_player_1ae58900f320e84fc6019e048e2cc99d2c" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>rect</name></member>
+      <member refid="classc_player_1a42a32f288151f5f13bb05848d54aa39d" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>right_touch</name></member>
+      <member refid="classc_player_1a649949458875311c8914926805fd5f57" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>speed_jump_height</name></member>
+      <member refid="classc_player_1a69c1efec5a4acd36d840bd7b8afb7bba" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>STARPOWER</name></member>
+      <member refid="classc_player_1a7c4161310cb761a4f8d55d629dd5ce81" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>STARPOWER_OVER</name></member>
+      <member refid="classc_player_1af2bc4cfa264c2769ca42cbb76db8e267" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>stat</name></member>
+      <member refid="classc_player_1ab63d11d6d4949c28137d3cccd1a668f8" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>Surface_L</name></member>
+      <member refid="classc_player_1a7587693aa283c71ad496cd0137be5398" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>Surface_R</name></member>
+      <member refid="classc_player_1ade467a44c79bcc4e3fdc902422667a17" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>top_bonus_touch</name></member>
+      <member refid="classc_player_1afd4e0d4e97092d00664a3ca836844c2c" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>top_touch</name></member>
+      <member refid="classc_player_1abb58ed485b03f52f71ee627eac70106a" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>touch_now</name></member>
+      <member refid="classc_player_1a774ea6710c3b4a8d46f9ac653183043d" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>update</name></member>
+      <member refid="classc_player_1a3360868741ab66e2e232a3915063eeba" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>W</name></member>
+      <member refid="classc_player_1a77d8f9987283588e898bc194b1f919a2" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>walkadd</name></member>
+      <member refid="classc_player_1ad4100c414b4a767412d5db25409a6db0" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>walkcount</name></member>
+      <member refid="classc_player_1ac9cbfe0dd7d61be45fc0f8971b7cf7c6" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>walkcount2</name></member>
+      <member refid="classc_player_1ac716864ca58cca9d7fd3cb4e0e81ff4e" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>x</name></member>
+      <member refid="classc_player_1a05f57a6d3ee282579334a951d883f6db" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>x_speed</name></member>
+      <member refid="classc_player_1a702df26bfd1459eae52fd161cc439fe0" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>y</name></member>
+      <member refid="classc_player_1aa74cd82b12aaab60b83c288b65f3a424" prot="public" virt="non-virtual"><scope>cPlayer</scope><name>y_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

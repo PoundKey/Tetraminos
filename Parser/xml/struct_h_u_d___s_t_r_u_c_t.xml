@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_h_u_d___s_t_r_u_c_t" kind="struct" prot="public">
+    <compoundname>HUD_STRUCT</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_h_u_d___s_t_r_u_c_t_1a47a2ff92f5483e679af596e996bcf24b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HUD_STRUCT::score</definition>
+        <argsstring></argsstring>
+        <name>score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="113" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_u_d___s_t_r_u_c_t_1a2977dc8473148cd345011841def1654b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HUD_STRUCT::lifes</definition>
+        <argsstring></argsstring>
+        <name>lifes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="114" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_h_u_d___s_t_r_u_c_t_1a080a7a472bd87b5729ab6b6e8ee056a1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HUD_STRUCT::coins</definition>
+        <argsstring></argsstring>
+        <name>coins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="115" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="112" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="111" bodyend="116"/>
+    <listofallmembers>
+      <member refid="struct_h_u_d___s_t_r_u_c_t_1a080a7a472bd87b5729ab6b6e8ee056a1" prot="public" virt="non-virtual"><scope>HUD_STRUCT</scope><name>coins</name></member>
+      <member refid="struct_h_u_d___s_t_r_u_c_t_1a2977dc8473148cd345011841def1654b" prot="public" virt="non-virtual"><scope>HUD_STRUCT</scope><name>lifes</name></member>
+      <member refid="struct_h_u_d___s_t_r_u_c_t_1a47a2ff92f5483e679af596e996bcf24b" prot="public" virt="non-virtual"><scope>HUD_STRUCT</scope><name>score</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

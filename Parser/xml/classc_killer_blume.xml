@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_killer_blume" kind="class" prot="public">
+    <compoundname>cKillerBlume</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_killer_blume_1aa772e768ce2d70d34af34a5d9c5897f7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cKillerBlume::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="135" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_killer_blume_1a6eccdcc72b556561bfbbb3bc9d1ce0ff" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cKillerBlume::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="135" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_killer_blume_1ad84c137735dffef6449fa08507887ee9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cKillerBlume::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="136" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_killer_blume_1a80d31a4ade9699aaacabd8cc18100c8e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cKillerBlume::dead</definition>
+        <argsstring></argsstring>
+        <name>dead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="137" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_killer_blume_1a6f989f3b9458e13cd6115ff755ab70d4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cKillerBlume::timer</definition>
+        <argsstring></argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="138" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_killer_blume_1a493c3cd7e3b15e352841f9870fe98795" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cKillerBlume::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="139" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_killer_blume_1aaf12840fcc78429182efb8c703584e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cKillerBlume::cKillerBlume</definition>
+        <argsstring>(int _x, int _y)</argsstring>
+        <name>cKillerBlume</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="132" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/killerblume.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_killer_blume_1aed24d2af280a1b017e7d309841edea6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cKillerBlume::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="134" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/killerblume.cpp" bodystart="27" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="130" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="129" bodyend="140"/>
+    <listofallmembers>
+      <member refid="classc_killer_blume_1aaf12840fcc78429182efb8c703584e09" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>cKillerBlume</name></member>
+      <member refid="classc_killer_blume_1ad84c137735dffef6449fa08507887ee9" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>count</name></member>
+      <member refid="classc_killer_blume_1a80d31a4ade9699aaacabd8cc18100c8e" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>dead</name></member>
+      <member refid="classc_killer_blume_1a493c3cd7e3b15e352841f9870fe98795" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>rect</name></member>
+      <member refid="classc_killer_blume_1a6f989f3b9458e13cd6115ff755ab70d4" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>timer</name></member>
+      <member refid="classc_killer_blume_1aed24d2af280a1b017e7d309841edea6d" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>update</name></member>
+      <member refid="classc_killer_blume_1aa772e768ce2d70d34af34a5d9c5897f7" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>x</name></member>
+      <member refid="classc_killer_blume_1a6eccdcc72b556561bfbbb3bc9d1ce0ff" prot="public" virt="non-virtual"><scope>cKillerBlume</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

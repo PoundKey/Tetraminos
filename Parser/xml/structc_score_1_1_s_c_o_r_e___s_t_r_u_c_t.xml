@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t" kind="struct" prot="public">
+    <compoundname>cScore::SCORE_STRUCT</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1a787b71623028924a166774b34369f07c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cScore::SCORE_STRUCT::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="84" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1a951437d5a926d39492dc49ed94d4c437" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cScore::SCORE_STRUCT::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="84" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1abbc3be6b6dfcd0bfb54da5c6719287dd" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* cScore::SCORE_STRUCT::text</definition>
+        <argsstring></argsstring>
+        <name>text</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="85" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1af1df60026000294f65ca39e37f2c2925" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScore::SCORE_STRUCT::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="86" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="83" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="82" bodyend="87"/>
+    <listofallmembers>
+      <member refid="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1af1df60026000294f65ca39e37f2c2925" prot="public" virt="non-virtual"><scope>cScore::SCORE_STRUCT</scope><name>count</name></member>
+      <member refid="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1abbc3be6b6dfcd0bfb54da5c6719287dd" prot="public" virt="non-virtual"><scope>cScore::SCORE_STRUCT</scope><name>text</name></member>
+      <member refid="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1a787b71623028924a166774b34369f07c" prot="public" virt="non-virtual"><scope>cScore::SCORE_STRUCT</scope><name>x</name></member>
+      <member refid="structc_score_1_1_s_c_o_r_e___s_t_r_u_c_t_1a951437d5a926d39492dc49ed94d4c437" prot="public" virt="non-virtual"><scope>cScore::SCORE_STRUCT</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

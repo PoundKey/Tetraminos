@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct__dictionary__" kind="struct" prot="public">
+    <compoundname>_dictionary_</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct__dictionary___1ac93e659a505b71aa87b8b558b55ee872" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dictionary_::n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of entries in dictionary </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" line="46" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dictionary___1a2d90a3894737abd3270d8b9aefaac5ef" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int _dictionary_::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Storage size </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" line="48" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dictionary___1a7a89c8fb24cb365745431d881f8f0afd" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** _dictionary_::val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of string values </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" line="50" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dictionary___1a3c962bd7edff49be125396596d1bec75" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** _dictionary_::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of string keys </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" line="52" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct__dictionary___1a017aee3083b2fc453bcf2d7b5b51af86" prot="public" static="no" mutable="no">
+        <type>unsigned *</type>
+        <definition>unsigned* _dictionary_::hash</definition>
+        <argsstring></argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of hash values for keys </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" line="54" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" line="44" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/iniparser.h" bodystart="44" bodyend="55"/>
+    <listofallmembers>
+      <member refid="struct__dictionary___1a017aee3083b2fc453bcf2d7b5b51af86" prot="public" virt="non-virtual"><scope>_dictionary_</scope><name>hash</name></member>
+      <member refid="struct__dictionary___1a3c962bd7edff49be125396596d1bec75" prot="public" virt="non-virtual"><scope>_dictionary_</scope><name>key</name></member>
+      <member refid="struct__dictionary___1ac93e659a505b71aa87b8b558b55ee872" prot="public" virt="non-virtual"><scope>_dictionary_</scope><name>n</name></member>
+      <member refid="struct__dictionary___1a2d90a3894737abd3270d8b9aefaac5ef" prot="public" virt="non-virtual"><scope>_dictionary_</scope><name>size</name></member>
+      <member refid="struct__dictionary___1a7a89c8fb24cb365745431d881f8f0afd" prot="public" virt="non-virtual"><scope>_dictionary_</scope><name>val</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

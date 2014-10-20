@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_scene" kind="class" prot="public">
+    <compoundname>cScene</compoundname>
+    <innerclass refid="structc_scene_1_1_c_a_s_t_e_l_s_t_r" prot="public">cScene::CASTELSTR</innerclass>
+    <innerclass refid="structc_scene_1_1_e_x_i_t___p_o_i_n_t" prot="public">cScene::EXIT_POINT</innerclass>
+    <innerclass refid="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t" prot="public">cScene::START_POINT</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_scene_1a36faa1954b44172798c6843af531ba4b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cScene::back_type</definition>
+        <argsstring></argsstring>
+        <name>back_type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="31" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a709ef5a97d5565bc866b678d138bb0a9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::back_x[MAX_BACK]</definition>
+        <argsstring>[MAX_BACK]</argsstring>
+        <name>back_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="33" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a34a46ca7921aed55783398fff234dd1e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::back_y[MAX_BACK]</definition>
+        <argsstring>[MAX_BACK]</argsstring>
+        <name>back_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="34" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a3aac35f8d4dc1664b7f42fb71e01e6b0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::back_T[MAX_BACK]</definition>
+        <argsstring>[MAX_BACK]</argsstring>
+        <name>back_T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="35" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1af23ec69c1dbfdbba4cc445a914bcb71f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cScene::castled</definition>
+        <argsstring></argsstring>
+        <name>castled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="43" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a95b20336531a78c98054d5ccb61e1008" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::Bonus_Kick_Mode</definition>
+        <argsstring></argsstring>
+        <name>Bonus_Kick_Mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="47" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a3a99dcd8732b2921da573c7b6ad41b29" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::partcount</definition>
+        <argsstring></argsstring>
+        <name>partcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="49" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a9fb21e2b109ada6aff0b78d8af0a1bc0" prot="public" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** cScene::parts</definition>
+        <argsstring></argsstring>
+        <name>parts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="50" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a9f3d7fafbd095b7a73fb7f000ffe2e7f" prot="public" static="no" mutable="no">
+        <type>ifstream</type>
+        <definition>ifstream cScene::ifs</definition>
+        <argsstring></argsstring>
+        <name>ifs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="51" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a11f83bbe551cc09b6aae7e0ff25bb907" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cScene::tileread</definition>
+        <argsstring></argsstring>
+        <name>tileread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="52" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a5b528a51f6aca36c578003251fd96599" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cScene::bonusread</definition>
+        <argsstring></argsstring>
+        <name>bonusread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="53" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a03d5fa1f3fcbc3e112d65441d3ebe6e9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cScene::coinread</definition>
+        <argsstring></argsstring>
+        <name>coinread</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="54" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1af306f88abede20003832ed00528a09e4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cScene::COINcount</definition>
+        <argsstring></argsstring>
+        <name>COINcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="55" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a5799fd21de858fd0166418330acf7233" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::BGCOLOR</definition>
+        <argsstring></argsstring>
+        <name>BGCOLOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="57" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1ade2717bad444cd91300e493989a8d0d6" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* cScene::nowlevel</definition>
+        <argsstring></argsstring>
+        <name>nowlevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="58" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a9ef79972e92051ff2f22384f9b374e31" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char * cScene::RESTARTLevel</definition>
+        <argsstring></argsstring>
+        <name>RESTARTLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="58" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a77af9e33fd1b82bb49f40f6640003dcc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::TEXTUREcount</definition>
+        <argsstring></argsstring>
+        <name>TEXTUREcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="60" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1ab63f2d93407ac2ccbca7784c8cf19d44" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::TILE[MAX_X][MAX_Y]</definition>
+        <argsstring>[MAX_X][MAX_Y]</argsstring>
+        <name>TILE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="68" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a61d4e89cf2c8e232ac5aa25411753047" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cScene::COIN[MAX_X][MAX_Y]</definition>
+        <argsstring>[MAX_X][MAX_Y]</argsstring>
+        <name>COIN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="70" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a619e7bd20b88e99eac3bf661d66a6dda" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::BONUS[MAX_X][MAX_Y]</definition>
+        <argsstring>[MAX_X][MAX_Y]</argsstring>
+        <name>BONUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="72" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a0826557ef794131ad367be33ab63ae3d" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cScene::Textures[MAX_TEXTURES]</definition>
+        <argsstring>[MAX_TEXTURES]</argsstring>
+        <name>Textures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="76" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1aa24e90e007267c501c59d4def12259bf" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cScene::Bonus_Textures[MAX_BONUS_TEXTURES]</definition>
+        <argsstring>[MAX_BONUS_TEXTURES]</argsstring>
+        <name>Bonus_Textures</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="77" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a95157e6aea31e85f25190dc47891b7b6" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cScene::SAVE_SURFACE</definition>
+        <argsstring></argsstring>
+        <name>SAVE_SURFACE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="78" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a6b2d1810b44c169a270280c54ff82f9d" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface * cScene::Background_Sky</definition>
+        <argsstring></argsstring>
+        <name>Background_Sky</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="78" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1aa0a1add8b6188d544c4a9a1a1603ed71" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface * cScene::Background_Sky_Night</definition>
+        <argsstring></argsstring>
+        <name>Background_Sky_Night</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="78" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a1ca4930f7dd6e338f70fc0ab70fac287" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::VTiles</definition>
+        <argsstring></argsstring>
+        <name>VTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="81" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a2416b38a9318900d482ac99cee5711f4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cScene::HTiles</definition>
+        <argsstring></argsstring>
+        <name>HTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="81" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a3a5c1301740c4d797e59ef2305991a18" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t" kindref="compound">cScene::START_POINT</ref></type>
+        <definition>struct cScene::START_POINT cScene::STARTPOINTS[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>STARTPOINTS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a79e17a078a1a6c410450a3bc0c93aee4" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structc_scene_1_1_e_x_i_t___p_o_i_n_t" kindref="compound">cScene::EXIT_POINT</ref></type>
+        <definition>struct cScene::EXIT_POINT cScene::EXITPOINTS[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>EXITPOINTS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="94" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1aa1069f1a9e3701fa6d1c170f8f9b8c94" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structc_scene_1_1_c_a_s_t_e_l_s_t_r" kindref="compound">cScene::CASTELSTR</ref></type>
+        <definition>struct cScene::CASTELSTR cScene::CASTLE</definition>
+        <argsstring></argsstring>
+        <name>CASTLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_scene_1a41527c27b71527b72a17cd5efcb49a17" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cScene::SCREEN_RECT</definition>
+        <argsstring></argsstring>
+        <name>SCREEN_RECT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="106" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_scene_1a4e473ceffba7f3a8bc900a35021babd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cScene::cScene</definition>
+        <argsstring>()</argsstring>
+        <name>cScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="16" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="16" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1ad694440eaf6dc5c8c635ecd84433b120" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::loadLevel</definition>
+        <argsstring>(char *scenename, int startpoint)</argsstring>
+        <name>loadLevel</name>
+        <param>
+          <type>char *</type>
+          <declname>scenename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startpoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="18" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="69" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a339fdfcc12a543df52c68de0f959c28b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::getParts</definition>
+        <argsstring>(char *Text)</argsstring>
+        <name>getParts</name>
+        <param>
+          <type>char *</type>
+          <declname>Text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="19" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="326" bodyend="360"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a43085fc20e430f51a1166f5ed21a813d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::interpreteSceneLine</definition>
+        <argsstring>()</argsstring>
+        <name>interpreteSceneLine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>ENEMIES : </para>        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="20" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="148" bodyend="324"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a1bb50a806144b8029d5b681a190b7ffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::drawLevel</definition>
+        <argsstring>()</argsstring>
+        <name>drawLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="24" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="485" bodyend="561"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a459931bc701b7df75967fc47e44e1c8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::saveLevel</definition>
+        <argsstring>()</argsstring>
+        <name>saveLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="696" bodyend="727"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a23c6ba3f06aa70c1470ed17c8bd5d425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::loadGame</definition>
+        <argsstring>()</argsstring>
+        <name>loadGame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="27" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="728" bodyend="781"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1aa7a2ce0bc681f84e984eb618a9f0ec6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::initBackground</definition>
+        <argsstring>()</argsstring>
+        <name>initBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="29" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="363" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1ade23e4dc0f772f8bbf64d09d6c02cc1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::drawBackground</definition>
+        <argsstring>()</argsstring>
+        <name>drawBackground</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="30" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="388" bodyend="424"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a0c03d50a52711e7a72d4e66eddc37fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::unloadLevel</definition>
+        <argsstring>()</argsstring>
+        <name>unloadLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="37" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="784" bodyend="863"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a957d07269ea7c7e30b66874f439e7b27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cScene::posValid</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>posValid</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="39" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="562" bodyend="568"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a3ef30ebb4ad0955593a92e131b681d1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cScene::touchBonus</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>touchBonus</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="40" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="570" bodyend="576"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a576a055805031088e12c85af26cce5b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::BonusCheck</definition>
+        <argsstring>(int x1, int y1, int x2, int y2)</argsstring>
+        <name>BonusCheck</name>
+        <param>
+          <type>int</type>
+          <declname>x1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="41" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="677" bodyend="692"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1af7219447361e2e151de1135cd627e1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::castlelation</definition>
+        <argsstring>()</argsstring>
+        <name>castlelation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="42" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="426" bodyend="481"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_scene_1a2c1dd4936d94dfc9a7a2bd27aae171aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cScene::updatePhysic</definition>
+        <argsstring>()</argsstring>
+        <name>updatePhysic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="45" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="56">
+        <label>cScene::START_POINT</label>
+        <link refid="structc_scene_1_1_s_t_a_r_t___p_o_i_n_t"/>
+      </node>
+      <node id="55">
+        <label>cScene::EXIT_POINT</label>
+        <link refid="structc_scene_1_1_e_x_i_t___p_o_i_n_t"/>
+      </node>
+      <node id="53">
+        <label>cScene</label>
+        <link refid="classc_scene"/>
+        <childnode refid="54" relation="usage">
+          <edgelabel>CASTLE</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>EXITPOINTS</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>STARTPOINTS</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>ifs</edgelabel>
+        </childnode>
+      </node>
+      <node id="54">
+        <label>cScene::CASTELSTR</label>
+        <link refid="structc_scene_1_1_c_a_s_t_e_l_s_t_r"/>
+      </node>
+      <node id="57">
+        <label>ifstream</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" line="14" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.h" bodystart="13" bodyend="107"/>
+    <listofallmembers>
+      <member refid="classc_scene_1a3aac35f8d4dc1664b7f42fb71e01e6b0" prot="public" virt="non-virtual"><scope>cScene</scope><name>back_T</name></member>
+      <member refid="classc_scene_1a36faa1954b44172798c6843af531ba4b" prot="public" virt="non-virtual"><scope>cScene</scope><name>back_type</name></member>
+      <member refid="classc_scene_1a709ef5a97d5565bc866b678d138bb0a9" prot="public" virt="non-virtual"><scope>cScene</scope><name>back_x</name></member>
+      <member refid="classc_scene_1a34a46ca7921aed55783398fff234dd1e" prot="public" virt="non-virtual"><scope>cScene</scope><name>back_y</name></member>
+      <member refid="classc_scene_1a6b2d1810b44c169a270280c54ff82f9d" prot="public" virt="non-virtual"><scope>cScene</scope><name>Background_Sky</name></member>
+      <member refid="classc_scene_1aa0a1add8b6188d544c4a9a1a1603ed71" prot="public" virt="non-virtual"><scope>cScene</scope><name>Background_Sky_Night</name></member>
+      <member refid="classc_scene_1a5799fd21de858fd0166418330acf7233" prot="public" virt="non-virtual"><scope>cScene</scope><name>BGCOLOR</name></member>
+      <member refid="classc_scene_1a619e7bd20b88e99eac3bf661d66a6dda" prot="public" virt="non-virtual"><scope>cScene</scope><name>BONUS</name></member>
+      <member refid="classc_scene_1a95b20336531a78c98054d5ccb61e1008" prot="public" virt="non-virtual"><scope>cScene</scope><name>Bonus_Kick_Mode</name></member>
+      <member refid="classc_scene_1aa24e90e007267c501c59d4def12259bf" prot="public" virt="non-virtual"><scope>cScene</scope><name>Bonus_Textures</name></member>
+      <member refid="classc_scene_1a576a055805031088e12c85af26cce5b7" prot="public" virt="non-virtual"><scope>cScene</scope><name>BonusCheck</name></member>
+      <member refid="classc_scene_1a5b528a51f6aca36c578003251fd96599" prot="public" virt="non-virtual"><scope>cScene</scope><name>bonusread</name></member>
+      <member refid="classc_scene_1aa1069f1a9e3701fa6d1c170f8f9b8c94" prot="public" virt="non-virtual"><scope>cScene</scope><name>CASTLE</name></member>
+      <member refid="classc_scene_1af23ec69c1dbfdbba4cc445a914bcb71f" prot="public" virt="non-virtual"><scope>cScene</scope><name>castled</name></member>
+      <member refid="classc_scene_1af7219447361e2e151de1135cd627e1fd" prot="public" virt="non-virtual"><scope>cScene</scope><name>castlelation</name></member>
+      <member refid="classc_scene_1a61d4e89cf2c8e232ac5aa25411753047" prot="public" virt="non-virtual"><scope>cScene</scope><name>COIN</name></member>
+      <member refid="classc_scene_1af306f88abede20003832ed00528a09e4" prot="public" virt="non-virtual"><scope>cScene</scope><name>COINcount</name></member>
+      <member refid="classc_scene_1a03d5fa1f3fcbc3e112d65441d3ebe6e9" prot="public" virt="non-virtual"><scope>cScene</scope><name>coinread</name></member>
+      <member refid="classc_scene_1a4e473ceffba7f3a8bc900a35021babd2" prot="public" virt="non-virtual"><scope>cScene</scope><name>cScene</name></member>
+      <member refid="classc_scene_1ade23e4dc0f772f8bbf64d09d6c02cc1e" prot="public" virt="non-virtual"><scope>cScene</scope><name>drawBackground</name></member>
+      <member refid="classc_scene_1a1bb50a806144b8029d5b681a190b7ffb" prot="public" virt="non-virtual"><scope>cScene</scope><name>drawLevel</name></member>
+      <member refid="classc_scene_1a79e17a078a1a6c410450a3bc0c93aee4" prot="public" virt="non-virtual"><scope>cScene</scope><name>EXITPOINTS</name></member>
+      <member refid="classc_scene_1a339fdfcc12a543df52c68de0f959c28b" prot="public" virt="non-virtual"><scope>cScene</scope><name>getParts</name></member>
+      <member refid="classc_scene_1a2416b38a9318900d482ac99cee5711f4" prot="public" virt="non-virtual"><scope>cScene</scope><name>HTiles</name></member>
+      <member refid="classc_scene_1a9f3d7fafbd095b7a73fb7f000ffe2e7f" prot="public" virt="non-virtual"><scope>cScene</scope><name>ifs</name></member>
+      <member refid="classc_scene_1aa7a2ce0bc681f84e984eb618a9f0ec6b" prot="public" virt="non-virtual"><scope>cScene</scope><name>initBackground</name></member>
+      <member refid="classc_scene_1a43085fc20e430f51a1166f5ed21a813d" prot="public" virt="non-virtual"><scope>cScene</scope><name>interpreteSceneLine</name></member>
+      <member refid="classc_scene_1a23c6ba3f06aa70c1470ed17c8bd5d425" prot="public" virt="non-virtual"><scope>cScene</scope><name>loadGame</name></member>
+      <member refid="classc_scene_1ad694440eaf6dc5c8c635ecd84433b120" prot="public" virt="non-virtual"><scope>cScene</scope><name>loadLevel</name></member>
+      <member refid="classc_scene_1ade2717bad444cd91300e493989a8d0d6" prot="public" virt="non-virtual"><scope>cScene</scope><name>nowlevel</name></member>
+      <member refid="classc_scene_1a3a99dcd8732b2921da573c7b6ad41b29" prot="public" virt="non-virtual"><scope>cScene</scope><name>partcount</name></member>
+      <member refid="classc_scene_1a9fb21e2b109ada6aff0b78d8af0a1bc0" prot="public" virt="non-virtual"><scope>cScene</scope><name>parts</name></member>
+      <member refid="classc_scene_1a957d07269ea7c7e30b66874f439e7b27" prot="public" virt="non-virtual"><scope>cScene</scope><name>posValid</name></member>
+      <member refid="classc_scene_1a9ef79972e92051ff2f22384f9b374e31" prot="public" virt="non-virtual"><scope>cScene</scope><name>RESTARTLevel</name></member>
+      <member refid="classc_scene_1a95157e6aea31e85f25190dc47891b7b6" prot="public" virt="non-virtual"><scope>cScene</scope><name>SAVE_SURFACE</name></member>
+      <member refid="classc_scene_1a459931bc701b7df75967fc47e44e1c8d" prot="public" virt="non-virtual"><scope>cScene</scope><name>saveLevel</name></member>
+      <member refid="classc_scene_1a41527c27b71527b72a17cd5efcb49a17" prot="public" virt="non-virtual"><scope>cScene</scope><name>SCREEN_RECT</name></member>
+      <member refid="classc_scene_1a3a5c1301740c4d797e59ef2305991a18" prot="public" virt="non-virtual"><scope>cScene</scope><name>STARTPOINTS</name></member>
+      <member refid="classc_scene_1a77af9e33fd1b82bb49f40f6640003dcc" prot="public" virt="non-virtual"><scope>cScene</scope><name>TEXTUREcount</name></member>
+      <member refid="classc_scene_1a0826557ef794131ad367be33ab63ae3d" prot="public" virt="non-virtual"><scope>cScene</scope><name>Textures</name></member>
+      <member refid="classc_scene_1ab63f2d93407ac2ccbca7784c8cf19d44" prot="public" virt="non-virtual"><scope>cScene</scope><name>TILE</name></member>
+      <member refid="classc_scene_1a11f83bbe551cc09b6aae7e0ff25bb907" prot="public" virt="non-virtual"><scope>cScene</scope><name>tileread</name></member>
+      <member refid="classc_scene_1a3ef30ebb4ad0955593a92e131b681d1f" prot="public" virt="non-virtual"><scope>cScene</scope><name>touchBonus</name></member>
+      <member refid="classc_scene_1a0c03d50a52711e7a72d4e66eddc37fdf" prot="public" virt="non-virtual"><scope>cScene</scope><name>unloadLevel</name></member>
+      <member refid="classc_scene_1a2c1dd4936d94dfc9a7a2bd27aae171aa" prot="public" virt="non-virtual"><scope>cScene</scope><name>updatePhysic</name></member>
+      <member refid="classc_scene_1a1ca4930f7dd6e338f70fc0ab70fac287" prot="public" virt="non-virtual"><scope>cScene</scope><name>VTiles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

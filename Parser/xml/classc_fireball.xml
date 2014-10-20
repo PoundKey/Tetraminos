@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_fireball" kind="class" prot="public">
+    <compoundname>cFireball</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_fireball_1ac0b9f6df3cedf6b13a18a6e295e842ab" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cFireball::FIREBALLS[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>FIREBALLS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="46" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1ac4afc208b01674bf5b0008ae43b4a323" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cFireball::online</definition>
+        <argsstring></argsstring>
+        <name>online</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="51" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1a2e2f14adeb98bd3a74bd7ea1297ab9f1" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cFireball::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="52" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1a1b83fa533abc0ad24157075edab2de34" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFireball::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="53" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1a4e3b1928db3e37212a3d507abf1c7c54" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFireball::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="53" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1a5cce90e66e11ab507ec7bd6fe9a0872f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cFireball::x_speed</definition>
+        <argsstring></argsstring>
+        <name>x_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="54" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1a59359e62b4ebeaf0c8af53ed6e59d72e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cFireball::y_speed</definition>
+        <argsstring></argsstring>
+        <name>y_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="54" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1a78f7b44ccaede090974588d510957f82" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cFireball::ani</definition>
+        <argsstring></argsstring>
+        <name>ani</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="54" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1abe7b8f4f0e1c1706616baa499ee7aa5a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cFireball::down_touch</definition>
+        <argsstring></argsstring>
+        <name>down_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="55" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fireball_1ab860bf0ad92d63f24cc3305c39269444" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cFireball::center_touch</definition>
+        <argsstring></argsstring>
+        <name>center_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="55" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_fireball_1a33c574b7114b2e2a7b3c073188e9416b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cFireball::cFireball</definition>
+        <argsstring>()</argsstring>
+        <name>cFireball</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="45" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="557" bodyend="564"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_fireball_1add24af003da1ef9eda3c8db16b7ed3fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool cFireball::init</definition>
+        <argsstring>(int _x, int _y, int dir)</argsstring>
+        <name>init</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="48" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="566" bodyend="579"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_fireball_1a8f92ff827523bbfb534e2e0602f83613" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cFireball::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="49" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.cpp" bodystart="580" bodyend="648"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" line="43" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/player.h" bodystart="42" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classc_fireball_1a78f7b44ccaede090974588d510957f82" prot="public" virt="non-virtual"><scope>cFireball</scope><name>ani</name></member>
+      <member refid="classc_fireball_1ab860bf0ad92d63f24cc3305c39269444" prot="public" virt="non-virtual"><scope>cFireball</scope><name>center_touch</name></member>
+      <member refid="classc_fireball_1a33c574b7114b2e2a7b3c073188e9416b" prot="public" virt="non-virtual"><scope>cFireball</scope><name>cFireball</name></member>
+      <member refid="classc_fireball_1abe7b8f4f0e1c1706616baa499ee7aa5a" prot="public" virt="non-virtual"><scope>cFireball</scope><name>down_touch</name></member>
+      <member refid="classc_fireball_1ac0b9f6df3cedf6b13a18a6e295e842ab" prot="public" virt="non-virtual"><scope>cFireball</scope><name>FIREBALLS</name></member>
+      <member refid="classc_fireball_1add24af003da1ef9eda3c8db16b7ed3fc" prot="public" virt="non-virtual"><scope>cFireball</scope><name>init</name></member>
+      <member refid="classc_fireball_1ac4afc208b01674bf5b0008ae43b4a323" prot="public" virt="non-virtual"><scope>cFireball</scope><name>online</name></member>
+      <member refid="classc_fireball_1a2e2f14adeb98bd3a74bd7ea1297ab9f1" prot="public" virt="non-virtual"><scope>cFireball</scope><name>rect</name></member>
+      <member refid="classc_fireball_1a8f92ff827523bbfb534e2e0602f83613" prot="public" virt="non-virtual"><scope>cFireball</scope><name>update</name></member>
+      <member refid="classc_fireball_1a1b83fa533abc0ad24157075edab2de34" prot="public" virt="non-virtual"><scope>cFireball</scope><name>x</name></member>
+      <member refid="classc_fireball_1a5cce90e66e11ab507ec7bd6fe9a0872f" prot="public" virt="non-virtual"><scope>cFireball</scope><name>x_speed</name></member>
+      <member refid="classc_fireball_1a4e3b1928db3e37212a3d507abf1c7c54" prot="public" virt="non-virtual"><scope>cFireball</scope><name>y</name></member>
+      <member refid="classc_fireball_1a59359e62b4ebeaf0c8af53ed6e59d72e" prot="public" virt="non-virtual"><scope>cFireball</scope><name>y_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

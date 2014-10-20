@@ -1,0 +1,1666 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="_global_8h" kind="file">
+    <compoundname>Global.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">SDL/SDL.h</includes>
+    <includes local="no">SDL/SDL_mixer.h</includes>
+    <includes local="no">SDL/SDL_image.h</includes>
+    <includes local="no">SDL/SDL_ttf.h</includes>
+    <includes local="no">SDL/SDL_opengl.h</includes>
+    <includes refid="_s_d_l__gfx_primitives_8h" local="yes">SDL_gfxPrimitives.h</includes>
+    <includes refid="_s_d_l__gfx_primitives__font_8h" local="yes">SDL_gfxPrimitives_font.h</includes>
+    <includes refid="main_8h" local="yes">main.h</includes>
+    <includes refid="levels_8h" local="yes">levels.h</includes>
+    <includes refid="functions_8h" local="yes">functions.h</includes>
+    <includes refid="player_8h" local="yes">player.h</includes>
+    <includes refid="bonus_8h" local="yes">bonus.h</includes>
+    <includes refid="menu_8h" local="yes">menu.h</includes>
+    <includes refid="enemy_8h" local="yes">enemy.h</includes>
+    <includes refid="particle_8h" local="yes">particle.h</includes>
+    <includes refid="gamepad_8h" local="yes">gamepad.h</includes>
+    <includedby refid="bonus_8cpp" local="yes">bonus.cpp</includedby>
+    <includedby refid="functions_8h" local="yes">functions.h</includedby>
+    <includedby refid="bowser_8cpp" local="yes">bowser.cpp</includedby>
+    <includedby refid="enemy_8cpp" local="yes">enemy.cpp</includedby>
+    <includedby refid="firecircle_8cpp" local="yes">firecircle.cpp</includedby>
+    <includedby refid="flybrett_8cpp" local="yes">flybrett.cpp</includedby>
+    <includedby refid="gamepad_8cpp" local="yes">gamepad.cpp</includedby>
+    <includedby refid="global_8cpp" local="yes">global.cpp</includedby>
+    <includedby refid="goomba_8cpp" local="yes">goomba.cpp</includedby>
+    <includedby refid="goombabig_8cpp" local="yes">goombabig.cpp</includedby>
+    <includedby refid="keyinput_8cpp" local="yes">keyinput.cpp</includedby>
+    <includedby refid="killerblume_8cpp" local="yes">killerblume.cpp</includedby>
+    <includedby refid="levels_8cpp" local="yes">levels.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="menu_8cpp" local="yes">menu.cpp</includedby>
+    <includedby refid="opengl_8cpp" local="yes">opengl.cpp</includedby>
+    <includedby refid="particle_8cpp" local="yes">particle.cpp</includedby>
+    <includedby refid="player_8cpp" local="yes">player.cpp</includedby>
+    <includedby refid="spiny_8cpp" local="yes">spiny.cpp</includedby>
+    <includedby refid="turtle_8cpp" local="yes">turtle.cpp</includedby>
+    <incdepgraph>
+      <node id="240">
+        <label>gamepad.h</label>
+        <link refid="gamepad_8h_source"/>
+      </node>
+      <node id="238">
+        <label>enemy.h</label>
+        <link refid="enemy_8h_source"/>
+      </node>
+      <node id="225">
+        <label>SDL/SDL_mixer.h</label>
+      </node>
+      <node id="221">
+        <label>stdlib.h</label>
+      </node>
+      <node id="223">
+        <label>fstream</label>
+      </node>
+      <node id="239">
+        <label>particle.h</label>
+        <link refid="particle_8h_source"/>
+      </node>
+      <node id="234">
+        <label>functions.h</label>
+        <link refid="functions_8h_source"/>
+        <childnode refid="220" relation="include">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>player.h</label>
+        <link refid="player_8h_source"/>
+      </node>
+      <node id="224">
+        <label>SDL/SDL.h</label>
+      </node>
+      <node id="228">
+        <label>SDL/SDL_opengl.h</label>
+      </node>
+      <node id="237">
+        <label>menu.h</label>
+        <link refid="menu_8h_source"/>
+      </node>
+      <node id="233">
+        <label>levels.h</label>
+        <link refid="levels_8h_source"/>
+      </node>
+      <node id="226">
+        <label>SDL/SDL_image.h</label>
+      </node>
+      <node id="230">
+        <label>math.h</label>
+      </node>
+      <node id="222">
+        <label>iostream</label>
+      </node>
+      <node id="229">
+        <label>SDL_gfxPrimitives.h</label>
+        <link refid="_s_d_l__gfx_primitives_8h_source"/>
+        <childnode refid="230" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>Global.h</label>
+        <link refid="Global.h"/>
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+        <childnode refid="223" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
+        </childnode>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+        <childnode refid="231" relation="include">
+        </childnode>
+        <childnode refid="232" relation="include">
+        </childnode>
+        <childnode refid="233" relation="include">
+        </childnode>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="236" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="231">
+        <label>SDL_gfxPrimitives_font.h</label>
+        <link refid="_s_d_l__gfx_primitives__font_8h_source"/>
+      </node>
+      <node id="232">
+        <label>main.h</label>
+        <link refid="main_8h_source"/>
+      </node>
+      <node id="227">
+        <label>SDL/SDL_ttf.h</label>
+      </node>
+      <node id="236">
+        <label>bonus.h</label>
+        <link refid="bonus_8h_source"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="242">
+        <label>functions.h</label>
+        <link refid="functions_8h_source"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>Global.h</label>
+        <link refid="Global.h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_h_u_d___s_t_r_u_c_t" prot="public">HUD_STRUCT</innerclass>
+    <innerclass refid="structs__music__archive" prot="public">s_music_archive</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_global_8h_1a75643d42ae09f02951d5d11d9b94428f" prot="public" static="no">
+        <name>CAPTION</name>
+        <initializer>&quot;MEGA MARIO&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="78" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1aeb696ed3736a3c9f76e7fd8193d3966f" prot="public" static="no">
+        <name>SCREEN_BPP</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="80" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a21151d72f7cc58ba09ce95ec2fdbfd14" prot="public" static="no">
+        <name>ER</name>
+        <initializer>cout&lt;&lt;&quot;Nix da !!!&quot;&lt;&lt;flush&lt;&lt;endl;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="84" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1ab36943a21e07b9223eb3307e1486eec1" prot="public" static="no">
+        <name>MAXSONGS</name>
+        <initializer>50</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="120" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a4717a319e124f2d0b9f2f6aa823bdca4" prot="public" static="no">
+        <name>PLAYSOUND1</name>
+        <param><defname>nr</defname></param>
+        <initializer>if(nosound)Mix_PlayChannel(1,SOUND[nr],0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="151" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a0389124f724f933786bd80b751f2d101" prot="public" static="no">
+        <name>PLAYSOUND2</name>
+        <param><defname>nr</defname></param>
+        <initializer>if(nosound)Mix_PlayChannel(2,SOUND[nr],0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="152" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a44f883084a45421c0797269010c41b67" prot="public" static="no">
+        <name>PLAYSOUND0</name>
+        <param><defname>nr</defname></param>
+        <initializer>if(nosound)Mix_PlayChannel(0,SOUND[nr],0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="153" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a7bbdbdcfece918fba0f794f7419cd6ac" prot="public" static="no">
+        <name>MAX_SOUNDS</name>
+        <initializer>20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="154" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1af3bd89b9a6b0d0528eff4fbbef83370a" prot="public" static="no">
+        <name>S_GROW</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="158" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a3b16ba23351194f22c3f22f153a9d7fd" prot="public" static="no">
+        <name>S_JUMP</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="159" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a6ed4b5aa2bba8c7658015d878853b1a8" prot="public" static="no">
+        <name>S_CRACK</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="160" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a94618971f49c7a304ca4b8db1be4cad2" prot="public" static="no">
+        <name>S_COIN</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="161" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a06b04940bb3d128841bef0abf639e2ce" prot="public" static="no">
+        <name>S_KICK</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="162" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a9b72237a05d51234c256534039e14fbf" prot="public" static="no">
+        <name>S_STOMP</name>
+        <initializer>5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="163" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a16f0a9ffd6cc135007a903ab5a5597f2" prot="public" static="no">
+        <name>S_FIREBALL</name>
+        <initializer>6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="164" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a7197344ee60d494e39a6f81aa215fd7b" prot="public" static="no">
+        <name>S_STAGE_CLEAR</name>
+        <initializer>7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="165" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a7ab2a9258ad15fe000350f8e8ae15244" prot="public" static="no">
+        <name>S_1UP</name>
+        <initializer>8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="166" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a6564482bb3c39e41b89826a1dbcafa51" prot="public" static="no">
+        <name>S_DIE</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="167" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a82878402930352ad2261f112655afc04" prot="public" static="no">
+        <name>S_GAMEOVER</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="168" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1afb9e07798b01476148a1545188d36119" prot="public" static="no">
+        <name>S_PAUSE</name>
+        <initializer>11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="169" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a7cfe6981ddc2c22b3814f701bdf87b28" prot="public" static="no">
+        <name>S_PIPE</name>
+        <initializer>12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="170" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a9f9951e8a4bf9d66053b0a6cfedba563" prot="public" static="no">
+        <name>S_FLAG</name>
+        <initializer>13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="171" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a977d8a3273667fe544cf8a0ac86c91a3" prot="public" static="no">
+        <name>S_BOWSERFALL</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="172" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1aa1be73974df3b9639eb884d2711a5de1" prot="public" static="no">
+        <name>S_SHRINK</name>
+        <initializer>15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="173" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a5b85a710cba3df13e9479fc7467f5f90" prot="public" static="no">
+        <name>S_OUTPUT</name>
+        <initializer>16</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="174" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1acb20b2fcb5a493d5f5d90c219e624fa2" prot="public" static="no">
+        <name>S_TOCK</name>
+        <initializer>17</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="175" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a049f5f88b1a0b4a39ff42be5a09bdae3" prot="public" static="no">
+        <name>S_STOMP2</name>
+        <initializer>18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="176" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1ac255cb6823e8c0f82324120991e2fedb" prot="public" static="no">
+        <name>S_CANNON</name>
+        <initializer>19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="177" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1a4a5f1a42c85fe0a45a7334d85ada3880" prot="public" static="no">
+        <name>ENEMYSPEED</name>
+        <initializer>-2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="182" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="_global_8h_1ab00fb3066176488a75434abd9b81db4a" prot="public" static="no">
+        <name>MAXENEMY</name>
+        <initializer>200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="183" column="9" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_global_8h_1a78fa3957d73de49cb81d047857504218" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* screen</definition>
+        <argsstring></argsstring>
+        <name>screen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="95" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a0ef8b5219d776593fd7e89236e154ad3" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* helpscreen</definition>
+        <argsstring></argsstring>
+        <name>helpscreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="96" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1abe98055fa1742552aeb885434a0d1138" prot="public" static="no" mutable="no">
+        <type>SDL_Surface *</type>
+        <definition>SDL_Surface* cheatscreen</definition>
+        <argsstring></argsstring>
+        <name>cheatscreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="97" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a6b57f01d3c576db5368dd0efc2f435a4" prot="public" static="no" mutable="no">
+        <type>SDL_Event</type>
+        <definition>SDL_Event event</definition>
+        <argsstring></argsstring>
+        <name>event</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="99" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1abf5bfa705e66ffc1ddaa6ce46c960873" prot="public" static="no" mutable="no">
+        <type>TTF_Font *</type>
+        <definition>TTF_Font* font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="101" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a4de8573bd7d63b4559b95263e0b45640" prot="public" static="no" mutable="no">
+        <type>Uint8 *</type>
+        <definition>Uint8* keys</definition>
+        <argsstring></argsstring>
+        <name>keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="103" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a4c118d4497138e5017f5c26812c8ca2a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double frame_multi</definition>
+        <argsstring></argsstring>
+        <name>frame_multi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="104" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ab5fb8057c8357bfd477d57bd1787a56e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Real_Fullscreen</definition>
+        <argsstring></argsstring>
+        <name>Real_Fullscreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="105" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a5ae2be6326cda71c91db0848daa8c9d1" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* cheatcode</definition>
+        <argsstring></argsstring>
+        <name>cheatcode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="106" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a2a73b8972e7ee71cc7580452888bd930" prot="public" static="no" mutable="no">
+        <type>ofstream</type>
+        <definition>ofstream out_logfile</definition>
+        <argsstring></argsstring>
+        <name>out_logfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="108" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a7676f9c704acc16615bbb1da02020646" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool HighQualityMusic_available</definition>
+        <argsstring></argsstring>
+        <name>HighQualityMusic_available</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="119" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ac5df215b73e30021b7f5fc7a7d247f87" prot="public" static="no" mutable="no">
+        <type><ref refid="structs__music__archive" kindref="compound">s_music_archive</ref></type>
+        <definition>s_music_archive MusicArchive</definition>
+        <argsstring></argsstring>
+        <name>MusicArchive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="128" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a70c2d06784cbd8b90e27b121bd2d0922" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_h_u_d___s_t_r_u_c_t" kindref="compound">HUD_STRUCT</ref></type>
+        <definition>HUD_STRUCT HUD</definition>
+        <argsstring></argsstring>
+        <name>HUD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="131" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a59c3bba4b17cd5e19f149ea175fa6989" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int WIDTH</definition>
+        <argsstring></argsstring>
+        <name>WIDTH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="133" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a38f4644d616508a835e846b6e959aad1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GL_Width</definition>
+        <argsstring></argsstring>
+        <name>GL_Width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="133" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a4e81322eb1085aca9cd7c5527f5e4c6b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int HEIGHT</definition>
+        <argsstring></argsstring>
+        <name>HEIGHT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="134" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a3244bbf06a85c5da8e356d82e386364b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GL_Height</definition>
+        <argsstring></argsstring>
+        <name>GL_Height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="134" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1abd63c841d9af51da87a50e8bf50c5729" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool NoFrameCheck</definition>
+        <argsstring></argsstring>
+        <name>NoFrameCheck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="137" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a520d5bf19a4fb31c15dd1200368b058c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gameStarted</definition>
+        <argsstring></argsstring>
+        <name>gameStarted</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="139" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ae1ea5dc7f1ecb80bd9f245e03bc3b60a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gameStartedVirtual</definition>
+        <argsstring></argsstring>
+        <name>gameStartedVirtual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="139" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1aaa4603b1029f3e414a74d218c9b6d118" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool pixelation</definition>
+        <argsstring></argsstring>
+        <name>pixelation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="139" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a203d8dcc3d92907fbe7ee6f03e170677" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool show_blood</definition>
+        <argsstring></argsstring>
+        <name>show_blood</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="139" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1adc8300f08a2c46de91d3dee2a1e488a5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cheater</definition>
+        <argsstring></argsstring>
+        <name>cheater</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="139" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a82b1f82ab0c0c9eb0893a564576617ab" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cheats_enabled</definition>
+        <argsstring></argsstring>
+        <name>cheats_enabled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="139" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a21957c5761e4590b35e2db3e4ac132f2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nosound</definition>
+        <argsstring></argsstring>
+        <name>nosound</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="140" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a7f88805134a6b5877dfdd0bfbc71ea54" prot="public" static="no" mutable="no">
+        <type>SDL_Color</type>
+        <definition>SDL_Color HUDColor</definition>
+        <argsstring></argsstring>
+        <name>HUDColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="143" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a11a7562575f3a2ab082e3ca149facaf4" prot="public" static="no" mutable="no">
+        <type>SDL_Color</type>
+        <definition>SDL_Color HUDColorbg</definition>
+        <argsstring></argsstring>
+        <name>HUDColorbg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="144" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a21edde480214d91e9a852317411b1cee" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect tmp_rect</definition>
+        <argsstring></argsstring>
+        <name>tmp_rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="146" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/levels.cpp" bodystart="483" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1adab280c65b666919cb954e02cddfccb6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cam_x</definition>
+        <argsstring></argsstring>
+        <name>cam_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="147" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1acccedd1c50f043bd2213af1b025bc64e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cam_y</definition>
+        <argsstring></argsstring>
+        <name>cam_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="147" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1abcf4e4513241b0bcee6e83243a22f53a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bonus_activ</definition>
+        <argsstring></argsstring>
+        <name>bonus_activ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="147" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a242408258c35c595478b51607d812ffc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int musicvolume</definition>
+        <argsstring></argsstring>
+        <name>musicvolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="155" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a0cad5f3e25e5273c70f2e64a4703983d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int soundvolume</definition>
+        <argsstring></argsstring>
+        <name>soundvolume</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="155" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ad3c8b4ab6a1939f819572ac269b23e8d" prot="public" static="no" mutable="no">
+        <type>Mix_Chunk *</type>
+        <definition>Mix_Chunk* SOUND[MAX_SOUNDS]</definition>
+        <argsstring>[MAX_SOUNDS]</argsstring>
+        <name>SOUND</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="156" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a6779c300146cfd0e9f17f6699764a21c" prot="public" static="no" mutable="no">
+        <type>Uint32</type>
+        <definition>Uint32 magenta</definition>
+        <argsstring></argsstring>
+        <name>magenta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="180" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a968482ddda860efec2e69dd8db1ae4be" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GOOMBAcount</definition>
+        <argsstring></argsstring>
+        <name>GOOMBAcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="184" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ac35de0280408a3af182648cc569bb1e0" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_goomba" kindref="compound">cGoomba</ref> *</type>
+        <definition>cGoomba* GOOMBA[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>GOOMBA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="185" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a359608d8ec5536ac582238a936d99d5a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int GOOMBABIGcount</definition>
+        <argsstring></argsstring>
+        <name>GOOMBABIGcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="186" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a60e3bfea99a71858cf87a51ac4a9ef7d" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_goomba_big" kindref="compound">cGoombaBig</ref> *</type>
+        <definition>cGoombaBig* GOOMBABIG[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>GOOMBABIG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="187" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a2679acd8d57c4370bd251d353ea4f46c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TURTLEcount</definition>
+        <argsstring></argsstring>
+        <name>TURTLEcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="188" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1abba366c912ce7341304dbd6c16927702" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_turtle" kindref="compound">cTurtle</ref> *</type>
+        <definition>cTurtle* TURTLE[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>TURTLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="189" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a3db3afd3e67bc856cc15cfa42bc025fb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TURTLEFLYcount</definition>
+        <argsstring></argsstring>
+        <name>TURTLEFLYcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="190" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a5991af91070af57e1d34e9ec0c2f8c6b" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_turtle_fly" kindref="compound">cTurtleFly</ref> *</type>
+        <definition>cTurtleFly* TURTLEFLY[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>TURTLEFLY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="191" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ab9816dc57337cf3a08808f4844680f7a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SPINYcount</definition>
+        <argsstring></argsstring>
+        <name>SPINYcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="192" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a30774e340b7a38c29cb04cc7b5c7b0ea" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_spiny" kindref="compound">cSpiny</ref> *</type>
+        <definition>cSpiny* SPINY[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>SPINY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="193" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a4f499c38a89f85c77e4dfff046ebd231" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int FIRECIRCLEcount</definition>
+        <argsstring></argsstring>
+        <name>FIRECIRCLEcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="194" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a903a7748b10fadb880253d71c34799fc" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_fire_circle" kindref="compound">cFireCircle</ref> *</type>
+        <definition>cFireCircle* FIRECIRCLE[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>FIRECIRCLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="195" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a0950bb4ee6c5efc1b11d6f8d778b73d3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CANNONcount</definition>
+        <argsstring></argsstring>
+        <name>CANNONcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="196" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a1538a93f19f404cfeb3a3abe99774447" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_cannon" kindref="compound">cCannon</ref> *</type>
+        <definition>cCannon* CANNON[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>CANNON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="197" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1aebe828602b426fecd654d441c45a8802" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int KILLERBLUMEcount</definition>
+        <argsstring></argsstring>
+        <name>KILLERBLUMEcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="198" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1aefb9a642558b7c0eff35260f6160ad97" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_killer_blume" kindref="compound">cKillerBlume</ref> *</type>
+        <definition>cKillerBlume* KILLERBLUME[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>KILLERBLUME</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="199" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ab79e1223925d5b4195b95bdf682c1c78" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BRETTcount</definition>
+        <argsstring></argsstring>
+        <name>BRETTcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="200" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a7bd6d73cca1390bf32044dbd3395cba1" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_brett" kindref="compound">cBrett</ref> *</type>
+        <definition>cBrett* BRETT[MAXENEMY]</definition>
+        <argsstring>[MAXENEMY]</argsstring>
+        <name>BRETT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="201" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a4c869d58f57deb03276fc855054c9919" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_scene" kindref="compound">cScene</ref> *</type>
+        <definition>cScene* LEVEL</definition>
+        <argsstring></argsstring>
+        <name>LEVEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="203" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a562579ec90ef8c65b72fc80c0cc3f6cb" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_player" kindref="compound">cPlayer</ref> *</type>
+        <definition>cPlayer* PLAYER</definition>
+        <argsstring></argsstring>
+        <name>PLAYER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="204" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a9b62a9291c6426e74bb6dd051476e0df" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_bonus" kindref="compound">cBonus</ref> *</type>
+        <definition>cBonus* BONUS_DYNAMIC[5]</definition>
+        <argsstring>[5]</argsstring>
+        <name>BONUS_DYNAMIC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="205" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a1cf2c0f7203abdafec803a3b6d71887f" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_crack" kindref="compound">cCrack</ref> *</type>
+        <definition>cCrack* CRACK</definition>
+        <argsstring></argsstring>
+        <name>CRACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="206" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1abc54e16b83e51052b4e2d673ecb28b00" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_glidder" kindref="compound">cGlidder</ref> *</type>
+        <definition>cGlidder* GLIDDER</definition>
+        <argsstring></argsstring>
+        <name>GLIDDER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="207" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a15e76a53256080be791ae98fe41ab455" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_score" kindref="compound">cScore</ref> *</type>
+        <definition>cScore* SCORE</definition>
+        <argsstring></argsstring>
+        <name>SCORE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="208" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a045af5efb0f5c4301ae93d5e8369d771" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_fire" kindref="compound">cFire</ref> *</type>
+        <definition>cFire* FIRE</definition>
+        <argsstring></argsstring>
+        <name>FIRE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="209" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1aa58c34a820d4ac0ee2e61fa3659d7f27" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_bowser" kindref="compound">cBowser</ref> *</type>
+        <definition>cBowser* BOWSER</definition>
+        <argsstring></argsstring>
+        <name>BOWSER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="210" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a2581c48f51785c5e949f80844113add6" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_fireball" kindref="compound">cFireball</ref> *</type>
+        <definition>cFireball* FIREBALL[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>FIREBALL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="211" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1ac81e03e04c6dcd24d4d0f7bd2cac56e7" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_blood" kindref="compound">cBlood</ref> *</type>
+        <definition>cBlood* BLOOD_GENERATOR</definition>
+        <argsstring></argsstring>
+        <name>BLOOD_GENERATOR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="212" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_global_8h_1a0886e7bf02856bd6bc3815514ed643df" prot="public" static="no" mutable="no">
+        <type><ref refid="classc_gamepad" kindref="compound">cGamepad</ref> *</type>
+        <definition>cGamepad* Gamepad</definition>
+        <argsstring></argsstring>
+        <name>Gamepad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="213" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_global_8h_1ac45a6723f7a72b6a80fd0d0c84e17d8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadGlobalSprites</definition>
+        <argsstring>()</argsstring>
+        <name>loadGlobalSprites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="89" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="89" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="_global_8h_1ac8cde2b741b5b079ce60d3973c7ef381" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void unloadGlobalSprites</definition>
+        <argsstring>()</argsstring>
+        <name>unloadGlobalSprites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="90" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="153" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="_global_8h_1a729c8a0b458c87aee4700edd5bff3dfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void THEGAMEENDSHERE</definition>
+        <argsstring>()</argsstring>
+        <name>THEGAMEENDSHERE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="91" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="161" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="_global_8h_1a715a7c8a61eb2ebfbf1399d53225194f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void instruct</definition>
+        <argsstring>(char *path)</argsstring>
+        <name>instruct</name>
+        <param>
+          <type>char *</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="92" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/global.cpp" bodystart="339" bodyend="366"/>
+      </memberdef>
+      <memberdef kind="function" id="_global_8h_1a1bbe22bbd6a5c6e7529d1a3cb815251d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drawGLscreen</definition>
+        <argsstring>()</argsstring>
+        <name>drawGLscreen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="93" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/opengl.cpp" bodystart="65" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="_global_8h_1ad79d7a80669f607ed4889f9eee67dd64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitOpenGL</definition>
+        <argsstring>(void)</argsstring>
+        <name>InitOpenGL</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h" line="94" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/opengl.cpp" bodystart="5" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>Mega<sp/>Mario<sp/>SRC</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>created:<sp/><sp/><sp/><sp/>2005/09/18</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>created:<sp/><sp/><sp/><sp/>18:9:2005<sp/><sp/><sp/>10:13</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>author:<sp/><sp/><sp/><sp/><sp/>Jens<sp/>Wellmann<sp/>(c)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__GLOBAL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__GLOBAL_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//C++&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//#ifndef<sp/>__unix__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//#endif<sp/>//not<sp/>needed<sp/>anymore</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__GNUC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:4244)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:4800)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:4154)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:4305)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:4018)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:4018)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>warning(disable:4996)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::flush;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::ifstream;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::fstream;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::ofstream;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::cout;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::endl;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::iostream;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::stringstream;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::ios;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(<sp/>_MSC_VER<sp/>)<sp/>&amp;&amp;<sp/>_MSC_VER<sp/>&lt;<sp/>1400<sp/>//<sp/>no<sp/>Visual<sp/>Studio<sp/>8<sp/>and<sp/>higher</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::find_if;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//SDL&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL/SDL.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL/SDL_mixer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL/SDL_image.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL/SDL_ttf.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SDL/SDL_opengl.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SDL_gfxPrimitives.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;SDL_gfxPrimitives_font.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//Jensen&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;main.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;levels.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;functions.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;player.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;bonus.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;menu.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;enemy.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;particle.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;gamepad.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="comment">//#define<sp/>Use_OPENGL</highlight></codeline>
+<codeline lineno="76"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CAPTION<sp/>&quot;MEGA<sp/>MARIO&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SCREEN_BPP<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ER<sp/>cout&lt;&lt;&quot;Nix<sp/>da<sp/>!!!&quot;&lt;&lt;flush&lt;&lt;endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadGlobalSprites();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>unloadGlobalSprites();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>THEGAMEENDSHERE();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>instruct(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>path);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawGLscreen();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitOpenGL(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>SDL_Surface<sp/>*screen;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>SDL_Surface<sp/>*helpscreen;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>SDL_Surface<sp/>*cheatscreen;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>SDL_Event<sp/>event;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>TTF_Font*<sp/>font;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>Uint8<sp/>*keys;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>frame_multi;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Real_Fullscreen;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>cheatcode;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>ofstream<sp/>out_logfile;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="struct_h_u_d___s_t_r_u_c_t" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_h_u_d___s_t_r_u_c_t" kindref="compound">HUD_STRUCT</ref></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>score;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lifes;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>coins;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>HighQualityMusic_available;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXSONGS<sp/>50</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="structs__music__archive" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structs__music__archive" kindref="compound">s_music_archive</ref></highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>Mix_Music<sp/>*song[MAXSONGS];</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>name[MAXSONGS];</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>allocatecount;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>currentsong;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="structs__music__archive" kindref="compound">s_music_archive</ref><sp/>MusicArchive;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="struct_h_u_d___s_t_r_u_c_t" kindref="compound">HUD_STRUCT</ref><sp/>HUD;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>WIDTH,GL_Width;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>HEIGHT,GL_Height;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__unix__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>NoFrameCheck;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>gameStarted,gameStartedVirtual,pixelation,show_blood,cheater,cheats_enabled;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nosound;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>SDL_Color<sp/>HUDColor;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>SDL_Color<sp/>HUDColorbg;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>SDL_Rect<sp/>tmp_rect;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>cam_x,cam_y,bonus_activ;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">//SDL_MapRGB(screen-&gt;format,255,0,0)</highlight></codeline>
+<codeline lineno="150"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLAYSOUND1(nr)<sp/>if(nosound)Mix_PlayChannel(1,SOUND[nr],0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLAYSOUND2(nr)<sp/>if(nosound)Mix_PlayChannel(2,SOUND[nr],0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PLAYSOUND0(nr)<sp/>if(nosound)Mix_PlayChannel(0,SOUND[nr],0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_SOUNDS<sp/>20</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>musicvolume,soundvolume;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>Mix_Chunk<sp/>*SOUND[MAX_SOUNDS];</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_GROW<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_JUMP<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_CRACK<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_COIN<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_KICK<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_STOMP<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_FIREBALL<sp/>6</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_STAGE_CLEAR<sp/>7</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_1UP<sp/>8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_DIE<sp/>9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_GAMEOVER<sp/>10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_PAUSE<sp/>11</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_PIPE<sp/>12</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_FLAG<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_BOWSERFALL<sp/>14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_SHRINK<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_OUTPUT<sp/>16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_TOCK<sp/>17</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_STOMP2<sp/>18</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>S_CANNON<sp/>19</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/>Uint32<sp/>magenta;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ENEMYSPEED<sp/>-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAXENEMY<sp/>200</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>GOOMBAcount;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_goomba" kindref="compound">cGoomba</ref><sp/>*GOOMBA[MAXENEMY];</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>GOOMBABIGcount;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_goomba_big" kindref="compound">cGoombaBig</ref><sp/>*GOOMBABIG[5];</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TURTLEcount;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_turtle" kindref="compound">cTurtle</ref><sp/>*TURTLE[MAXENEMY];</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>TURTLEFLYcount;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_turtle_fly" kindref="compound">cTurtleFly</ref><sp/>*TURTLEFLY[MAXENEMY];</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SPINYcount;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_spiny" kindref="compound">cSpiny</ref><sp/>*SPINY[MAXENEMY];</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>FIRECIRCLEcount;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_fire_circle" kindref="compound">cFireCircle</ref><sp/>*FIRECIRCLE[MAXENEMY];</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>CANNONcount;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_cannon" kindref="compound">cCannon</ref><sp/>*CANNON[MAXENEMY];</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>KILLERBLUMEcount;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_killer_blume" kindref="compound">cKillerBlume</ref><sp/>*KILLERBLUME[MAXENEMY];</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>BRETTcount;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_brett" kindref="compound">cBrett</ref><sp/>*BRETT[MAXENEMY];</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_scene" kindref="compound">cScene</ref><sp/>*LEVEL;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_player" kindref="compound">cPlayer</ref><sp/>*PLAYER;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_bonus" kindref="compound">cBonus</ref>*<sp/>BONUS_DYNAMIC[5];</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_crack" kindref="compound">cCrack</ref><sp/>*CRACK;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_glidder" kindref="compound">cGlidder</ref><sp/>*GLIDDER;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_score" kindref="compound">cScore</ref>*<sp/>SCORE;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_fire" kindref="compound">cFire</ref>*<sp/>FIRE;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_bowser" kindref="compound">cBowser</ref>*<sp/>BOWSER;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_fireball" kindref="compound">cFireball</ref><sp/>*FIREBALL[2];</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_blood" kindref="compound">cBlood</ref><sp/>*BLOOD_GENERATOR;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/><ref refid="classc_gamepad" kindref="compound">cGamepad</ref><sp/>*Gamepad;</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MAX_PATH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_PATH<sp/>PATH_MAX</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DATADIR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATADIR<sp/>&quot;data/&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/Global.h"/>
+  </compounddef>
+</doxygen>

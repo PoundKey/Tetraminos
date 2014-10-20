@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_fire_circle" kind="class" prot="public">
+    <compoundname>cFireCircle</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_fire_circle_1a7aecf6e1fdcb8fd1dc2922e2941e8fd2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFireCircle::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="110" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_circle_1a461eca2cf039f6f08fce797afd145006" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFireCircle::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="110" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_circle_1af323be1305ece2e65d20096dd3576c7c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cFireCircle::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="110" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_circle_1ac3b1c6f2014738637ba9fcf5a8230df2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cFireCircle::dir_x</definition>
+        <argsstring></argsstring>
+        <name>dir_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="111" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_circle_1a07d827d89eae7c8ff9fb0e1cd674121d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cFireCircle::dir_y</definition>
+        <argsstring></argsstring>
+        <name>dir_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="111" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_circle_1acd0d22e4b51d17009e3a5544e7c3a931" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cFireCircle::angle</definition>
+        <argsstring></argsstring>
+        <name>angle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="111" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_circle_1a104b3215f0bec44c11eab7b0ccfe985f" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cFireCircle::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="112" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_fire_circle_1aafed9c40340a2ee615f4f88ddde67d34" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cFireCircle::counta2</definition>
+        <argsstring></argsstring>
+        <name>counta2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="113" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_fire_circle_1aac2fcaa0309c3b42ec7fde24893d6013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cFireCircle::cFireCircle</definition>
+        <argsstring>(int _x, int _y, int _size)</argsstring>
+        <name>cFireCircle</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="107" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/firecircle.cpp" bodystart="11" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_fire_circle_1a10af62090b7305e8fddf5c8a35fa4da2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cFireCircle::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="109" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/firecircle.cpp" bodystart="19" bodyend="51"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="105" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="104" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classc_fire_circle_1acd0d22e4b51d17009e3a5544e7c3a931" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>angle</name></member>
+      <member refid="classc_fire_circle_1aac2fcaa0309c3b42ec7fde24893d6013" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>cFireCircle</name></member>
+      <member refid="classc_fire_circle_1aafed9c40340a2ee615f4f88ddde67d34" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>counta2</name></member>
+      <member refid="classc_fire_circle_1ac3b1c6f2014738637ba9fcf5a8230df2" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>dir_x</name></member>
+      <member refid="classc_fire_circle_1a07d827d89eae7c8ff9fb0e1cd674121d" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>dir_y</name></member>
+      <member refid="classc_fire_circle_1a104b3215f0bec44c11eab7b0ccfe985f" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>rect</name></member>
+      <member refid="classc_fire_circle_1af323be1305ece2e65d20096dd3576c7c" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>size</name></member>
+      <member refid="classc_fire_circle_1a10af62090b7305e8fddf5c8a35fa4da2" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>update</name></member>
+      <member refid="classc_fire_circle_1a7aecf6e1fdcb8fd1dc2922e2941e8fd2" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>x</name></member>
+      <member refid="classc_fire_circle_1a461eca2cf039f6f08fce797afd145006" prot="public" virt="non-virtual"><scope>cFireCircle</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

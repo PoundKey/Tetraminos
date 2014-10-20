@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_cannon" kind="class" prot="public">
+    <compoundname>cCannon</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_cannon_1a2d83957f36235eae6c3cff0560563704" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cCannon::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="122" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_cannon_1a9eb33c531cdaae4c5a3d17ba18ac93ed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cCannon::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="122" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_cannon_1a99403d9141849ce213d625e3a785c42e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cCannon::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="123" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_cannon_1a313bbde69255066e100ea3034e848246" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cCannon::bullet_x</definition>
+        <argsstring></argsstring>
+        <name>bullet_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="124" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_cannon_1affb1423f3a3b1b3253420ed7dcca0785" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cCannon::bullet_y</definition>
+        <argsstring></argsstring>
+        <name>bullet_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="124" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_cannon_1abe97b543f30ed6efdda7c8182412fd83" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cCannon::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="125" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_cannon_1adc58302672fdfef6b42272cfe3a4c07b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cCannon::die</definition>
+        <argsstring></argsstring>
+        <name>die</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="125" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_cannon_1a8b9941739582988f123cbb899ced2b55" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cCannon::updating</definition>
+        <argsstring></argsstring>
+        <name>updating</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="126" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_cannon_1a5ab0a62503aad1e4a4b4cab472f2f40b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cCannon::cCannon</definition>
+        <argsstring>(int _x, int _y)</argsstring>
+        <name>cCannon</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="119" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/firecircle.cpp" bodystart="62" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_cannon_1a575156f97213992f14431a30f6c42c8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cCannon::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="121" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/firecircle.cpp" bodystart="70" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="117" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="116" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classc_cannon_1a313bbde69255066e100ea3034e848246" prot="public" virt="non-virtual"><scope>cCannon</scope><name>bullet_x</name></member>
+      <member refid="classc_cannon_1affb1423f3a3b1b3253420ed7dcca0785" prot="public" virt="non-virtual"><scope>cCannon</scope><name>bullet_y</name></member>
+      <member refid="classc_cannon_1a5ab0a62503aad1e4a4b4cab472f2f40b" prot="public" virt="non-virtual"><scope>cCannon</scope><name>cCannon</name></member>
+      <member refid="classc_cannon_1a99403d9141849ce213d625e3a785c42e" prot="public" virt="non-virtual"><scope>cCannon</scope><name>count</name></member>
+      <member refid="classc_cannon_1adc58302672fdfef6b42272cfe3a4c07b" prot="public" virt="non-virtual"><scope>cCannon</scope><name>die</name></member>
+      <member refid="classc_cannon_1abe97b543f30ed6efdda7c8182412fd83" prot="public" virt="non-virtual"><scope>cCannon</scope><name>dir</name></member>
+      <member refid="classc_cannon_1a575156f97213992f14431a30f6c42c8c" prot="public" virt="non-virtual"><scope>cCannon</scope><name>update</name></member>
+      <member refid="classc_cannon_1a8b9941739582988f123cbb899ced2b55" prot="public" virt="non-virtual"><scope>cCannon</scope><name>updating</name></member>
+      <member refid="classc_cannon_1a2d83957f36235eae6c3cff0560563704" prot="public" virt="non-virtual"><scope>cCannon</scope><name>x</name></member>
+      <member refid="classc_cannon_1a9eb33c531cdaae4c5a3d17ba18ac93ed" prot="public" virt="non-virtual"><scope>cCannon</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

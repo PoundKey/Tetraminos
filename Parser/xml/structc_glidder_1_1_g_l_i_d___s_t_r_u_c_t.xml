@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t" kind="struct" prot="public">
+    <compoundname>cGlidder::GLID_STRUCT</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1aef545dd0df4649814f13b05bda169400" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cGlidder::GLID_STRUCT::y_speed</definition>
+        <argsstring></argsstring>
+        <name>y_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="63" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1a7de4a8432ae5e99af4225c0ced44c895" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cGlidder::GLID_STRUCT::x_speed</definition>
+        <argsstring></argsstring>
+        <name>x_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="63" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1af4583c8951c3833457b34bf591cd2725" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cGlidder::GLID_STRUCT::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="64" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1ab3b263c4572b8d185f2fa89f8048ed7a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cGlidder::GLID_STRUCT::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="64" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1a8e80e374898bb72627aff4cb696a56de" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cGlidder::GLID_STRUCT::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="65" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" line="62" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/bonus.h" bodystart="61" bodyend="66"/>
+    <listofallmembers>
+      <member refid="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1a8e80e374898bb72627aff4cb696a56de" prot="public" virt="non-virtual"><scope>cGlidder::GLID_STRUCT</scope><name>count</name></member>
+      <member refid="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1af4583c8951c3833457b34bf591cd2725" prot="public" virt="non-virtual"><scope>cGlidder::GLID_STRUCT</scope><name>x</name></member>
+      <member refid="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1a7de4a8432ae5e99af4225c0ced44c895" prot="public" virt="non-virtual"><scope>cGlidder::GLID_STRUCT</scope><name>x_speed</name></member>
+      <member refid="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1ab3b263c4572b8d185f2fa89f8048ed7a" prot="public" virt="non-virtual"><scope>cGlidder::GLID_STRUCT</scope><name>y</name></member>
+      <member refid="structc_glidder_1_1_g_l_i_d___s_t_r_u_c_t_1aef545dd0df4649814f13b05bda169400" prot="public" virt="non-virtual"><scope>cGlidder::GLID_STRUCT</scope><name>y_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

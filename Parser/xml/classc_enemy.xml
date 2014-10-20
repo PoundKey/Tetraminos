@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classc_enemy" kind="class" prot="public">
+    <compoundname>cEnemy</compoundname>
+    <derivedcompoundref refid="classc_goomba" prot="public" virt="non-virtual">cGoomba</derivedcompoundref>
+    <derivedcompoundref refid="classc_goomba_big" prot="public" virt="non-virtual">cGoombaBig</derivedcompoundref>
+    <derivedcompoundref refid="classc_spiny" prot="public" virt="non-virtual">cSpiny</derivedcompoundref>
+    <derivedcompoundref refid="classc_turtle" prot="public" virt="non-virtual">cTurtle</derivedcompoundref>
+    <derivedcompoundref refid="classc_turtle_fly" prot="public" virt="non-virtual">cTurtleFly</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classc_enemy_1adb32067fcfc51dd19d2505af4fd1ed40" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::scoring</definition>
+        <argsstring></argsstring>
+        <name>scoring</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="25" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1aa04d0a92d0bc248452124baff543ceca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::H</definition>
+        <argsstring></argsstring>
+        <name>H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a57e5514f538de84533b9974683a2847f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::W</definition>
+        <argsstring></argsstring>
+        <name>W</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1aa9769b2dbb121388e7a6c68ba648cb44" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::dir</definition>
+        <argsstring></argsstring>
+        <name>dir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1abd9666583c7a384298397b5eec383aa6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::speed</definition>
+        <argsstring></argsstring>
+        <name>speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="26" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a0e85969c0340180542c3e710141625e7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cEnemy::down_touch</definition>
+        <argsstring></argsstring>
+        <name>down_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="28" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a7a909263d0b4e60499d9244e90396129" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cEnemy::left_touch</definition>
+        <argsstring></argsstring>
+        <name>left_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="28" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1aab15da51d678192dc3ab06e6b037cb98" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cEnemy::right_touch</definition>
+        <argsstring></argsstring>
+        <name>right_touch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="28" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a33bf693a2332448380c6cd6a90d912d9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cEnemy::dead</definition>
+        <argsstring></argsstring>
+        <name>dead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="28" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a9657c7559a8746c9f71ea12d6837ea7f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cEnemy::dying</definition>
+        <argsstring></argsstring>
+        <name>dying</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="29" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a3f7570bc4fedef4a8fb60908161d44e3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cEnemy::y_speed</definition>
+        <argsstring></argsstring>
+        <name>y_speed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="31" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a1737e0cf715ac8628c3b7ec40d9d6c36" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1af5fb882d22d1d16179675f115586e368" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a9c7ad2992fc5059f8423915a1403e22e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::DEATHcount</definition>
+        <argsstring></argsstring>
+        <name>DEATHcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="32" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a7dc52f3ab092c60457ac8058dcf49934" prot="public" static="no" mutable="no">
+        <type>SDL_Rect</type>
+        <definition>SDL_Rect cEnemy::rect</definition>
+        <argsstring></argsstring>
+        <name>rect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="33" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1adc4cb1c3aa049e0dfa0ee97e00744f96" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::walkcount</definition>
+        <argsstring></argsstring>
+        <name>walkcount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="35" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1a003e15ffccf6e452346022e3d252d259" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::walkcount2</definition>
+        <argsstring></argsstring>
+        <name>walkcount2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="35" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classc_enemy_1afce148cf9d214fcac58519406164bd4b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cEnemy::walkadd</definition>
+        <argsstring></argsstring>
+        <name>walkadd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="35" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classc_enemy_1aba356ad9f8eecfa4865ba8dca5cf9408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>cEnemy::cEnemy</definition>
+        <argsstring>(int _x, int _y)</argsstring>
+        <name>cEnemy</name>
+        <param>
+          <type>int</type>
+          <declname>_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>_y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="11" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="12" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1a27804f111e0581503ba38f341aba18f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cEnemy::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="13" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="32" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1a4429e5ae0936da6d9ec63eac96b178c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cEnemy::MakeMyWalk</definition>
+        <argsstring>()</argsstring>
+        <name>MakeMyWalk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="15" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="132" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1ac0fba8e404a517668470400f425d8425" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cEnemy::die</definition>
+        <argsstring>()</argsstring>
+        <name>die</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="16" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="98" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1a8000a954f44eb0208559f6a02d5db795" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cEnemy::add_update</definition>
+        <argsstring>()</argsstring>
+        <name>add_update</name>
+        <reimplementedby refid="classc_goomba_1a3c9a9bdf5e9a9c7177f1a72a2746b1f9">add_update</reimplementedby>
+        <reimplementedby refid="classc_goomba_big_1a11ae7bfe38d9226eb9a5a03b5aa3454b">add_update</reimplementedby>
+        <reimplementedby refid="classc_spiny_1abb1eb28a0efb902dc8887329a8e87da4">add_update</reimplementedby>
+        <reimplementedby refid="classc_turtle_1a10cf93c880ce4178d518b534e5718965">add_update</reimplementedby>
+        <reimplementedby refid="classc_turtle_fly_1aac3b9341be60585b7ed2a2899e5c199e">add_update</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="18" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="108" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1a1a2dbf310eef1e0049a7ff1dafb752e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cEnemy::headbang</definition>
+        <argsstring>()</argsstring>
+        <name>headbang</name>
+        <reimplementedby refid="classc_goomba_1a911ca8ead9af4d87745de9b522e67153">headbang</reimplementedby>
+        <reimplementedby refid="classc_goomba_big_1a6bdcfbb612c8b790f6c833d0d22b0612">headbang</reimplementedby>
+        <reimplementedby refid="classc_spiny_1a75f95f8ea11a4da646ef2b97331b9136">headbang</reimplementedby>
+        <reimplementedby refid="classc_turtle_1a89fc91d708ab54e18a9da5443c21523e">headbang</reimplementedby>
+        <reimplementedby refid="classc_turtle_fly_1a9b57fc0f52d6a6fced76152d718adecd">headbang</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="19" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="109" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1aee66e696e7c0555e9d7e6ba20a6643c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void cEnemy::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <reimplementedby refid="classc_goomba_1a0e3e445dd73b892aa601985754c14fa2">draw</reimplementedby>
+        <reimplementedby refid="classc_goomba_big_1a96ca3cc933f25aa08f2fbe47ecce3827">draw</reimplementedby>
+        <reimplementedby refid="classc_spiny_1a34bd1800a4a066e9a7d207ec7c635872">draw</reimplementedby>
+        <reimplementedby refid="classc_turtle_1ad8b5bb0bff70e909d4298ae83cf23b9c">draw</reimplementedby>
+        <reimplementedby refid="classc_turtle_fly_1aaec1f5985405a85252fb5db00126a06e">draw</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="20" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="110" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1a36271ede720016d735beb8940235e3b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cEnemy::playerTouchRight</definition>
+        <argsstring>()</argsstring>
+        <name>playerTouchRight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="22" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="113" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="classc_enemy_1a28c6d80036d4777c0fc6d6dd9307ed19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int cEnemy::playerTouchLeft</definition>
+        <argsstring>()</argsstring>
+        <name>playerTouchLeft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="23" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.cpp" bodystart="122" bodyend="130"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>cGoomba</label>
+        <link refid="classc_goomba"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>cGoombaBig</label>
+        <link refid="classc_goomba_big"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>cSpiny</label>
+        <link refid="classc_spiny"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>cTurtleFly</label>
+        <link refid="classc_turtle_fly"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>cEnemy</label>
+        <link refid="classc_enemy"/>
+      </node>
+      <node id="24">
+        <label>cTurtle</label>
+        <link refid="classc_turtle"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" line="9" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/enemy.h" bodystart="8" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classc_enemy_1a8000a954f44eb0208559f6a02d5db795" prot="public" virt="virtual"><scope>cEnemy</scope><name>add_update</name></member>
+      <member refid="classc_enemy_1aba356ad9f8eecfa4865ba8dca5cf9408" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>cEnemy</name></member>
+      <member refid="classc_enemy_1a33bf693a2332448380c6cd6a90d912d9" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>dead</name></member>
+      <member refid="classc_enemy_1a9c7ad2992fc5059f8423915a1403e22e" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>DEATHcount</name></member>
+      <member refid="classc_enemy_1ac0fba8e404a517668470400f425d8425" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>die</name></member>
+      <member refid="classc_enemy_1aa9769b2dbb121388e7a6c68ba648cb44" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>dir</name></member>
+      <member refid="classc_enemy_1a0e85969c0340180542c3e710141625e7" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>down_touch</name></member>
+      <member refid="classc_enemy_1aee66e696e7c0555e9d7e6ba20a6643c8" prot="public" virt="virtual"><scope>cEnemy</scope><name>draw</name></member>
+      <member refid="classc_enemy_1a9657c7559a8746c9f71ea12d6837ea7f" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>dying</name></member>
+      <member refid="classc_enemy_1aa04d0a92d0bc248452124baff543ceca" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>H</name></member>
+      <member refid="classc_enemy_1a1a2dbf310eef1e0049a7ff1dafb752e7" prot="public" virt="virtual"><scope>cEnemy</scope><name>headbang</name></member>
+      <member refid="classc_enemy_1a7a909263d0b4e60499d9244e90396129" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>left_touch</name></member>
+      <member refid="classc_enemy_1a4429e5ae0936da6d9ec63eac96b178c3" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>MakeMyWalk</name></member>
+      <member refid="classc_enemy_1a28c6d80036d4777c0fc6d6dd9307ed19" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>playerTouchLeft</name></member>
+      <member refid="classc_enemy_1a36271ede720016d735beb8940235e3b9" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>playerTouchRight</name></member>
+      <member refid="classc_enemy_1a7dc52f3ab092c60457ac8058dcf49934" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>rect</name></member>
+      <member refid="classc_enemy_1aab15da51d678192dc3ab06e6b037cb98" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>right_touch</name></member>
+      <member refid="classc_enemy_1adb32067fcfc51dd19d2505af4fd1ed40" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>scoring</name></member>
+      <member refid="classc_enemy_1abd9666583c7a384298397b5eec383aa6" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>speed</name></member>
+      <member refid="classc_enemy_1a27804f111e0581503ba38f341aba18f8" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>update</name></member>
+      <member refid="classc_enemy_1a57e5514f538de84533b9974683a2847f" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>W</name></member>
+      <member refid="classc_enemy_1afce148cf9d214fcac58519406164bd4b" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>walkadd</name></member>
+      <member refid="classc_enemy_1adc4cb1c3aa049e0dfa0ee97e00744f96" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>walkcount</name></member>
+      <member refid="classc_enemy_1a003e15ffccf6e452346022e3d252d259" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>walkcount2</name></member>
+      <member refid="classc_enemy_1a1737e0cf715ac8628c3b7ec40d9d6c36" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>x</name></member>
+      <member refid="classc_enemy_1af5fb882d22d1d16179675f115586e368" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>y</name></member>
+      <member refid="classc_enemy_1a3f7570bc4fedef4a8fb60908161d44e3" prot="public" virt="non-virtual"><scope>cEnemy</scope><name>y_speed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

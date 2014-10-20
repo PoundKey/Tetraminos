@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="menu_8h" kind="file">
+    <compoundname>menu.h</compoundname>
+    <includedby refid="_global_8h" local="yes">Global.h</includedby>
+    <invincdepgraph>
+      <node id="444">
+        <label>functions.h</label>
+        <link refid="functions_8h_source"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+      </node>
+      <node id="442">
+        <label>menu.h</label>
+        <link refid="menu.h"/>
+        <childnode refid="443" relation="include">
+        </childnode>
+      </node>
+      <node id="443">
+        <label>Global.h</label>
+        <link refid="_global_8h_source"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="menu_8h_1a160a3a5233ef50d86739fc2ac3d651b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuEvent</definition>
+        <argsstring>()</argsstring>
+        <name>MenuEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.h" line="9" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.cpp" bodystart="136" bodyend="462"/>
+      </memberdef>
+      <memberdef kind="function" id="menu_8h_1aba5bd9067aa6f261123165a337c7957d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void showMenu</definition>
+        <argsstring>()</argsstring>
+        <name>showMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.h" line="10" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.cpp" bodystart="115" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="menu_8h_1a1e892d795309ff53c6e4c8436f88b483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initMenu</definition>
+        <argsstring>()</argsstring>
+        <name>initMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Load Level List! </para>        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.h" line="12" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.cpp" bodystart="21" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="menu_8h_1ab6b02c01e30c9218e3e40408f80dbced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void loadlevellist</definition>
+        <argsstring>()</argsstring>
+        <name>loadlevellist</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.h" line="13" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.cpp" bodystart="68" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="menu_8h_1a6563d4bb8cba76b036ff1042bba7a3f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void drawInGameStats</definition>
+        <argsstring>()</argsstring>
+        <name>drawInGameStats</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.h" line="15" column="1" bodyfile="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.cpp" bodystart="473" bodyend="509"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/********************************************************************</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/><sp/>Mega<sp/>Mario<sp/>SRC</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/><sp/><sp/><sp/>created:<sp/><sp/><sp/><sp/>2005/09/18</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/><sp/><sp/><sp/>created:<sp/><sp/><sp/><sp/>18:9:2005<sp/><sp/><sp/>10:13</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/><sp/><sp/><sp/>author:<sp/><sp/><sp/><sp/><sp/>Jens<sp/>Wellmann<sp/>(c)</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*********************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MenuEvent();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>showMenu();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initMenu();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>loadlevellist();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>drawInGameStats();</highlight></codeline>
+    </programlisting>
+    <location file="/Users/CTXue/Desktop/CPSC/CS410/Mario/src/menu.h"/>
+  </compounddef>
+</doxygen>
