@@ -93,8 +93,8 @@ fileList.forEach(function (file) {
         switch (obj.$.kind) {
             case 'class':
                 //console.dir("class: " + path);
-                classInfo(obj);
-
+                var output = classInfo(obj);
+                staticInfo.push(output);
                 break;
 
             case 'file':
@@ -117,7 +117,7 @@ fileList.forEach(function (file) {
 
 });
 
-//console.dir(staticInfo);
+console.dir(staticInfo);
 
 
 
