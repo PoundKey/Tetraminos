@@ -6,6 +6,7 @@ var fs = require('fs');
 var parseString = require('xml2js').parseString;
 
 var staticInfo = [];
+var writeOutput;
 
 var fileList = fs.readdirSync('./xml');
 //console.dir(lists);
@@ -19,6 +20,7 @@ var classInfo = function (_class) {
     var field = [];
     var inheritance = [];
     var dependency = [];
+    var output;
 
     //entityArray, length in 2 or 1, each contains set of attributes or methods.
     var entityArray = _class.sectiondef;
@@ -55,13 +57,15 @@ var classInfo = function (_class) {
 
         } else {
             console.log('Entity has not been defined yet');
-            return;
         }
 
     });
 
-    var output = {'className': className, 'method': method, 'field': field, 
+    output = {'className': className, 'method': method, 'field': field,
                         'inheritance':inheritance, 'dependency': dependency};
+
+//    output = {className : {'method': method, 'field': field,
+//        'inheritance': inheritance, 'dependency': dependency }};
     //return the parsed info for single xml file as the output
     return output;
 
@@ -117,8 +121,15 @@ fileList.forEach(function (file) {
 
 });
 
-console.dir(staticInfo);
+writeOutput = {'staticInfo':staticInfo};
+//console.dir(writeOutput);
+//console.dir(JSON.stringify(writeOutput, null, 4));
+var outputFilename = 'static_info.json';
+fs.writeFile(outputFilename, JSON.stringify(writeOutput, null, 4), 'utf8', function (err) {
+    
+    err ? console.dir(err) : console.dir("Static info successfully saved to: " + outputFilename)
 
+});
 
 
 
