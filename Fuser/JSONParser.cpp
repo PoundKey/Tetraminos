@@ -1,6 +1,6 @@
 #include "rapidjson/document.h"
 #include "rapidjson/filestream.h"
-#include "ClassList.cpp"
+#include "ClassProfile.cpp"
 #include <iostream>
 
 int main() {
@@ -10,6 +10,8 @@ int main() {
     rapidjson::FileStream is(pFile);
     rapidjson::Document d;
     d.ParseStream<0>(is);
+
+    // This is test data
 	// const char myJson[] = "{\"staticInfo\":[{\"className\":\"cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\":[  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]},{\"className\":\"cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\":[  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]}]}";
 
 
@@ -18,11 +20,11 @@ int main() {
     rapidjson::Document child;
     const rapidjson::Value& b = d["staticInfo"];
     assert(b.IsArray());
-    std::vector<ClassList::ClassList> listClasses;
+    std::vector<ClassProfile::ClassProfile> listClasses;
     for (rapidjson::SizeType i = 0; i < b.Size(); i++){ // rapidjson uses SizeType instead of size_t.
             
             //New cl object
-            ClassList::ClassList cl;
+            ClassProfile::ClassProfile cl;
             const rapidjson::Value& temp = b[i];
             std::cout << temp["className"].GetString() << "\n";
 
@@ -64,7 +66,7 @@ int main() {
 
     //This is for Dyninst to use for iterating over it's functions
     std::cout << "This is printing from the list of Class" << endl;
-    for( std::vector<ClassList::ClassList>::const_iterator i = listClasses.begin(); i != listClasses.end(); ++i){
+    for( std::vector<ClassProfile::ClassProfile>::const_iterator i = listClasses.begin(); i != listClasses.end(); ++i){
         std::cout << "This is profile: ";
         std::cout << (*i).getProfile() << endl;
         vector<std::string> methods = (*i).getMethods();

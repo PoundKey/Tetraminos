@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-class ClassList {
+class ClassProfile {
     std::string profile;
     std::vector<std::string> methods;
     std::vector<std::string> fields; 
@@ -25,57 +25,57 @@ class ClassList {
 
 };
 
-void ClassList::setProfile (std::string prof) {
+void ClassProfile::setProfile (std::string prof) {
   profile = prof;
 }
 
-std::string ClassList::getProfile () const {
+std::string ClassProfile::getProfile () const {
   return profile;
 }
 
-std::vector<std::string> ClassList::getMethods() const{
+std::vector<std::string> ClassProfile::getMethods() const{
 	return methods; 
 }
 
-std::vector<std::string> ClassList::getFields() const{
+std::vector<std::string> ClassProfile::getFields() const{
 	return methods; 
 }
 
-std::vector<std::string> ClassList::getInheritance() const{
+std::vector<std::string> ClassProfile::getInheritance() const{
 	return inheritance; 
 }
 
-std::vector<std::string> ClassList::getDependency() const{
+std::vector<std::string> ClassProfile::getDependency() const{
 	return dependencies; 
 }
 
-int ClassList::getSize(){
+int ClassProfile::getSize(){
 	return size; 
 }
 
-void ClassList::setMethod (std::string d){
+void ClassProfile::setMethod (std::string d){
 	methods.push_back(d);
 }
 
-void ClassList::setField (std::string d){
+void ClassProfile::setField (std::string d){
 	fields.push_back(d);
 }
 
-void ClassList::setInheritance (std::string d){
+void ClassProfile::setInheritance (std::string d){
 	inheritance.push_back(d);
 }
 
-void ClassList::setDependency (std::string d){
+void ClassProfile::setDependency (std::string d){
 	methods.push_back(d);
 }
 
-void ClassList::setSize(int i){
+void ClassProfile::setSize(int i){
 	size = i;
 }
 
 // int main () {
 //   std::cout << "Hello world!" << std::endl;
-//   ClassList pr;
+//   ClassProfile pr;
 //   pr.Profile("fish");
 //   pr.setSize(1);
 //   pr.setMethod("method1");
