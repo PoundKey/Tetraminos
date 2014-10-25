@@ -4,13 +4,13 @@
 <!--[if IE 8]>    <html class="no-js ie ie8" lang="en"> <![endif]-->
 <!--[if IE 9]>    <html class="no-js ie ie9" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!-->
-<html class="no-js" lang="en"> <!--<![endif]-->
+<html class="no-js" lang="en" ng-app="myApp"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />  -->
 
     <title>Tetraminos - CPSC 410 Term Project</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/plugins.css"/>
@@ -20,13 +20,17 @@
     <script type="text/javascript" src="js/plugins.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+
 
     <!--[if lt IE 9]>
         <script type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 </head>
-<body id="container">
+<body id="container" ng-controller="AppCtrl">
 
 	<!-- BEGIN MAIN PAGE -->
 	<div id="page-main" class="page active">
