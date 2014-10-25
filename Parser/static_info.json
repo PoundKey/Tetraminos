@@ -13,7 +13,7 @@
                 "bloodparts",
                 "BLOODcount"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -38,7 +38,7 @@
                 "up_touch",
                 "online"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -73,7 +73,7 @@
                 "HAMMERcount",
                 "HAMMERS"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -88,7 +88,7 @@
                 "count",
                 "dir"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -107,7 +107,7 @@
                 "die",
                 "updating"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -124,7 +124,7 @@
                 "SURFACE",
                 "counter"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -160,7 +160,7 @@
                 "walkcount2",
                 "walkadd"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -182,7 +182,7 @@
                 "y",
                 "FIREcount"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -201,7 +201,7 @@
                 "rect",
                 "counta2"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -223,7 +223,7 @@
                 "down_touch",
                 "center_touch"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -248,7 +248,7 @@
                 "Button_B",
                 "Button_Start"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -264,7 +264,7 @@
                 "rect",
                 "SURFACE"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -276,7 +276,7 @@
                 "draw"
             ],
             "field": [],
-            "inheritance": [],
+            "inheritance": "cEnemy",
             "dependency": []
         },
         {
@@ -288,7 +288,7 @@
                 "draw"
             ],
             "field": [],
-            "inheritance": [],
+            "inheritance": "cEnemy",
             "dependency": []
         },
         {
@@ -305,7 +305,7 @@
                 "timer",
                 "rect"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -359,7 +359,7 @@
                 "K_B",
                 "K_A"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -414,7 +414,7 @@
                 "CASTLE",
                 "SCREEN_RECT"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -428,7 +428,7 @@
                 "SCORE_S",
                 "SCOREcount"
             ],
-            "inheritance": [],
+            "inheritance": null,
             "dependency": []
         },
         {
@@ -440,7 +440,7 @@
                 "draw"
             ],
             "field": [],
-            "inheritance": [],
+            "inheritance": "cEnemy",
             "dependency": []
         },
         {
@@ -454,7 +454,7 @@
             "field": [
                 "down"
             ],
-            "inheritance": [],
+            "inheritance": "cEnemy",
             "dependency": []
         },
         {
@@ -468,7 +468,7 @@
             "field": [
                 "count"
             ],
-            "inheritance": [],
+            "inheritance": "cEnemy",
             "dependency": []
         }
     ]

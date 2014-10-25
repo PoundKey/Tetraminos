@@ -7,10 +7,8 @@ var parseString = require('xml2js').parseString;
 
 var staticInfo = [];
 var writeOutput;
-
 var fileList = fs.readdirSync('./xml');
 //console.dir(lists);
-
 
 var classInfo = function (_class) {
 
@@ -18,10 +16,12 @@ var classInfo = function (_class) {
     var className = _class.compoundname[0];
     var method = [];
     var field = [];
-    var inheritance = [];
+    var inheritance;
     var dependency = [];
     var output;
 
+    //console.log(JSON.stringify(_class, null, 4));
+    _class.basecompoundref ? inheritance = _class.basecompoundref[0]._ : inheritance=null;
     //entityArray, length in 2 or 1, each contains set of attributes or methods.
     var entityArray = _class.sectiondef;
 
@@ -61,11 +61,11 @@ var classInfo = function (_class) {
 
     });
 
-    output = {'className': className, 'method': method, 'field': field,
-                        'inheritance':inheritance, 'dependency': dependency};
+    output = {
+        'className': className, 'method': method, 'field': field,
+        'inheritance': inheritance, 'dependency': dependency
+    };
 
-//    output = {className : {'method': method, 'field': field,
-//        'inheritance': inheritance, 'dependency': dependency }};
     //return the parsed info for single xml file as the output
     return output;
 
@@ -86,7 +86,7 @@ var structInfo = function (_struct) {
 fileList.forEach(function (file) {
 
     if (file.search('.xml') == -1) return;
-    //if (file != 'classc_blood.xml') return;
+    //if (file != 'classc_spiny.xml') return;
     var path = "./xml/" + file;
 
     var classFile = fs.readFileSync(path, 'utf8');
@@ -121,16 +121,16 @@ fileList.forEach(function (file) {
 
 });
 
-writeOutput = {'staticInfo':staticInfo};
+
+
+writeOutput = {'staticInfo': staticInfo};
 //console.dir(writeOutput);
 //console.dir(JSON.stringify(writeOutput, null, 4));
 var outputFilename = 'static_info.json';
 fs.writeFile(outputFilename, JSON.stringify(writeOutput, null, 4), 'utf8', function (err) {
-    
-    err ? console.dir(err) : console.dir("Static info successfully saved to: " + outputFilename)
+
+    err ? console.dir(err) : console.dir("Static info successfully saved to: " + outputFilename);
 
 });
-
-
 
 
