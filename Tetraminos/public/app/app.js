@@ -9,6 +9,8 @@ var myApp = angular.module('myApp', [
 
 ]);
 
+/**
+
 myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	// if(window.history && window.history.pushState){
 	// 	$locationProvider.html5Mode(true);
@@ -20,6 +22,6 @@ myApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $l
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
 
-
+*/
 
 
