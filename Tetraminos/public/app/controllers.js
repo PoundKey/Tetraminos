@@ -10,6 +10,15 @@ angular.module('myApp.controllers', [])
 
 
 
+       $scope.marioAnalyzer = function () {
+           alert("Start analyzing Mario source code...");
+       };
+
+        $scope.pacmanAnalyzer = function () {
+           alert("Start analyzing Pacman source code...");
+       };
+
+
    	
    }]);
 
