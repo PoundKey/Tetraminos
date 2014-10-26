@@ -2,8 +2,18 @@
 #include "rapidjson/filestream.h"
 #include "ClassProfile.cpp"
 #include <iostream>
+#include <map>
+#include <cstdio>
+#include <windows.h>
+#include <tlhelp32.h>
 
-int main() {
+int main(int argc, char * argv[]) {
+    std::map<std::string,std::string> classmap;
+    std::map<std::string,std::string>::iterator it;
+    std::int pid = argv[1];
+
+
+
     //TODO: IMPORT JSON FILE
     // http://stackoverflow.com/questions/18107079/rapidjson-working-code-for-reading-document-from-file
     FILE * pFile = fopen ("test.json" , "r");
@@ -37,7 +47,12 @@ int main() {
                 printf("Method[%d] = %s\n", j, tempMethod[j].GetString());
 
                 cl.setMethod(tempMethod[j].GetString());
+
+                // Add method to and class to hashmap
+                classmap[tempMethod[j].GetString()] = temp["className"].GetString();
+
                 // Line space for instrument creationtempField[h].GetString() to access field
+
             }
             const rapidjson::Value& tempField = temp["field"];
             for (rapidjson::SizeType h = 0; h < tempField.Size(); h++){
@@ -74,7 +89,51 @@ int main() {
              std::cout << *j << ' ' << std::endl;
          }
         }
+
+   
+    /* Call to dyninst passing pid and listClasses
+
+    callToDyninst(pid, listClasses);
+    */
+
+
+
+// GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
+    std::string exeName = argv[1];
+    PROCESSENTRY32 entry;
+    entry.dwSize = sizeof(PROCESSENTRY32);
+
+    HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, NULL);
+
+    if (Process32First(snapshot, &entry) == TRUE)
+    {
+        while (Process32Next(snapshot, &entry) == TRUE)
+        {
+            if (_stricmp(entry.szExeFile, exeName) == 0)
+            {  
+                //HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, entry.th32ProcessID);
+
+                std::cout << entry.th32ProcessID << '\n';
+
+                //CloseHandle(hProcess);
+            }
+        }
+    }
+
+    // CloseHandle(snapshot);
+
     
+
+
+
+
+/* Experimental
+    std::cout << "cBLood => " << classmap.find("cBlood") << '\n';
+    std::cout << "loadlevel => " << classmap.find("loadlevel") << '\n';
+    it = classmap.find("playerTouchRight");
+    std::string s = it->second;
+    std::cout << s << endl;
+    */
     
     // Reference Code That You Can Ignore
     // assert(a.IsArray());
@@ -87,7 +146,7 @@ int main() {
     // const rapidjson::Value& a = b[\"1\"];
     // const rapidjson::Value& fields = a[\"fields\"];
     // assert(fields.IsArray());
-    // for (rapidjson::SizeType i = 0; i < fields.Size(); i++) // rapidjson uses SizeType instead of size_t.
+    // for (rapidjson::SizeType i = 0; i < fields.Size(); i++) // rapidjson uses SizeType instead of size_t.    
     //         printf(\"a[%d] = %s\n\", i, fields[i].GetString());
 }
 
