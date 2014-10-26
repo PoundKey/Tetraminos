@@ -210,6 +210,8 @@ hr {
 	.entry{
 		overflow-x: hidden;
 		position: relative;
+	/*	width: 80%
+		margin: 0 auto;*/
 	}
 	#background {
 		display: none;
