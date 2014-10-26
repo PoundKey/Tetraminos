@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="pacman_8cpp" kind="file">
+    <compoundname>pacman.cpp</compoundname>
+    <includes refid="field_8hpp" local="yes">field.hpp</includes>
+    <includes refid="game__controller_8hpp" local="yes">game_controller.hpp</includes>
+    <includes refid="pacman_8hpp" local="yes">pacman.hpp</includes>
+    <incdepgraph>
+      <node id="134">
+        <label>cell.hpp</label>
+        <link refid="cell_8hpp_source"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+      </node>
+      <node id="135">
+        <label>direction.hpp</label>
+        <link refid="direction_8hpp_source"/>
+        <childnode refid="136" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>figure.hpp</label>
+        <link refid="figure_8hpp_source"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="135" relation="include">
+        </childnode>
+      </node>
+      <node id="133">
+        <label>Gosu/Gosu.hpp</label>
+      </node>
+      <node id="131">
+        <label>pacman.cpp</label>
+        <link refid="pacman.cpp"/>
+        <childnode refid="132" relation="include">
+        </childnode>
+        <childnode refid="137" relation="include">
+        </childnode>
+        <childnode refid="139" relation="include">
+        </childnode>
+      </node>
+      <node id="138">
+        <label>vector</label>
+      </node>
+      <node id="137">
+        <label>game_controller.hpp</label>
+        <link refid="game__controller_8hpp_source"/>
+        <childnode refid="138" relation="include">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>iostream</label>
+      </node>
+      <node id="139">
+        <label>pacman.hpp</label>
+        <link refid="pacman_8hpp_source"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="138" relation="include">
+        </childnode>
+        <childnode refid="140" relation="include">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>field.hpp</label>
+        <link refid="field_8hpp_source"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+        <childnode refid="134" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;field.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;game_controller.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pacman.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="struct_pacman_descriptor" kindref="compound">PacmanDescriptor</ref><sp/>Descriptor<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/>1.0<sp/>/<sp/>28.0,<sp/><sp/>1.0<sp/>/<sp/>28.0,<sp/>26.0<sp/>/<sp/>28.0,<sp/>26.0<sp/>/<sp/>28.0<sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="class_pacman_1a6e55984f6573aebdd7b3a7b2acc7933d" kindref="member">Pacman::Pacman</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/><ref refid="class_game_controller" kindref="compound">GameController</ref>*<sp/>controller):</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_figure" kindref="compound">Figure</ref>(x,<sp/>y,<sp/>controller)<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state<sp/>=<sp/>Alive;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;speed<sp/>=<sp/>Pacman::NORMAL_SPEED;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>reset();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pacman_1a6b7038487df14cbca8d7e5b696fa5911" kindref="member">Pacman::draw</ref>(Gosu::Graphics&amp;<sp/>graphics,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellWidth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellHeight)<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>Gosu::Color<sp/>foo(255,<sp/>255,<sp/>0);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//this-&gt;spriteset[mouthStatus]-&gt;draw(4<sp/>+<sp/>xOffset<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth,<sp/>4<sp/>+<sp/>yOffset<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight,<sp/>2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*graphics.drawQuad(xOffset<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth,<sp/>yOffset<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight,<sp/>foo,</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xOffset<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth<sp/>+<sp/>cellWidth,<sp/>yOffset<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight,<sp/>foo,</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xOffset<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth,<sp/>yOffset<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight<sp/>+<sp/>cellHeight,<sp/>foo,</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>xOffset<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth<sp/>+<sp/>cellWidth,<sp/>yOffset<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight<sp/>+<sp/>cellHeight,<sp/>foo,<sp/>3);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_figure_1a7f878dcb957ef2b2143bf2ce692f4de1" kindref="member">drawArc</ref>(graphics,<sp/>foo,<sp/>cellWidth,<sp/>cellHeight,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>Descriptor.circle,<sp/>(mouthOpenAngle<sp/>/<sp/>2<sp/>+<sp/>getAngleFromDirection()<sp/>*<sp/>90),<sp/>(360<sp/>-<sp/>mouthOpenAngle));</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/>QPainter<sp/>painter(window);</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Zeichenfarbe<sp/>setzen</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/>painter.setPen(QColor(255,<sp/>255,<sp/>0));</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/>painter.setBrush(Qt::SolidPattern);</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/>painter.setRenderHint(QPainter::Antialiasing);</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>Kreissegment<sp/>zeichnen</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>drawArc(painter,<sp/>cellWidth,<sp/>cellHeight,</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>true,<sp/>Descriptor.circle,<sp/>(mouthOpenAngle<sp/>/<sp/>2<sp/>+<sp/>getAngleFromDirection()<sp/>*<sp/>90),<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(360<sp/>-<sp/>mouthOpenAngle));<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pacman::getAngleFromDirection()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(direction.<ref refid="class_direction_1ac2632d6e15012979af51e944ecbf8754" kindref="member">getValue</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Direction::UP:<sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Direction::LEFT:<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>2;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Direction::DOWN:<sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>3;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>Direction::RIGHT:<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Never<sp/>happens...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pacman_1ade750d70a46f70d45eb40c02742f4deb" kindref="member">Pacman::nextTick</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mund<sp/>oeffnen<sp/>und<sp/>schliessen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;state<sp/>==<sp/>Alive)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mouthOpening)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mouthOpenAngle<sp/>+=<sp/>MOUTH_STEP;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mouthOpenAngle<sp/>==<sp/>MAX_MOUTH_ANGLE)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mouthOpening<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mouthOpenAngle<sp/>-=<sp/>MOUTH_STEP;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(mouthOpenAngle<sp/>==<sp/>MIN_MOUTH_ANGLE)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mouthOpening<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;ticks++;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;ticks<sp/>&gt;=<sp/>this-&gt;speed)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;ticks<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Bewegen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(this-&gt;direction<sp/>!=<sp/>Direction::NONE)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Der<sp/>Controller<sp/>macht<sp/>das<sp/>fuer<sp/>alle<sp/>Figuren.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>controller-&gt;<ref refid="class_game_controller_1a3943991318d531e48513cd555464251d" kindref="member">move</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>this-&gt;direction);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;state<sp/>==<sp/>Dying)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mouthOpenAngle<sp/>+=<sp/>MOUTH_STEP;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(mouthOpenAngle<sp/>&gt;=<sp/>360)<sp/>this-&gt;state<sp/>=<sp/>Dead;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pacman_1a4d0d76b1642d579348241c7baf8a2f75" kindref="member">Pacman::keyPressed</ref>(<ref refid="class_direction" kindref="compound">Direction</ref><sp/>direction)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Nur<sp/>weitermachen,<sp/>wenn<sp/>Pacman<sp/>lebt</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(this-&gt;getState()<sp/>!=<sp/>Alive)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Neue<sp/>Richtung<sp/>speichern</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(direction<sp/>!=<sp/>Direction::NONE<sp/>&amp;&amp;<sp/>controller-&gt;<ref refid="class_game_controller_1a64f94c3a489f1ab08a0cd46a5ab16e34" kindref="member">canMove</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>direction))<sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;direction<sp/>=<sp/>direction;</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_pacman_1aee1a5073227a694643fef37da12e0e53" kindref="member">Pacman::handleCollisionWith</ref>(<ref refid="class_figure" kindref="compound">Figure</ref>*<sp/>otherFigure)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Keine<sp/>Aktion:<sp/>Die<sp/>anderen<sp/>Figuren<sp/>behandeln<sp/>die</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Kollision<sp/>mit<sp/>Pacman.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Pacman::reset()</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/>Figure::reset();</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;mouthOpenAngle<sp/>=<sp/>MAX_MOUTH_ANGLE;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;mouthOpening<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;direction<sp/>=<sp/>Direction::NONE;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp"/>
+  </compounddef>
+</doxygen>

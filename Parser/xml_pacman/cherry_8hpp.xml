@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="cherry_8hpp" kind="file">
+    <compoundname>cherry.hpp</compoundname>
+    <includes refid="figure_8hpp" local="yes">figure.hpp</includes>
+    <includedby refid="cherry_8cpp" local="yes">cherry.cpp</includedby>
+    <includedby refid="field_8cpp" local="yes">field.cpp</includedby>
+    <includedby refid="game__controller_8cpp" local="yes">game_controller.cpp</includedby>
+    <incdepgraph>
+      <node id="24">
+        <label>cherry.hpp</label>
+        <link refid="cherry.hpp"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>direction.hpp</label>
+        <link refid="direction_8hpp_source"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>figure.hpp</label>
+        <link refid="figure_8hpp_source"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>Gosu/Gosu.hpp</label>
+      </node>
+      <node id="28">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="struct_cherry_descriptor" prot="public">CherryDescriptor</innerclass>
+    <innerclass refid="class_cherry" prot="public">Cherry</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CHERRY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHERRY_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;figure.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="struct_cherry_descriptor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_cherry_descriptor" kindref="compound">CherryDescriptor</ref><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref><sp/>cherries[<sp/>2<sp/>];</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref><sp/>reflection[<sp/>4<sp/>];</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref><sp/>stalks[<sp/>2<sp/>];</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="class_cherry" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_cherry" kindref="compound">Cherry</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_figure" kindref="compound">Figure</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_cherry_1a3f4d3ac7728ec063d1552b74fdd6581b" kindref="member">Cherry</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/><ref refid="class_game_controller" kindref="compound">GameController</ref>*<sp/>controller);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cherry_1ae95165d8cbd1fd251442f3d07c3e8fc3" kindref="member">draw</ref>(Gosu::Graphics&amp;<sp/>graphics,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellWidth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellHeight);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cherry_1a804a374c1c524b90b3fefb0b4c6f282e" kindref="member">handleCollisionWith</ref>(<ref refid="class_figure" kindref="compound">Figure</ref>*<sp/>otherFigure);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CHERRY_H</highlight></codeline>
+    </programlisting>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="cell_8cpp" kind="file">
+    <compoundname>cell.cpp</compoundname>
+    <includes refid="cell_8hpp" local="yes">cell.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>cell.hpp</label>
+        <link refid="cell_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>direction.hpp</label>
+        <link refid="direction_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>cell.cpp</label>
+        <link refid="cell.cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Gosu/Gosu.hpp</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;cell.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="class_cell_1a394510643e8664cf12b5efaf5cb99f71" kindref="member">Cell::Cell</ref>()<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>reset();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cell::reset()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>food<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>prisonExit<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>border<sp/>=<sp/>Direction::NONE;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_1a4863802b421a43016efeda04b72abbbd" kindref="member">Cell::draw</ref>(Gosu::Graphics&amp;<sp/>graphics,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Gosu::Color<sp/>borderColor(0,<sp/>0,<sp/>230);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hat<sp/>die<sp/>Zelle<sp/>oben<sp/>einen<sp/>Rand?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(border<sp/>&amp;<sp/>Direction::UP)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graphics.drawLine(x<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>1,<sp/>borderColor,<sp/>x<sp/>+<sp/>w<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>1,<sp/>borderColor,<sp/>2);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hat<sp/>die<sp/>Zelle<sp/>links<sp/>einen<sp/>Rand?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(border<sp/>&amp;<sp/>Direction::LEFT)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graphics.drawLine(x<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>1,<sp/>borderColor,<sp/>x<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>h<sp/>+<sp/>2,<sp/>borderColor,<sp/>2);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hat<sp/>die<sp/>Zelle<sp/>unten<sp/>einen<sp/>Rand?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(border<sp/>&amp;<sp/>Direction::DOWN)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graphics.drawLine(x<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>h<sp/>+<sp/>1,<sp/>borderColor,<sp/>x<sp/>+<sp/>w<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>h<sp/>+<sp/>1,<sp/>borderColor,<sp/>2);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Hat<sp/>die<sp/>Zelle<sp/>rechts<sp/>einen<sp/>Rand?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(border<sp/>&amp;<sp/>Direction::RIGHT)<sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graphics.drawLine(x<sp/>+<sp/>w<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>1,<sp/>borderColor,<sp/>x<sp/>+<sp/>w<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>h<sp/>+<sp/>1,<sp/>borderColor,<sp/>2);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(food)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>innerX<sp/>=<sp/>x<sp/>+<sp/>4;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>innerY<sp/>=<sp/>y<sp/>+<sp/>2;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>innerW<sp/>=<sp/>w<sp/>-<sp/>8;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>innerH<sp/>=<sp/>h<sp/>-<sp/>4;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>foodSize<sp/>=<sp/>int(innerW<sp/>*<sp/>0.2);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>centerX<sp/>=<sp/>int((innerW<sp/>-<sp/>foodSize)<sp/>/<sp/>2<sp/>+<sp/>innerX);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>centerY<sp/>=<sp/>int((innerH<sp/>-<sp/>foodSize)<sp/>/<sp/>2<sp/>+<sp/>innerY);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Gosu::Color<sp/>foodColor(255,<sp/>184,<sp/>151);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graphics.drawQuad(centerX,<sp/>centerY,<sp/>foodColor,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>centerX<sp/>+<sp/>foodSize,<sp/>centerY,<sp/>foodColor,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>centerX,<sp/>centerY<sp/>+<sp/>foodSize,<sp/>foodColor,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>centerX<sp/>+<sp/>foodSize,<sp/>centerY<sp/>+<sp/>foodSize,<sp/>foodColor,<sp/>3);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(prisonExit)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graphics.drawLine(x<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>h/2<sp/>+<sp/>1,<sp/>Gosu::Colors::yellow,<sp/>x<sp/>+<sp/>w<sp/>+<sp/>1,<sp/>y<sp/>+<sp/>h/2<sp/>+<sp/>1,<sp/>Gosu::Colors::yellow,<sp/>2);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cell_1ade5fcb769957c07c22036a7b7d14dd2e" kindref="member">Cell::isBorder</ref>(<ref refid="class_direction" kindref="compound">Direction</ref><sp/>dir)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(dir<sp/>&amp;<sp/>border)<sp/>!=<sp/>0;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_1afbf2e8312cfe99f4cf18dfc1758b49f9" kindref="member">Cell::setFood</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>food)<sp/>{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;food<sp/>=<sp/>food;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cell_1abb6ffd6e08ebfecf75febf2836a537e3" kindref="member">Cell::isFood</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>food;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_1aa70b9733ed19a2f853ba0b54d66d7969" kindref="member">Cell::setExit</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>exit)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;exit<sp/>=<sp/>exit;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_cell_1a0b9fac28eaa939804bba4708209aa428" kindref="member">Cell::isExit</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>exit;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Cell::setPrisonExit(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>prisonexit)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;prisonExit<sp/>=<sp/>prisonexit;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Cell::isPrisonExit()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="132"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;prisonExit;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_1ad5b46a1d7e9ff4f08b15ae9737e66104" kindref="member">Cell::setBorder</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>border)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;border<sp/>=<sp/>border;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_1a7d0e9751e48dccc34c5548ba0a343823" kindref="member">Cell::addBorder</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>border)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;border<sp/>|=<sp/>border;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_cell_1afedcfe3cc1a4bfee63fab1c294eee536" kindref="member">Cell::removeBorder</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>border)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;border<sp/>&amp;=<sp/>~border;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/cell.cpp"/>
+  </compounddef>
+</doxygen>

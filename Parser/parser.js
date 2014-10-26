@@ -4,6 +4,18 @@
 
 var fs = require('fs');
 var parseString = require('xml2js').parseString;
+var readline = require('readline');
+var inputCodeBase = './xml_';
+
+/**
+var prompts = readline.createInterface(process.stdin, process.stdout);
+
+prompts.question("Please enter a codebase (mario || pacman): ", function(answer) {
+	inputCodeBase = inputCodeBase + answer;
+  console.log("Thank you for your valuable feedback: ", answer);
+  prompts.close();
+});
+*/
 
 var staticInfo = [];
 var writeOutput;

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_pill_descriptor" kind="struct" prot="public">
+    <compoundname>PillDescriptor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_pill_descriptor_1a4f6df4f89d34d677d4c4eda34d74a49b" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref></type>
+        <definition>BoundingBox PillDescriptor::circle</definition>
+        <argsstring></argsstring>
+        <name>circle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pill.hpp" line="7" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pill.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="65">
+        <label>PillDescriptor</label>
+        <link refid="struct_pill_descriptor"/>
+        <childnode refid="66" relation="usage">
+          <edgelabel>circle</edgelabel>
+        </childnode>
+      </node>
+      <node id="66">
+        <label>BoundingBox</label>
+        <link refid="struct_bounding_box"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pill.hpp" line="6" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pill.hpp" bodystart="6" bodyend="8"/>
+    <listofallmembers>
+      <member refid="struct_pill_descriptor_1a4f6df4f89d34d677d4c4eda34d74a49b" prot="public" virt="non-virtual"><scope>PillDescriptor</scope><name>circle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

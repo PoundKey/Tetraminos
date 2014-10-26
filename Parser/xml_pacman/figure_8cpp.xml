@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="figure_8cpp" kind="file">
+    <compoundname>figure.cpp</compoundname>
+    <includes refid="figure_8hpp" local="yes">figure.hpp</includes>
+    <includes local="no">GL/glew.h</includes>
+    <incdepgraph>
+      <node id="67">
+        <label>figure.cpp</label>
+        <link refid="figure.cpp"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="70">
+        <label>direction.hpp</label>
+        <link refid="direction_8hpp_source"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>figure.hpp</label>
+        <link refid="figure_8hpp_source"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="69">
+        <label>Gosu/Gosu.hpp</label>
+      </node>
+      <node id="71">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;figure.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="class_figure_1a3ef8e5f5e276f9e6c71c4ec27236af5e" kindref="member">Figure::Figure</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/><ref refid="class_game_controller" kindref="compound">GameController</ref>*<sp/>controller)<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;cellX<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;cellY<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;startx<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;starty<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;controller<sp/>=<sp/>controller;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state<sp/>=<sp/>Alive;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;ticks<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_figure_1a3afde28bdf6100f817b3205b0039a759" kindref="member">Figure::getInnerX</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellWidth)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cellWidth<sp/>*<sp/><ref refid="class_figure_1aec212f4e73b277b4c5959e80077daea6" kindref="member">getX</ref>()<sp/>+<sp/>EMPTY_BORDER;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_figure_1a3021678f2a7b8c14f5a432c7900ea9cc" kindref="member">Figure::getInnerY</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellHeight)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cellHeight<sp/>*<sp/><ref refid="class_figure_1adce37bd838719a6483fc9df6c39dfe43" kindref="member">getY</ref>()<sp/>+<sp/>EMPTY_BORDER;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_figure_1ac28d4f59ff2f217d64b37cc42c956f93" kindref="member">Figure::getInnerW</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellWidth)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1<sp/>*<sp/>cellWidth<sp/>-<sp/>2<sp/>*<sp/>EMPTY_BORDER;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_figure_1aa5b6f9cf09f9e8e0f64d50bb60c992c8" kindref="member">Figure::getInnerH</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellHeight)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1<sp/>*<sp/>cellHeight<sp/>-<sp/>2<sp/>*<sp/>EMPTY_BORDER;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_figure_1aec212f4e73b277b4c5959e80077daea6" kindref="member">Figure::getX</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cellX;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_figure_1adce37bd838719a6483fc9df6c39dfe43" kindref="member">Figure::getY</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cellY;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_figure_1ac95f648898513f4375b38592e44aed0a" kindref="member">Figure::setX</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>cellX<sp/>=<sp/>x;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_figure_1a9ce19da45247d1435334b83ce0f5a02d" kindref="member">Figure::setY</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>cellY<sp/>=<sp/>y;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_figure_1aafde02c8d8607e9ca4b983976e2827d9" kindref="member">Figure::setDirection</ref>(<ref refid="class_direction" kindref="compound">Direction</ref><sp/>direction)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;direction<sp/>=<sp/>direction;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_figure_1a7f878dcb957ef2b2143bf2ce692f4de1" kindref="member">Figure::drawArc</ref>(Gosu::Graphics&amp;<sp/>graphics,<sp/>Gosu::Color<sp/>color,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellWidth,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellHeight,</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fill,<sp/><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref><sp/>bounds,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>start,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>length)<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(length<sp/>&gt;<sp/>360)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="class_figure_1a3afde28bdf6100f817b3205b0039a759" kindref="member">getInnerX</ref>(cellWidth)<sp/>+<sp/>bounds.x<sp/>*<sp/>cellWidth<sp/>-<sp/>3;<sp/></highlight><highlight class="comment">//getInnerX(cellWidth)<sp/>+<sp/>(unsigned<sp/>int)<sp/>(bounds.x<sp/>*<sp/>getInnerW(cellWidth)<sp/>+<sp/>0.5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="class_figure_1a3021678f2a7b8c14f5a432c7900ea9cc" kindref="member">getInnerY</ref>(cellHeight)<sp/>+<sp/>bounds.y<sp/>*<sp/>cellHeight<sp/>-<sp/>3;<sp/></highlight><highlight class="comment">//getInnerY(cellHeight)<sp/>+<sp/>(unsigned<sp/>int)<sp/>(bounds.y<sp/>*<sp/>getInnerH(cellHeight)<sp/>+<sp/>0.5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w<sp/>=<sp/>bounds.w<sp/>*<sp/>cellWidth;<sp/></highlight><highlight class="comment">//(unsigned<sp/>int)<sp/>(bounds.w<sp/>*<sp/>getInnerW(cellWidth)<sp/>+<sp/>0.5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h<sp/>=<sp/>bounds.h<sp/>*<sp/>cellHeight;<sp/></highlight><highlight class="comment">//(unsigned<sp/>int)<sp/>(bounds.h<sp/>*<sp/>getInnerH(cellHeight)<sp/>+<sp/>0.5);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::cout<sp/>&lt;&lt;<sp/>x<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>this-&gt;cellX<sp/>&lt;&lt;<sp/>&quot;<sp/>|<sp/>&quot;<sp/>&lt;&lt;<sp/>w<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/>cellWidth<sp/>&lt;&lt;<sp/>&quot;<sp/>&quot;<sp/>&lt;&lt;<sp/><sp/>bounds.w<sp/>&lt;&lt;<sp/>std::endl;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>glColor3f((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)color.red()/255,<sp/>(float)color.green()/255,<sp/>(float)color.blue()/255);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fill)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBegin(GL_TRIANGLE_FAN);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glVertex2f((float)cellWidth<sp/>/<sp/>2<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth,<sp/>(float)cellHeight<sp/>/<sp/>2<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x<sp/>+<sp/>w/2,<sp/>y<sp/>+<sp/>h/2);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBegin(GL_LINE_LOOP);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>angle<sp/>=<sp/>-start;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(length!=0)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*float<sp/>x1<sp/>=<sp/>cellWidth<sp/>/<sp/>2<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth<sp/>+<sp/>cos((float)Gosu::degreesToRadians(angle))<sp/>*<sp/>((cellWidth<sp/>/<sp/>2)<sp/>-<sp/>2);</highlight></codeline>
+<codeline lineno="153"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/>y1<sp/>=<sp/>cellHeight<sp/>/<sp/>2<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight<sp/>+<sp/>sin((float)Gosu::degreesToRadians(angle))<sp/>*<sp/>((cellWidth<sp/>/<sp/>2)<sp/>-<sp/>2);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*float<sp/>x1<sp/>=<sp/>cellWidth<sp/>/<sp/>2<sp/>+<sp/>this-&gt;cellX<sp/>*<sp/>cellWidth<sp/>+<sp/>cos((float)Gosu::degreesToRadians(angle))<sp/>*<sp/>w/2;</highlight></codeline>
+<codeline lineno="156"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>float<sp/>y1<sp/>=<sp/>cellHeight<sp/>/<sp/>2<sp/>+<sp/>this-&gt;cellY<sp/>*<sp/>cellHeight<sp/>+<sp/>sin((float)Gosu::degreesToRadians(angle))<sp/>*<sp/>h/2;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/>x<sp/>+<sp/>w/2<sp/>+<sp/>cos((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)Gosu::degreesToRadians(angle))<sp/>*<sp/>w/2;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y1<sp/>=<sp/>y<sp/>+<sp/>h/2<sp/>+<sp/>sin((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)Gosu::degreesToRadians(angle))<sp/>*<sp/>h/2;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x1,<sp/>y1);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angle--;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>length--;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnd();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_figure_1a5ef8377e6cea7266e5cbffe19194bed8" kindref="member">Figure::drawRectangle</ref>(Gosu::Graphics&amp;<sp/>graphics,<sp/>Gosu::Color<sp/>color,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellWidth,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellHeight,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fill,</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref><sp/>bounds)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="class_figure_1a3afde28bdf6100f817b3205b0039a759" kindref="member">getInnerX</ref>(cellWidth)<sp/>+<sp/>bounds.x<sp/>*<sp/>cellWidth<sp/>-<sp/>3;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="class_figure_1a3021678f2a7b8c14f5a432c7900ea9cc" kindref="member">getInnerY</ref>(cellHeight)<sp/>+<sp/>bounds.y<sp/>*<sp/>cellHeight<sp/>-<sp/>3;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w<sp/>=<sp/>bounds.w<sp/>*<sp/>cellWidth;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h<sp/>=<sp/>bounds.h<sp/>*<sp/>cellHeight;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>glColor3f((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)color.red()/255,<sp/>(float)color.green()/255,<sp/>(float)color.blue()/255);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(fill)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBegin(GL_QUADS);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x,<sp/>y);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x,<sp/>y<sp/>+<sp/>h);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x<sp/>+<sp/>w,<sp/>y<sp/>+<sp/>h);</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x<sp/>+<sp/>w,<sp/>y);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnd();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Do<sp/>we<sp/>even<sp/>need/use<sp/>it?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Figure::drawLine(Gosu::Graphics&amp;<sp/>graphics,<sp/>Gosu::Color<sp/>color,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellWidth,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cellHeight,</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y2)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/><ref refid="class_figure_1a3afde28bdf6100f817b3205b0039a759" kindref="member">getInnerX</ref>(cellWidth);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/><ref refid="class_figure_1a3021678f2a7b8c14f5a432c7900ea9cc" kindref="member">getInnerY</ref>(cellHeight);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>glColor3f((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)color.red()/255,<sp/>(float)color.green()/255,<sp/>(float)color.blue()/255);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>glBegin(GL_LINES);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x<sp/>+<sp/>x1,<sp/>y<sp/>+<sp/>y1);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertex2f(x<sp/>+<sp/>x2,<sp/>y<sp/>+<sp/>y2);</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnd();</highlight></codeline>
+<codeline lineno="218"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_figure_1abbc9f322f94da232786ae8e0abc104f4" kindref="member">Figure::isCollisionWith</ref>(<ref refid="class_figure" kindref="compound">Figure</ref>*<sp/>otherFigure)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>cellX<sp/>==<sp/>otherFigure-&gt;<ref refid="class_figure_1aec212f4e73b277b4c5959e80077daea6" kindref="member">getX</ref>()<sp/>&amp;&amp;<sp/>cellY<sp/>==<sp/>otherFigure-&gt;<ref refid="class_figure_1adce37bd838719a6483fc9df6c39dfe43" kindref="member">getY</ref>();</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="comment">/*void<sp/>Figure::setDead(bool<sp/>dead)<sp/>{</highlight></codeline>
+<codeline lineno="238"><highlight class="comment"><sp/><sp/><sp/><sp/>this-&gt;dead<sp/>=<sp/>dead;</highlight></codeline>
+<codeline lineno="239"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="comment">/*bool<sp/>Figure::isDead()<sp/>const<sp/>{</highlight></codeline>
+<codeline lineno="247"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>dead;</highlight></codeline>
+<codeline lineno="248"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_figure_1ab54cb50c904fb14877edfa1c8aaefa13" kindref="member">Figure::setState</ref>(FigureState<sp/>state)</highlight></codeline>
+<codeline lineno="251"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state<sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal">FigureState<sp/>Figure::getState()</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;state;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Figure::reset()</highlight></codeline>
+<codeline lineno="261"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;cellX<sp/>=<sp/>startx;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;cellY<sp/>=<sp/>starty;</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;state<sp/>=<sp/>Alive;</highlight></codeline>
+<codeline lineno="265"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/figure.cpp"/>
+  </compounddef>
+</doxygen>

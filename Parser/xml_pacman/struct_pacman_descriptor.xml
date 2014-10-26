@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_pacman_descriptor" kind="struct" prot="public">
+    <compoundname>PacmanDescriptor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_pacman_descriptor_1a7a0f0d2bb59e9ae8dbbfb8c00bf2565a" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref></type>
+        <definition>BoundingBox PacmanDescriptor::circle</definition>
+        <argsstring></argsstring>
+        <name>circle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="9" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="52">
+        <label>PacmanDescriptor</label>
+        <link refid="struct_pacman_descriptor"/>
+        <childnode refid="53" relation="usage">
+          <edgelabel>circle</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>BoundingBox</label>
+        <link refid="struct_bounding_box"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="8" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="8" bodyend="10"/>
+    <listofallmembers>
+      <member refid="struct_pacman_descriptor_1a7a0f0d2bb59e9ae8dbbfb8c00bf2565a" prot="public" virt="non-virtual"><scope>PacmanDescriptor</scope><name>circle</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

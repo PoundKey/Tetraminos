@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_pacman_window" kind="class" prot="public">
+    <compoundname>PacmanWindow</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Window</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pacman_window_1a2f4f2fa3a5bb26359fb13a7d56f3588a" prot="private" static="no" mutable="no">
+        <type><ref refid="class_field" kindref="compound">Field</ref> *</type>
+        <definition>Field* PacmanWindow::field</definition>
+        <argsstring></argsstring>
+        <name>field</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="10" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_window_1a8f7668ee6060fd3a1d224fafc1282287" prot="private" static="no" mutable="no">
+        <type>Gosu::Font</type>
+        <definition>Gosu::Font PacmanWindow::font</definition>
+        <argsstring></argsstring>
+        <name>font</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="12" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_window_1a8b6ed82bfec6e99a37795e9e3ed10be6" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int PacmanWindow::count</definition>
+        <argsstring></argsstring>
+        <name>count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="18" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pacman_window_1a4f36d542eb03c761decb10c636913db8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PacmanWindow::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="14" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.cpp" bodystart="41" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_window_1aba7e93f23b5ca5ecc45636ffaed28fac" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PacmanWindow::draw</definition>
+        <argsstring>()</argsstring>
+        <name>draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="15" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.cpp" bodystart="17" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_window_1a95ae7cb9c8491b48fe1cc542797fcb92" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PacmanWindow::buttonDown</definition>
+        <argsstring>(Gosu::Button button)</argsstring>
+        <name>buttonDown</name>
+        <param>
+          <type>Gosu::Button</type>
+          <declname>button</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="16" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.cpp" bodystart="75" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pacman_window_1a455987e3d1da38ee59a4be9a2928c820" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PacmanWindow::PacmanWindow</definition>
+        <argsstring>()</argsstring>
+        <name>PacmanWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="21" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.cpp" bodystart="6" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_window_1ae37009f0de70c8a9b6ca3713a0ee0f11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PacmanWindow::~PacmanWindow</definition>
+        <argsstring>()</argsstring>
+        <name>~PacmanWindow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="22" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.cpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_window_1aecab81948b7e7afa830b6d57e6edb5ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PacmanWindow::checkGameOver</definition>
+        <argsstring>()</argsstring>
+        <name>checkGameOver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Test, ob das Spiel beendet ist. Ist das der Fall, dann wird ein kleiner Hinweisdialog angezeigt. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="28" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="54">
+        <label>PacmanWindow</label>
+        <link refid="class_pacman_window"/>
+        <childnode refid="55" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>Gosu::Window</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="56">
+        <label>PacmanWindow</label>
+        <link refid="class_pacman_window"/>
+        <childnode refid="57" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>Gosu::Window</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" line="9" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman_window.hpp" bodystart="8" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_pacman_window_1a95ae7cb9c8491b48fe1cc542797fcb92" prot="private" virt="non-virtual"><scope>PacmanWindow</scope><name>buttonDown</name></member>
+      <member refid="class_pacman_window_1aecab81948b7e7afa830b6d57e6edb5ca" prot="public" virt="non-virtual"><scope>PacmanWindow</scope><name>checkGameOver</name></member>
+      <member refid="class_pacman_window_1a8b6ed82bfec6e99a37795e9e3ed10be6" prot="private" virt="non-virtual"><scope>PacmanWindow</scope><name>count</name></member>
+      <member refid="class_pacman_window_1aba7e93f23b5ca5ecc45636ffaed28fac" prot="private" virt="non-virtual"><scope>PacmanWindow</scope><name>draw</name></member>
+      <member refid="class_pacman_window_1a2f4f2fa3a5bb26359fb13a7d56f3588a" prot="private" virt="non-virtual"><scope>PacmanWindow</scope><name>field</name></member>
+      <member refid="class_pacman_window_1a8f7668ee6060fd3a1d224fafc1282287" prot="private" virt="non-virtual"><scope>PacmanWindow</scope><name>font</name></member>
+      <member refid="class_pacman_window_1a455987e3d1da38ee59a4be9a2928c820" prot="public" virt="non-virtual"><scope>PacmanWindow</scope><name>PacmanWindow</name></member>
+      <member refid="class_pacman_window_1a4f36d542eb03c761decb10c636913db8" prot="private" virt="non-virtual"><scope>PacmanWindow</scope><name>update</name></member>
+      <member refid="class_pacman_window_1ae37009f0de70c8a9b6ca3713a0ee0f11" prot="public" virt="non-virtual"><scope>PacmanWindow</scope><name>~PacmanWindow</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

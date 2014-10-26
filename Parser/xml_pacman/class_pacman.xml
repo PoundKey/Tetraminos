@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_pacman" kind="class" prot="public">
+    <compoundname>Pacman</compoundname>
+    <basecompoundref refid="class_figure" prot="public" virt="non-virtual">Figure</basecompoundref>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_pacman_1a99a735a09c8e6c9ea36c1289ce271bb6" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Pacman::MIN_MOUTH_ANGLE</definition>
+        <argsstring></argsstring>
+        <name>MIN_MOUTH_ANGLE</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="15" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a9cb3c9d2181e90cf276254e337f77cce" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Pacman::MAX_MOUTH_ANGLE</definition>
+        <argsstring></argsstring>
+        <name>MAX_MOUTH_ANGLE</name>
+        <initializer>= 60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="18" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a172d8d891b8b4a08cefec72593026169" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Pacman::MOUTH_STEP</definition>
+        <argsstring></argsstring>
+        <name>MOUTH_STEP</name>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="22" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a547c00cc671eb22985c8e0b0e8856b0e" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Pacman::NORMAL_SPEED</definition>
+        <argsstring></argsstring>
+        <name>NORMAL_SPEED</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="33" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_pacman_1ae1e7f3d9152d497f654aded7fed5bf6e" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Pacman::mouthOpenAngle</definition>
+        <argsstring></argsstring>
+        <name>mouthOpenAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="25" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1a83b05033ee53e83835a539a72102a270" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Pacman::mouthOpening</definition>
+        <argsstring></argsstring>
+        <name>mouthOpening</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="29" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_pacman_1ac535e97ffa689f3338799c73b3650858" prot="private" static="no" mutable="no">
+        <type><ref refid="class_direction" kindref="compound">Direction</ref></type>
+        <definition>Direction Pacman::direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="36" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_pacman_1a220ce30e039e4f9a6ad5e202dee8a3d1" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Pacman::getAngleFromDirection</definition>
+        <argsstring>() const </argsstring>
+        <name>getAngleFromDirection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Blickwinkel und damit Richtung bestimmen, in die der Mund zeigen soll. Die Zahl wird als Multiplikator beim Zeichnen verwendet. <simplesect kind="return"><para><itemizedlist>
+<listitem>
+<para><computeroutput>0</computeroutput> = 0 * 90 Grad (rechts) </para></listitem>
+<listitem>
+<para><computeroutput>1</computeroutput> = 1 * 90 Grad (oben) </para></listitem>
+<listitem>
+<para><computeroutput>2</computeroutput> = 2 * 90 Grad (links) </para></listitem>
+<listitem>
+<para><computeroutput>3</computeroutput> = 3 * 90 Grad (unten) </para></listitem>
+</itemizedlist>
+</para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="49" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp" bodystart="71" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_pacman_1a6e55984f6573aebdd7b3a7b2acc7933d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Pacman::Pacman</definition>
+        <argsstring>(unsigned int x, unsigned int y, GameController *controller)</argsstring>
+        <name>Pacman</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="class_game_controller" kindref="compound">GameController</ref> *</type>
+          <declname>controller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_pacman" kindref="compound">Pacman</ref> erzeugen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position der Zelle des Spielfeldes, in der <ref refid="class_pacman" kindref="compound">Pacman</ref> platziert wird. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position der Zelle des Spielfeldes, in der <ref refid="class_pacman" kindref="compound">Pacman</ref> platziert wird. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>controller</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Spiele-Controller, der die Aktionen bewertet und die Figuren steuert. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="61" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a6b7038487df14cbca8d7e5b696fa5911" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::draw</definition>
+        <argsstring>(Gosu::Graphics &amp;graphics, int cellWidth, int cellHeight)</argsstring>
+        <name>draw</name>
+        <reimplements refid="class_figure_1a5822e1130930629113c233379b6a8621">draw</reimplements>
+        <param>
+          <type>Gosu::Graphics &amp;</type>
+          <declname>graphics</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cellWidth</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>cellHeight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aufforderung zur Neuzeichnung. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verweis auf das Fenster, in dem die Figur erscheinen soll. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellWidth</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Breite einer Zelle auf dem Spielfeld in Pixeln. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cellHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hoehe einer Zelle auf dem Spielfeld in Pixeln. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="70" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp" bodystart="36" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1ade750d70a46f70d45eb40c02742f4deb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::nextTick</definition>
+        <argsstring>()</argsstring>
+        <name>nextTick</name>
+        <reimplements refid="class_figure_1a14ec6bbc1684ad5f64ad47b2b5e6b959">nextTick</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Naechster Zeittakt. Die Methode muss uerberschrieben werden, um zeitgesteuerte Aktionen ausloesen zu koennen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="76" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp" bodystart="88" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a4d0d76b1642d579348241c7baf8a2f75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pacman::keyPressed</definition>
+        <argsstring>(Direction direction)</argsstring>
+        <name>keyPressed</name>
+        <param>
+          <type><ref refid="class_direction" kindref="compound">Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Eine Taste wurde gedrueckt, um die Figur in eine bestimmte Richtung zu schicken. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Richtung, in die die Figur(en) bewegt werden soll(en). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="83" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp" bodystart="135" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1aee1a5073227a694643fef37da12e0e53" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::handleCollisionWith</definition>
+        <argsstring>(Figure *otherFigure)</argsstring>
+        <name>handleCollisionWith</name>
+        <reimplements refid="class_figure_1a23c88c5f6b4c0d0b1091925a0a79c32c">handleCollisionWith</reimplements>
+        <param>
+          <type><ref refid="class_figure" kindref="compound">Figure</ref> *</type>
+          <declname>otherFigure</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Kollisionsbehandlung: Diese Figur ist mit der uebergebenen zusammen gestossen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>otherFigure</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Anderer Kollisionsbeteiligter. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="90" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="class_pacman_1a6b190109b2d9400c4eb7c52913ffd0c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Pacman::reset</definition>
+        <argsstring>()</argsstring>
+        <name>reset</name>
+        <reimplements refid="class_figure_1a7a363ffe52fa238f8815f4ddb002391c">reset</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="92" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.cpp" bodystart="156" bodyend="162"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="46">
+        <label>Figure</label>
+        <link refid="class_figure"/>
+      </node>
+      <node id="45">
+        <label>Pacman</label>
+        <link refid="class_pacman"/>
+        <childnode refid="46" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="48">
+        <label>Figure</label>
+        <link refid="class_figure"/>
+        <childnode refid="49" relation="usage">
+          <edgelabel>direction</edgelabel>
+        </childnode>
+        <childnode refid="50" relation="usage">
+          <edgelabel>controller</edgelabel>
+        </childnode>
+      </node>
+      <node id="47">
+        <label>Pacman</label>
+        <link refid="class_pacman"/>
+        <childnode refid="48" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="50">
+        <label>GameController</label>
+        <link refid="class_game_controller"/>
+      </node>
+      <node id="49">
+        <label>Direction</label>
+        <link refid="class_direction"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" line="12" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/pacman.hpp" bodystart="12" bodyend="93"/>
+    <listofallmembers>
+      <member refid="class_figure_1a62c4a10c33dd1e8959649aa7b0af9469" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>cellX</name></member>
+      <member refid="class_figure_1a68a2914364c7887ccf9cbebca690e417" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>cellY</name></member>
+      <member refid="class_figure_1ae5c33c0da6a5c28524f9e3297c5a650a" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>controller</name></member>
+      <member refid="class_pacman_1ac535e97ffa689f3338799c73b3650858" prot="private" virt="non-virtual"><scope>Pacman</scope><name>direction</name></member>
+      <member refid="class_pacman_1a6b7038487df14cbca8d7e5b696fa5911" prot="public" virt="virtual"><scope>Pacman</scope><name>draw</name></member>
+      <member refid="class_figure_1a7f878dcb957ef2b2143bf2ce692f4de1" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>drawArc</name></member>
+      <member refid="class_figure_1a62c6ed44ab5965034662b333d9cf16ef" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>drawLine</name></member>
+      <member refid="class_figure_1a5ef8377e6cea7266e5cbffe19194bed8" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>drawRectangle</name></member>
+      <member refid="class_figure_1a19cfa104a197e2ba5178472bf8d86fe1" prot="public" virt="non-virtual"><scope>Pacman</scope><name>EMPTY_BORDER</name></member>
+      <member refid="class_figure_1a3ef8e5f5e276f9e6c71c4ec27236af5e" prot="public" virt="non-virtual"><scope>Pacman</scope><name>Figure</name></member>
+      <member refid="class_pacman_1a220ce30e039e4f9a6ad5e202dee8a3d1" prot="private" virt="non-virtual"><scope>Pacman</scope><name>getAngleFromDirection</name></member>
+      <member refid="class_figure_1aa5b6f9cf09f9e8e0f64d50bb60c992c8" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>getInnerH</name></member>
+      <member refid="class_figure_1ac28d4f59ff2f217d64b37cc42c956f93" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>getInnerW</name></member>
+      <member refid="class_figure_1a3afde28bdf6100f817b3205b0039a759" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>getInnerX</name></member>
+      <member refid="class_figure_1a3021678f2a7b8c14f5a432c7900ea9cc" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>getInnerY</name></member>
+      <member refid="class_figure_1a04fc752464fd6a9273f63f7c14446152" prot="public" virt="virtual"><scope>Pacman</scope><name>getState</name></member>
+      <member refid="class_figure_1aec212f4e73b277b4c5959e80077daea6" prot="public" virt="virtual"><scope>Pacman</scope><name>getX</name></member>
+      <member refid="class_figure_1adce37bd838719a6483fc9df6c39dfe43" prot="public" virt="virtual"><scope>Pacman</scope><name>getY</name></member>
+      <member refid="class_pacman_1aee1a5073227a694643fef37da12e0e53" prot="public" virt="virtual"><scope>Pacman</scope><name>handleCollisionWith</name></member>
+      <member refid="class_figure_1abbc9f322f94da232786ae8e0abc104f4" prot="public" virt="virtual"><scope>Pacman</scope><name>isCollisionWith</name></member>
+      <member refid="class_pacman_1a4d0d76b1642d579348241c7baf8a2f75" prot="public" virt="non-virtual"><scope>Pacman</scope><name>keyPressed</name></member>
+      <member refid="class_pacman_1a9cb3c9d2181e90cf276254e337f77cce" prot="private" virt="non-virtual"><scope>Pacman</scope><name>MAX_MOUTH_ANGLE</name></member>
+      <member refid="class_pacman_1a99a735a09c8e6c9ea36c1289ce271bb6" prot="private" virt="non-virtual"><scope>Pacman</scope><name>MIN_MOUTH_ANGLE</name></member>
+      <member refid="class_pacman_1a172d8d891b8b4a08cefec72593026169" prot="private" virt="non-virtual"><scope>Pacman</scope><name>MOUTH_STEP</name></member>
+      <member refid="class_pacman_1ae1e7f3d9152d497f654aded7fed5bf6e" prot="private" virt="non-virtual"><scope>Pacman</scope><name>mouthOpenAngle</name></member>
+      <member refid="class_pacman_1a83b05033ee53e83835a539a72102a270" prot="private" virt="non-virtual"><scope>Pacman</scope><name>mouthOpening</name></member>
+      <member refid="class_pacman_1ade750d70a46f70d45eb40c02742f4deb" prot="public" virt="virtual"><scope>Pacman</scope><name>nextTick</name></member>
+      <member refid="class_pacman_1a547c00cc671eb22985c8e0b0e8856b0e" prot="private" virt="non-virtual"><scope>Pacman</scope><name>NORMAL_SPEED</name></member>
+      <member refid="class_pacman_1a6e55984f6573aebdd7b3a7b2acc7933d" prot="public" virt="non-virtual"><scope>Pacman</scope><name>Pacman</name></member>
+      <member refid="class_pacman_1a6b190109b2d9400c4eb7c52913ffd0c6" prot="public" virt="virtual"><scope>Pacman</scope><name>reset</name></member>
+      <member refid="class_figure_1aafde02c8d8607e9ca4b983976e2827d9" prot="public" virt="virtual"><scope>Pacman</scope><name>setDirection</name></member>
+      <member refid="class_figure_1ab54cb50c904fb14877edfa1c8aaefa13" prot="public" virt="virtual"><scope>Pacman</scope><name>setState</name></member>
+      <member refid="class_figure_1ac95f648898513f4375b38592e44aed0a" prot="public" virt="virtual"><scope>Pacman</scope><name>setX</name></member>
+      <member refid="class_figure_1a9ce19da45247d1435334b83ce0f5a02d" prot="public" virt="virtual"><scope>Pacman</scope><name>setY</name></member>
+      <member refid="class_figure_1ae92b872dc9b2d064dabbddbec045d7e3" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>speed</name></member>
+      <member refid="class_figure_1afb65fbf147384d72612b335ee33cc124" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>startx</name></member>
+      <member refid="class_figure_1a05dd42f060bf3a3c361e7407f6293cd9" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>starty</name></member>
+      <member refid="class_figure_1a7fa7b8287ef4d211ba8f7a7e71f2f137" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>state</name></member>
+      <member refid="class_figure_1a533ec7e27453ad01f0bb1778fc991a8e" prot="protected" virt="non-virtual"><scope>Pacman</scope><name>ticks</name></member>
+      <member refid="class_figure_1a654f8f4944edcfb248fb86b77b8b21d3" prot="public" virt="virtual"><scope>Pacman</scope><name>~Figure</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

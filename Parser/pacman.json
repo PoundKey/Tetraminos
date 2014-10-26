@@ -1,0 +1,252 @@
+{
+    "staticInfo": [
+        {
+            "className": "Cell",
+            "method": [
+                "Cell",
+                "draw",
+                "isBorder",
+                "setFood",
+                "isFood",
+                "setExit",
+                "isExit",
+                "setPrisonExit",
+                "isPrisonExit",
+                "setBorder",
+                "addBorder",
+                "removeBorder",
+                "reset"
+            ],
+            "field": [
+                "border",
+                "food",
+                "exit",
+                "prisonExit"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Cherry",
+            "method": [
+                "Cherry",
+                "draw",
+                "handleCollisionWith"
+            ],
+            "field": [],
+            "inheritance": "Figure",
+            "dependency": []
+        },
+        {
+            "className": "Direction",
+            "method": [
+                "Direction",
+                "getValue",
+                "turn180Degree",
+                "isVertical",
+                "isHorizontal",
+                "operator==",
+                "operator==",
+                "operator!=",
+                "operator!=",
+                "operator&",
+                "random"
+            ],
+            "field": [
+                "value"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Field",
+            "method": [
+                "setup",
+                "Field",
+                "~Field",
+                "nextTick",
+                "keyPressed",
+                "allowsBorderMovement",
+                "getCell",
+                "draw",
+                "getPoints",
+                "getState",
+                "getLevelNumber",
+                "getMaxLevels",
+                "getLives",
+                "nextLevel"
+            ],
+            "field": [
+                "FIELD_WIDTH",
+                "FIELD_HEIGHT",
+                "cells",
+                "controller",
+                "levelNumber",
+                "cellWidth",
+                "cellHeight"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Figure",
+            "method": [
+                "reset",
+                "Figure",
+                "~Figure",
+                "draw",
+                "nextTick",
+                "getX",
+                "getY",
+                "setX",
+                "setY",
+                "setDirection",
+                "isCollisionWith",
+                "handleCollisionWith",
+                "setState",
+                "getState",
+                "drawArc",
+                "drawRectangle",
+                "drawLine",
+                "getInnerX",
+                "getInnerY",
+                "getInnerW",
+                "getInnerH"
+            ],
+            "field": [
+                "cellX",
+                "cellY",
+                "direction",
+                "controller",
+                "speed",
+                "ticks",
+                "state",
+                "startx",
+                "starty",
+                "EMPTY_BORDER"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "GameController",
+            "method": [
+                "handleCollisionWithPacman",
+                "setState",
+                "GameController",
+                "~GameController",
+                "addFigure",
+                "setFoodCount",
+                "getFigures",
+                "setPacman",
+                "isGhostStateHarmless",
+                "getGhostHarmlessTicks",
+                "move",
+                "getDirectionToPacman",
+                "getDirectionToCoordinates",
+                "canMove",
+                "nextTick",
+                "keyPressed",
+                "collisionOfPacmanWith",
+                "collisionOfPacmanWith",
+                "collisionOfPacmanWith",
+                "getPoints",
+                "getState",
+                "getLives",
+                "reset"
+            ],
+            "field": [
+                "GHOSTS_HARMLESS_TICKS",
+                "DOT_POINTS",
+                "DEAD_GHOST_POINTS",
+                "CHERRY_POINTS",
+                "PILL_POINTS",
+                "STARTING_TICKS",
+                "LEVELCHANGE_TICKS",
+                "field",
+                "ghostStateHarmless",
+                "ghostHarmlessTicks",
+                "figures",
+                "pacman",
+                "points",
+                "foodCount",
+                "lives",
+                "ticks",
+                "state"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Ghost",
+            "method": [
+                "Ghost",
+                "draw",
+                "nextTick",
+                "handleCollisionWith"
+            ],
+            "field": [
+                "IQ",
+                "DEAD_IQ",
+                "MAX_IQ",
+                "NORMAL_SPEED",
+                "HARMLESS_SPEED",
+                "DEAD_SPEED"
+            ],
+            "inheritance": "Figure",
+            "dependency": []
+        },
+        {
+            "className": "Pacman",
+            "method": [
+                "getAngleFromDirection",
+                "Pacman",
+                "draw",
+                "nextTick",
+                "keyPressed",
+                "handleCollisionWith",
+                "reset"
+            ],
+            "field": [
+                "MIN_MOUTH_ANGLE",
+                "MAX_MOUTH_ANGLE",
+                "MOUTH_STEP",
+                "NORMAL_SPEED",
+                "mouthOpenAngle",
+                "mouthOpening",
+                "direction"
+            ],
+            "inheritance": "Figure",
+            "dependency": []
+        },
+        {
+            "className": "PacmanWindow",
+            "method": [
+                "update",
+                "draw",
+                "buttonDown",
+                "PacmanWindow",
+                "~PacmanWindow",
+                "checkGameOver"
+            ],
+            "field": [
+                "field",
+                "font",
+                "count"
+            ],
+            "inheritance": "Window",
+            "dependency": []
+        },
+        {
+            "className": "Pill",
+            "method": [
+                "Pill",
+                "draw",
+                "handleCollisionWith"
+            ],
+            "field": [],
+            "inheritance": "Figure",
+            "dependency": []
+        }
+    ]
+}

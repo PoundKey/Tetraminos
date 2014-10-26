@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_direction" kind="class" prot="public">
+    <compoundname>Direction</compoundname>
+    <includes refid="direction_8hpp" local="no">direction.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_direction_1a16c9dcea10d57f441f89ffdd2a769076" prot="public" static="no">
+        <name>@0</name>
+        <enumvalue id="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a873de7c5b6ec4204fc842c0de4aa13b0" prot="public">
+          <name>NONE</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a5c991b305f5c7ac3bfad93e14aa2c42c" prot="public">
+          <name>UP</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_direction_1a16c9dcea10d57f441f89ffdd2a769076aec601faa48bdc251e5513ab6a76a4581" prot="public">
+          <name>LEFT</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a772b6400aa059bf606a45367ac8d575b" prot="public">
+          <name>DOWN</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a427daf64ead139ed0facdbdb61b2aeaa" prot="public">
+          <name>RIGHT</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_direction_1a16c9dcea10d57f441f89ffdd2a769076aa2bd4f251fc4f6b2a65a01d04ce61ec8" prot="public">
+          <name>ALL</name>
+          <initializer>= 15</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="12" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" bodystart="12" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_direction_1aff1336830c119e2bbbdb923a62874dcc" prot="public" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Direction::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="15" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_direction_1a32c4b86971b57b5c74cb50745f8bb37e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Direction::Direction</definition>
+        <argsstring>(unsigned int value=NONE)</argsstring>
+        <name>Direction</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>value</declname>
+          <defval>NONE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Neue Richtung erzeugen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Neue Richtung, dabei handelt es sich entweder um einen Wert aus der Aufzaehlung oder um eine Bitkombination daraus. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="24" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1ac2632d6e15012979af51e944ecbf8754" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Direction::getValue</definition>
+        <argsstring>() const </argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wert der aktuellen Richtung auslesen. <simplesect kind="return"><para>Aktuelle Richtung, dabei handelt es sich entweder um einen Wert aus der Aufzaehlung oder um eine Bitkombination daraus. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="32" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="21" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1a8433ac503a06fcd66b6fc19d32c5cd05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_direction" kindref="compound">Direction</ref></type>
+        <definition>Direction Direction::turn180Degree</definition>
+        <argsstring>() const </argsstring>
+        <name>turn180Degree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Eine um 180 Grad gedrehte Richtung erzeugen. Die Operation ist nur definiert, wenn als Wert eine der Konstanten eingetragen ist. Bei einer Kombination daraus wird die unveraenderte Richtung zurueck gegeben. Der Originalwert bleibt in jedem Fall unveraendert. <simplesect kind="return"><para>Neue Richtung, die um 180 Grad gedreht ist. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="42" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="34" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1a3a523a04b4d36c30b6b971aa8da45e3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Direction::isVertical</definition>
+        <argsstring>() const </argsstring>
+        <name>isVertical</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handelt es sich um eine vertikale Richtung? <simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn es sich um eine vertikale Richtung handelt. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="49" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1aa3b28ab4ff7c5c3420b357b34dbd98b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Direction::isHorizontal</definition>
+        <argsstring>() const </argsstring>
+        <name>isHorizontal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handelt es sich um eine horizontale Richtung? <simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn es sich um eine horizontale Richtung handelt. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="56" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1a79313de01b18d75b200c9c51f4c04f22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Direction::operator==</definition>
+        <argsstring>(Direction other)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="class_direction" kindref="compound">Direction</ref></type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vergleich zweier Richtungen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zu vergleichende Richtung. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn beide Richtung inhaltlich gleich sind. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="64" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="72" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1a3b53586fddc27e65839799e2ca1f8d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Direction::operator==</definition>
+        <argsstring>(unsigned int other)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vergleich der Richtungen mit dem Bitwert einer anderen Richtung. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zu vergleichende Richtung. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn beide Richtung inhaltlich gleich sind. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="73" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1a15c9de467766b24383ea323ffebf88d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Direction::operator!=</definition>
+        <argsstring>(Direction &amp;other)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="class_direction" kindref="compound">Direction</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vergleich zweier Richtungen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zu vergleichende Richtung. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn beide Richtung inhaltlich ungleich sind. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="81" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="95" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1a355bc507abc4db11fe5a8b1a4df285fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Direction::operator!=</definition>
+        <argsstring>(unsigned int other)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Vergleich der Richtungen mit dem Bitwert einer anderen Richtung. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zu vergleichende Richtung. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn beide Richtung inhaltlich ungleich sind. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="90" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="107" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_direction_1a3194ec0d9c5308189071720313017857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Direction::operator&amp;</definition>
+        <argsstring>(unsigned int other)</argsstring>
+        <name>operator&amp;</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Die Richtung mit einer anderen Zahl logisch &apos;und&apos; verknupefen. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Zahl, mit der die Richtung verknuepft wird. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Neue Richtung als logisches &apos;Und&apos; aus dem bisherigen Wert und der Zahl &apos;other&apos;. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="99" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="119" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_direction_1a30677f0e38d37c0d643f602b90685217" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_direction" kindref="compound">Direction</ref></type>
+        <definition>Direction Direction::random</definition>
+        <argsstring>()</argsstring>
+        <name>random</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Eine zufaellige Richtung (oben, unten, links, rechts) erzeugen. <simplesect kind="return"><para>Zufaellige Richtung. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="106" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.cpp" bodystart="129" bodyend="131"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Die Klasse verwaltet Richtungsangaben. </para>    </detaileddescription>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" line="9" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/direction.hpp" bodystart="9" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_direction_1a16c9dcea10d57f441f89ffdd2a769076aa2bd4f251fc4f6b2a65a01d04ce61ec8" prot="public" virt="non-virtual"><scope>Direction</scope><name>ALL</name></member>
+      <member refid="class_direction_1a32c4b86971b57b5c74cb50745f8bb37e" prot="public" virt="non-virtual"><scope>Direction</scope><name>Direction</name></member>
+      <member refid="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a772b6400aa059bf606a45367ac8d575b" prot="public" virt="non-virtual"><scope>Direction</scope><name>DOWN</name></member>
+      <member refid="class_direction_1ac2632d6e15012979af51e944ecbf8754" prot="public" virt="non-virtual"><scope>Direction</scope><name>getValue</name></member>
+      <member refid="class_direction_1aa3b28ab4ff7c5c3420b357b34dbd98b1" prot="public" virt="non-virtual"><scope>Direction</scope><name>isHorizontal</name></member>
+      <member refid="class_direction_1a3a523a04b4d36c30b6b971aa8da45e3e" prot="public" virt="non-virtual"><scope>Direction</scope><name>isVertical</name></member>
+      <member refid="class_direction_1a16c9dcea10d57f441f89ffdd2a769076aec601faa48bdc251e5513ab6a76a4581" prot="public" virt="non-virtual"><scope>Direction</scope><name>LEFT</name></member>
+      <member refid="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a873de7c5b6ec4204fc842c0de4aa13b0" prot="public" virt="non-virtual"><scope>Direction</scope><name>NONE</name></member>
+      <member refid="class_direction_1a15c9de467766b24383ea323ffebf88d0" prot="public" virt="non-virtual"><scope>Direction</scope><name>operator!=</name></member>
+      <member refid="class_direction_1a355bc507abc4db11fe5a8b1a4df285fd" prot="public" virt="non-virtual"><scope>Direction</scope><name>operator!=</name></member>
+      <member refid="class_direction_1a3194ec0d9c5308189071720313017857" prot="public" virt="non-virtual"><scope>Direction</scope><name>operator&amp;</name></member>
+      <member refid="class_direction_1a79313de01b18d75b200c9c51f4c04f22" prot="public" virt="non-virtual"><scope>Direction</scope><name>operator==</name></member>
+      <member refid="class_direction_1a3b53586fddc27e65839799e2ca1f8d53" prot="public" virt="non-virtual"><scope>Direction</scope><name>operator==</name></member>
+      <member refid="class_direction_1a30677f0e38d37c0d643f602b90685217" prot="public" virt="non-virtual"><scope>Direction</scope><name>random</name></member>
+      <member refid="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a427daf64ead139ed0facdbdb61b2aeaa" prot="public" virt="non-virtual"><scope>Direction</scope><name>RIGHT</name></member>
+      <member refid="class_direction_1a8433ac503a06fcd66b6fc19d32c5cd05" prot="public" virt="non-virtual"><scope>Direction</scope><name>turn180Degree</name></member>
+      <member refid="class_direction_1a16c9dcea10d57f441f89ffdd2a769076a5c991b305f5c7ac3bfad93e14aa2c42c" prot="public" virt="non-virtual"><scope>Direction</scope><name>UP</name></member>
+      <member refid="class_direction_1aff1336830c119e2bbbdb923a62874dcc" prot="public" virt="non-virtual"><scope>Direction</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

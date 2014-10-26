@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="class_field" kind="class" prot="public">
+    <compoundname>Field</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="class_field_1a43c93553a1812862103cddea08dd8a2e" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Field::FIELD_WIDTH</definition>
+        <argsstring></argsstring>
+        <name>FIELD_WIDTH</name>
+        <initializer>= 21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="15" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_field_1a37305fd05c91fba9f986e45fc8f348c2" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int Field::FIELD_HEIGHT</definition>
+        <argsstring></argsstring>
+        <name>FIELD_HEIGHT</name>
+        <initializer>= 21</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="17" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_field_1a1628903e92da51281616835d983a8296" prot="private" static="no" mutable="no">
+        <type><ref refid="class_cell" kindref="compound">Cell</ref></type>
+        <definition>Cell Field::cells[FIELD_WIDTH][FIELD_HEIGHT]</definition>
+        <argsstring>[FIELD_WIDTH][FIELD_HEIGHT]</argsstring>
+        <name>cells</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="22" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_field_1a187746b783307db2406ecc8b04848f6f" prot="private" static="no" mutable="no">
+        <type><ref refid="class_game_controller" kindref="compound">GameController</ref> *</type>
+        <definition>GameController* Field::controller</definition>
+        <argsstring></argsstring>
+        <name>controller</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="26" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_field_1a7ce367a3b72447dac8087fa405f8a985" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Field::levelNumber</definition>
+        <argsstring></argsstring>
+        <name>levelNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="29" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_field_1a858ebdd2e389b18550fe3de8b112de8b" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Field::cellWidth</definition>
+        <argsstring></argsstring>
+        <name>cellWidth</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="32" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_field_1a516b92d387089e248e9e520f0ff66c71" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Field::cellHeight</definition>
+        <argsstring></argsstring>
+        <name>cellHeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="35" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_field_1a07f38aae0022638b4080b4993d65516c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Field::setup</definition>
+        <argsstring>(unsigned int levelNumber)</argsstring>
+        <name>setup</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>levelNumber</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialisierung des Spielfeldes aus einer textuellen Beschreibung. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>levelNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nummer des Levels (siehe Erlaeuterung oben).</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Initialisierung des Spielfeldes aus einer textuellen Beschreibung. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buf</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Aufbau des Spielfeldes (siehe Erlaeuterung oben). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="41" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="120" bodyend="190"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_field_1a3e804c92273d9159f413f227b535c672" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Field::Field</definition>
+        <argsstring>()</argsstring>
+        <name>Field</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ein neues Spielfeld erzeugen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="47" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a45d6e6d09b8f8e46de62b40119d62c60" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>Field::~Field</definition>
+        <argsstring>()</argsstring>
+        <name>~Field</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aufraeumarbeiten. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="52" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a1ca98256bd417fc5e2d1a24a8c8ea9f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Field::nextTick</definition>
+        <argsstring>()</argsstring>
+        <name>nextTick</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Die Methode wird zyklisch in festen Zeitabstaenden aufgerufen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="58" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="322" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a4a01172c224d7b1803d4b1b4be130e8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Field::keyPressed</definition>
+        <argsstring>(Direction direction)</argsstring>
+        <name>keyPressed</name>
+        <param>
+          <type><ref refid="class_direction" kindref="compound">Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Eine Taste wurde gedrueckt, um die Figur in eine bestimmte Richtung zu schicken. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Richtung, in die die Figur(en) bewegt werden soll(en). </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="65" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="335" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1ad9bae63d85c027043034ffd81ebb6325" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Field::allowsBorderMovement</definition>
+        <argsstring>(unsigned int x, unsigned int y, Direction direction) const </argsstring>
+        <name>allowsBorderMovement</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="class_direction" kindref="compound">Direction</ref></type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Kann eine Figur, die sich in der Zelle an der Koordinate (x,y) befindet, in die Richtung &apos;direction&apos; gehen oder ist dort ein Rahmen? <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position der Zelle und damit auch der Figur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position der Zelle und damit auch der Figur </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Richtung, in die die Figur gehen moechte. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn eine Bewegung moeglich ist oder <computeroutput>false</computeroutput>, falls ein Rahmen im Weg ist.</para></simplesect>
+Kann sich eine Figur, die sich auf der Zelle an Position (x, y) befindet, in die angegebene Richtung bewegen? Ist also dort kein Rahmen vorhanden? <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Position der Zelle, von der aus die Richtung untersucht werden soll. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Position der Zelle, von der aus die Richtung untersucht werden soll. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>direction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Richtung, in die gelaufen werden soll. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput> Es kann gelaufen werden, da sich keine Barriere im Weg befindet. <computeroutput>false</computeroutput> In der Richtung befindet sich eine Barriere. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="77" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="267" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1aef4e859be6172cc9cd7a744a5ab6b559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_cell" kindref="compound">Cell</ref> *</type>
+        <definition>Cell * Field::getCell</definition>
+        <argsstring>(unsigned int x, unsigned int y)</argsstring>
+        <name>getCell</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Liest die Zelle aus, die sich an der Koordinate (x,y) im Spielfeld befindet. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X-Koordinate der Zelle </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y-Koordinate der Zelle </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Zeiger auf die Zelle. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="86" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="252" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a10b6bf4b8ac047a9a086ad275fcf98dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Field::draw</definition>
+        <argsstring>(Gosu::Graphics &amp;graphics)</argsstring>
+        <name>draw</name>
+        <param>
+          <type>Gosu::Graphics &amp;</type>
+          <declname>graphics</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wird aufgerufen, wenn das Spielfeld neu gezeichnet werden muss. Die Methode ueberschreibt eine Methode der Basisklasse. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Informationen ueber das Ereignis, das das Neuzeichnen ausgeloest hat. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn das Eriegnis &apos;verbraucht&apos; wurde. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="97" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="223" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a309db9b07a34b252f438e9e6863812ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Field::getPoints</definition>
+        <argsstring>() const </argsstring>
+        <name>getPoints</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Aktuelle Punktezahl auslesen. <simplesect kind="return"><para>Aktuelle Punktezahl. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="103" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="346" bodyend="348"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1aa1a3ba493935d599b630afd188d72bd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GameState</type>
+        <definition>GameState Field::getState</definition>
+        <argsstring>()</argsstring>
+        <name>getState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ist das Spiel zuende? Es ist dann vorueber, wenn entweder <ref refid="class_pacman" kindref="compound">Pacman</ref> tot ist oder aber das ganze Essen aufgegessen wurde. <simplesect kind="return"><para><computeroutput>true</computeroutput>, wenn das Spiel zuende ist. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="113" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="361" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a2aaa6451d3c124886850af1948ba75c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Field::getLevelNumber</definition>
+        <argsstring>()</argsstring>
+        <name>getLevelNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="115" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="366" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a2b9bf303a1e3ca9372cfdd70391055d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Field::getMaxLevels</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxLevels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="116" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="371" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1a56c5fc8c3c20f23086464692384e30fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Field::getLives</definition>
+        <argsstring>()</argsstring>
+        <name>getLives</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="118" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="376" bodyend="379"/>
+      </memberdef>
+      <memberdef kind="function" id="class_field_1aa563d8b0fb2703a7de875c376f806674" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Field::nextLevel</definition>
+        <argsstring>()</argsstring>
+        <name>nextLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="120" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.cpp" bodystart="381" bodyend="393"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" line="11" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/field.hpp" bodystart="11" bodyend="129"/>
+    <listofallmembers>
+      <member refid="class_field_1ad9bae63d85c027043034ffd81ebb6325" prot="public" virt="non-virtual"><scope>Field</scope><name>allowsBorderMovement</name></member>
+      <member refid="class_field_1a516b92d387089e248e9e520f0ff66c71" prot="private" virt="non-virtual"><scope>Field</scope><name>cellHeight</name></member>
+      <member refid="class_field_1a1628903e92da51281616835d983a8296" prot="private" virt="non-virtual"><scope>Field</scope><name>cells</name></member>
+      <member refid="class_field_1a858ebdd2e389b18550fe3de8b112de8b" prot="private" virt="non-virtual"><scope>Field</scope><name>cellWidth</name></member>
+      <member refid="class_field_1a187746b783307db2406ecc8b04848f6f" prot="private" virt="non-virtual"><scope>Field</scope><name>controller</name></member>
+      <member refid="class_field_1a10b6bf4b8ac047a9a086ad275fcf98dd" prot="public" virt="virtual"><scope>Field</scope><name>draw</name></member>
+      <member refid="class_field_1a3e804c92273d9159f413f227b535c672" prot="public" virt="non-virtual"><scope>Field</scope><name>Field</name></member>
+      <member refid="class_field_1a37305fd05c91fba9f986e45fc8f348c2" prot="public" virt="non-virtual"><scope>Field</scope><name>FIELD_HEIGHT</name></member>
+      <member refid="class_field_1a43c93553a1812862103cddea08dd8a2e" prot="public" virt="non-virtual"><scope>Field</scope><name>FIELD_WIDTH</name></member>
+      <member refid="class_field_1aef4e859be6172cc9cd7a744a5ab6b559" prot="public" virt="non-virtual"><scope>Field</scope><name>getCell</name></member>
+      <member refid="class_field_1a2aaa6451d3c124886850af1948ba75c7" prot="public" virt="non-virtual"><scope>Field</scope><name>getLevelNumber</name></member>
+      <member refid="class_field_1a56c5fc8c3c20f23086464692384e30fa" prot="public" virt="non-virtual"><scope>Field</scope><name>getLives</name></member>
+      <member refid="class_field_1a2b9bf303a1e3ca9372cfdd70391055d1" prot="public" virt="non-virtual"><scope>Field</scope><name>getMaxLevels</name></member>
+      <member refid="class_field_1a309db9b07a34b252f438e9e6863812ba" prot="public" virt="non-virtual"><scope>Field</scope><name>getPoints</name></member>
+      <member refid="class_field_1aa1a3ba493935d599b630afd188d72bd7" prot="public" virt="non-virtual"><scope>Field</scope><name>getState</name></member>
+      <member refid="class_field_1a4a01172c224d7b1803d4b1b4be130e8c" prot="public" virt="non-virtual"><scope>Field</scope><name>keyPressed</name></member>
+      <member refid="class_field_1a7ce367a3b72447dac8087fa405f8a985" prot="private" virt="non-virtual"><scope>Field</scope><name>levelNumber</name></member>
+      <member refid="class_field_1aa563d8b0fb2703a7de875c376f806674" prot="public" virt="non-virtual"><scope>Field</scope><name>nextLevel</name></member>
+      <member refid="class_field_1a1ca98256bd417fc5e2d1a24a8c8ea9f0" prot="public" virt="non-virtual"><scope>Field</scope><name>nextTick</name></member>
+      <member refid="class_field_1a07f38aae0022638b4080b4993d65516c" prot="private" virt="non-virtual"><scope>Field</scope><name>setup</name></member>
+      <member refid="class_field_1a45d6e6d09b8f8e46de62b40119d62c60" prot="public" virt="virtual"><scope>Field</scope><name>~Field</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

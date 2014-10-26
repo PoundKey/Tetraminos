@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="struct_cherry_descriptor" kind="struct" prot="public">
+    <compoundname>CherryDescriptor</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_cherry_descriptor_1aa58cf0d6846c9722e40c90127f6a4429" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref></type>
+        <definition>BoundingBox CherryDescriptor::cherries[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>cherries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" line="7" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cherry_descriptor_1a85400834486d6dca64dffb1a2ae242a6" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref></type>
+        <definition>BoundingBox CherryDescriptor::reflection[4]</definition>
+        <argsstring>[4]</argsstring>
+        <name>reflection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" line="8" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_cherry_descriptor_1ae50c2a6e3023995b6ae34c232bf16ff7" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_bounding_box" kindref="compound">BoundingBox</ref></type>
+        <definition>BoundingBox CherryDescriptor::stalks[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>stalks</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" line="9" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>CherryDescriptor</label>
+        <link refid="struct_cherry_descriptor"/>
+        <childnode refid="12" relation="usage">
+          <edgelabel>stalks</edgelabel>
+          <edgelabel>cherries</edgelabel>
+          <edgelabel>reflection</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>BoundingBox</label>
+        <link refid="struct_bounding_box"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" line="6" column="1" bodyfile="/Users/CTXue/Downloads/Pacman-master/Pacman/cherry.hpp" bodystart="6" bodyend="10"/>
+    <listofallmembers>
+      <member refid="struct_cherry_descriptor_1aa58cf0d6846c9722e40c90127f6a4429" prot="public" virt="non-virtual"><scope>CherryDescriptor</scope><name>cherries</name></member>
+      <member refid="struct_cherry_descriptor_1a85400834486d6dca64dffb1a2ae242a6" prot="public" virt="non-virtual"><scope>CherryDescriptor</scope><name>reflection</name></member>
+      <member refid="struct_cherry_descriptor_1ae50c2a6e3023995b6ae34c232bf16ff7" prot="public" virt="non-virtual"><scope>CherryDescriptor</scope><name>stalks</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
