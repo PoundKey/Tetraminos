@@ -7,6 +7,7 @@ angular.module('myApp.controllers', [])
         function ($scope, $location, $http, $routeParams) {
 
             $scope.message = undefined;
+            $scope.content = undefined;
 
 
             $scope.marioAnalyzer = function () {
@@ -14,13 +15,13 @@ angular.module('myApp.controllers', [])
                 var msg = undefined;
                 $http.get('/api/mario')
                     .success(function (data, status, headers, config) {
-                        msg = data;
                         //alert("Start analyzing Mario source code: " + msg.title + " @ " + msg.content);
                         $scope.message = "Start analyzing Mario source code...";
+                        $scope.message = data.title;
+                        $scope.content = data.content;
                     })
                     .error(function (data, status, headers, config) {
                         alert("Error when sending the AJAX request. ");
-                        $scope.message = data;
                     });
 
 
