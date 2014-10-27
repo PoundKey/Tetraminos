@@ -22,6 +22,7 @@ int main(int argc, const char *argv[]) {
 		//if (input == 'c') {
 		//	testFunction();
 		//}
+		sleep(2);
 		testFunction();
 	}
 

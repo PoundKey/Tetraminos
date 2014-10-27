@@ -20,5 +20,5 @@ private:
 	std::vector<BPatch_function *> functions;
 	std::vector<BPatch_point *> *points;
 
-	void injectIntoFunction(BPatch_variableExpr *toInject, BPatch_arithExpr arithExpr, std::vector<BPatch_point *> *points);
+	//void injectIntoFunction(BPatch_variableExpr *toInject, BPatch_arithExpr arithExpr, std::vector<BPatch_point *> *points);
 };

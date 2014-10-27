@@ -7,13 +7,13 @@
 using namespace Dyninst;
 
 int main(int argc, const char *argv[]) {
-	//DynamicRunner *newRunner = new DynamicRunner(12345, "test");
+	DynamicRunner *newRunner = new DynamicRunner(7352, "test");
 
-
+	/**
 	std::vector<BPatch_process*> *getProcesses();
 
 	BPatch *bpatch = new BPatch();
-    BPatch_process *appProc = bpatch->processAttach("test", 4904);
+    BPatch_process *appProc = bpatch->processAttach("test", 5167);
 	
 	BPatch_image *appImage = appProc->getImage();
 
@@ -53,6 +53,7 @@ int main(int argc, const char *argv[]) {
 	appProc->continueExecution();
 	int lastCount = 0;
 	while (!appProc->isTerminated()) {
+
 		//appProc->stopExecution();
 		//int count;
 		//intCounter->readValue(&count);
@@ -62,5 +63,9 @@ int main(int argc, const char *argv[]) {
 		//lastCount = count;
 		//appProc->continueExecution();
 	}
-	
+	**/
+}
+
+void itFinished() {
+	printf("The callback worked!");
 }
