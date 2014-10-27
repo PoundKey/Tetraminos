@@ -22,6 +22,8 @@ Once installation is complete, compile (on Ubuntu) using the following command (
 g++ -I/usr/local/dyninst/include [___.cpp files] -L/usr/local/dyninst/lib -ldyninstAPI -lcommon -lsymtabAPI -lpatchAPI -lparseAPI -lstackwalk -lpcontrol -linstructionAPI -ldynC_API -ldynDwarf -ldynElf -lsymLite -lsymtabAPI
 
 Dynamic Analyser code exists in Fuser/DynamicAnalyser. Note that test.cpp and main.cpp are unused in the context of the entire project, but are there for testing purposes so that we don't need to compile and load an entire game every time we want to attach to a process and check that dyninst is working as it should.
+  - The test.cpp file sets up a program that just continuously calls a function testFunction(), every 2 seconds. The commented out portion of main.cpp sets up the dynamic analyser, attaches to the test.cpp binary file/executable, and printfs to test.cpps consolento every time that testFunction() is called. 
+  - To modify this for a larger program, we can just inject the printf into every function and print out the name of the function, as DynamicRunner.cpp does.
 
 Testing Process
 ================
