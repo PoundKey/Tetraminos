@@ -34,6 +34,8 @@ The console prints out error messages for class files not processed by the stati
 3. Framework (The wrapper): Triggers the automation process by clicking one of the 
 codebase selection button. It calls the execution cmd to invoke the game (codebase), following by calling the fuser to fetch the game process id and further invocation on the dynamic analyzer. Again, each invocation prints the assertion statement on the console verifying that the control flow executes correctly according to the plan.
 
+4. Dynamic Analyser: See last paragraph of Dynamic Analyser section for brief description of testing process.
+
 Codebase
 ================
 Ideally our analyzer works on every legitimate C++ code bases.
