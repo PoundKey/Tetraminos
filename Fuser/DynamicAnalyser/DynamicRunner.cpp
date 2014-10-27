@@ -1,5 +1,8 @@
 #include "DynamicRunner.h"
 
+// DynamicRunner initializer
+// sets up the app image and gets the functions from the
+// app
 DynamicRunner::DynamicRunner(int pid, std::string exeName ) {
 
 	std::vector<BPatch_process*> *getProcesses();
@@ -10,48 +13,53 @@ DynamicRunner::DynamicRunner(int pid, std::string exeName ) {
     // Get the process image
     appImage = appProc->getImage();
 
-    std::vector<BPatch_module *>* modules = appImage->getModules();
-	BPatch_module *appMod = modules[0][0];
+	// get the methods from the app image
+    functions = *(appImage->getProcedures());
+   
+}
 
-    functions = *(appMod->getProcedures());
-    //printf("Did i get here?\n");
-    for (int i = 0; i < functions.size(); i++) {
+// The workhorse function
+void DynamicRunner::analyse() {
+	for (int i = 0; i < functions.size(); i++) {
+		// Load up this function into a BPatch_function variable
 		BPatch_function *this_function = functions[i];
-		//std::cout << "Function name: " << this_function->getName() << "\n";
+		
+		// setup a vector of funcpoints and set to the entry point of this_function
+		// NOTE - the 'entry' point is essentially a memory address
 		std::vector<BPatch_point *> *func_points;
 		func_points = this_function->findPoint(BPatch_entry);
-		// Create a snippet that calls printf with each effective address
+		// Create a snippet that calls printf every time a function is called
 		std::vector<BPatch_snippet *> printfArgs;
+		// Setup the funcString - format is "Function Called! Name is: _____\n"
 		std::string funcString = "Function Called! Name is:";
 		funcString.append(this_function->getName());
 		funcString.append("\n");
+		// Create a BPatch_constExpr using the funcString
 		BPatch_snippet *fmt = new BPatch_constExpr(funcString.c_str());
 		printfArgs.push_back(fmt);
-		//std::string fname = this_function->getName();
-		BPatch_snippet *fmt2 = new BPatch_constExpr((const char*)this_function->getName().c_str());
-		//printf("%s",this_function->getName().c_str());
-		//printf("\n");
-		//printfArgs.push_back(fmt2);
-		std::vector<BPatch_function *> printfFuncs;
-		appImage->findFunction("printf", printfFuncs);
-		BPatch_funcCallExpr printfCall(*(printfFuncs[0]), printfArgs);
-		//printf("Do I get to here??");
-		std::string comparor = "apply_surface";
-		if (this_function->getName().compare(comparor) != 0) {
-			//std::cout << "This is apply_surface!\n";
-			appProc->insertSnippet(printfCall, *func_points);
-		}
-		
-		//printf("HELLO?\n");
-	}
-	appProc->continueExecution();
-	while (!appProc->isTerminated()) {
 
+		std::vector<BPatch_function *> printfFuncs;
+		// Find printf in the system library
+		appImage->findFunction("printf", printfFuncs);
+		// create a BPatch_funcCallExpr using printf and the string argument defined earlier
+		BPatch_funcCallExpr printfCall(*(printfFuncs[0]), printfArgs);
+		std::string comparor = "apply_surface";
+		// Here for speed purposes - "apply_surface" is the render function in pacman
+		// so I am ignoring it for now - will find a better way to do this -- TODO
+		if (this_function->getName().compare(comparor) != 0) {
+			injectFuncIntoFunc(printfCall, func_points);
+		}
 	}
+
+	// infinitely loop
+	appProc->continueExecution();
+	//while (!appProc->isTerminated()) {
+	//
+	//}
 }
 
-//void DynamicRunner::injectIntoFunction(BPatch_variableExpr *toInject, BPatch_arithExpr arithExpr, std::vector<BPatch_point *> *points) {
-//
-//}
+void DynamicRunner::injectFuncIntoFunc(BPatch_funcCallExpr funcToInject, std::vector<BPatch_point *> *func_points) {
+	appProc->insertSnippet(funcToInject, *func_points);
+}
 
 
