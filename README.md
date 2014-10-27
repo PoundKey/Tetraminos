@@ -40,4 +40,4 @@ codebase selection button. It calls the execution cmd to invoke the game (codeba
 
 Codebase
 ================
-Ideally our analyzer works on every legitimate C++ code bases.
+Ideally our analyzer works on every legitimate C++ code base.
