@@ -3,6 +3,11 @@
 // DynamicRunner initializer
 // sets up the app image and gets the functions from the
 // app
+
+// TODO - Need to take in another parameter - a pointer to a vector
+// that holds the static class information - and use that to map
+// class data to functions. Once we have that here, it will be 
+// easy to identify when a function is called and play a note.
 DynamicRunner::DynamicRunner(int pid, std::string exeName ) {
 
 	std::vector<BPatch_process*> *getProcesses();
