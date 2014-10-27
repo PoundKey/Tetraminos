@@ -34,7 +34,7 @@ The console prints out error messages for class files not processed by the stati
 2. Fuser: Takes in a single JSON file computed by the parser as input, assert the file conform s with the class pre-defined structure (Otherwise an exception is thrown). Along with each class profile creation, the consoles prints out it's corresponding string representation.
 
 3. Framework (The wrapper): Triggers the automation process by clicking one of the 
-codebase selection button. It calls the execution cmd to invoke the game (codebase), following by calling the fuser to fetch the game process id and further invocation on the dynamic analyzer. Again, each invocation prints the assertion statement on the console verifying that the control flow executes correctly according to the plan.
+codebase selection buttons. It calls the execution cmd to invoke the game (codebase), following by calling the fuser to fetch the game process id and further invocation on the dynamic analyzer. Again, each invocation prints the assertion statement on the console verifying that the control flow executes correctly according to the plan.
 
 4. Dynamic Analyser: See last paragraph of Dynamic Analyser section for brief description of testing process.
 
