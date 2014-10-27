@@ -6,17 +6,18 @@
 #include <cstdio>
 #include <windows.h>
 #include <tlhelp32.h>
+// #include "Sonifier/OSCmessenger.cpp"
+#include "../../Fuser/DynamicAnalyser/DynamicRunner.h"
 
 int main(int argc, char * argv[]) {
     std::map<std::string,std::string> classmap;
     std::map<std::string,std::string>::iterator it;
-    std::int pid = argv[1];
-
+    std::string jsonName = argv[2];
 
 
     //TODO: IMPORT JSON FILE
     // http://stackoverflow.com/questions/18107079/rapidjson-working-code-for-reading-document-from-file
-    FILE * pFile = fopen ("test.json" , "r");
+    FILE * pFile = fopen (argv[2] , "r");
     rapidjson::FileStream is(pFile);
     rapidjson::Document d;
     d.ParseStream<0>(is);
@@ -25,8 +26,6 @@ int main(int argc, char * argv[]) {
 	// const char myJson[] = "{\"staticInfo\":[{\"className\":\"cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\":[  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]},{\"className\":\"cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\":[  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]}]}";
 
 
-    //printf("%s\n", d["hello"].GetString());
-    //std::cout << d["hello"].GetString() << "\n";
     rapidjson::Document child;
     const rapidjson::Value& b = d["staticInfo"];
     assert(b.IsArray());
@@ -77,8 +76,11 @@ int main(int argc, char * argv[]) {
             listClasses.push_back(cl);
     }
 
-    // TODO: Pass listClasses too Dyninst.
+    // Send list of profiles to OSCMessenger to create instruments
+    createInstruments();
 
+
+    // TODO: Pass listClasses too Dyninst.
     //This is for Dyninst to use for iterating over it's functions
     std::cout << "This is printing from the list of Class" << endl;
     for( std::vector<ClassProfile::ClassProfile>::const_iterator i = listClasses.begin(); i != listClasses.end(); ++i){
@@ -100,6 +102,7 @@ int main(int argc, char * argv[]) {
 
 // GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
     std::string exeName = argv[1];
+    std::string pid;
     PROCESSENTRY32 entry;
     entry.dwSize = sizeof(PROCESSENTRY32);
 
@@ -113,12 +116,14 @@ int main(int argc, char * argv[]) {
             {  
                 //HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, entry.th32ProcessID);
 
-                std::cout << entry.th32ProcessID << '\n';
+                pid = entry.th32ProcessID;
 
                 //CloseHandle(hProcess);
             }
         }
     }
+
+    DynamicRunner(pid, exeName);
 
     // CloseHandle(snapshot);
 
