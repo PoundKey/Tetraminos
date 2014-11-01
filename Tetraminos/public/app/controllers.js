@@ -27,6 +27,54 @@ angular.module('myApp.controllers', [])
 
             };
 
+            $scope.bejewAnalyzer = function () {
+
+                var msg = undefined;
+                $http.get('/api/bejew')
+                    .success(function (data, status, headers, config) {
+                        $scope.message = "Start analyzing Bejew source code...";
+                        $scope.message = data.title;
+                        $scope.content = data.content;
+                    })
+                    .error(function (data, status, headers, config) {
+                        alert("Error when sending the AJAX request. ");
+                    });
+
+
+            };
+
+            $scope.sodAnalyzer = function () {
+
+                var msg = undefined;
+                $http.get('/api/sod')
+                    .success(function (data, status, headers, config) {
+                        $scope.message = "Start analyzing SOD source code...";
+                        $scope.message = data.title;
+                        $scope.content = data.content;
+                    })
+                    .error(function (data, status, headers, config) {
+                        alert("Error when sending the AJAX request. ");
+                    });
+
+
+            };
+
+            $scope.sudokuAnalyzer = function () {
+
+                var msg = undefined;
+                $http.get('/api/sudoku')
+                    .success(function (data, status, headers, config) {
+                        $scope.message = "Start analyzing Sudoku source code...";
+                        $scope.message = data.title;
+                        $scope.content = data.content;
+                    })
+                    .error(function (data, status, headers, config) {
+                        alert("Error when sending the AJAX request. ");
+                    });
+
+
+            };            
+
             $scope.pacmanAnalyzer = function () {
                 var msg = undefined;
                 $http.get('/api/pacman')
