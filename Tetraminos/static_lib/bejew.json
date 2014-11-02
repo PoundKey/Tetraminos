@@ -30,8 +30,11 @@
                 "m_matchingSequences"
             ],
             "size": 29538,
-            "inheritance": null,
-            "dependency": []
+            "inheritance": "N/A",
+            "dependency": [
+                "bejeweled::Grid",
+                "bejeweled::TileSequence"
+            ]
         },
         {
             "className": "bejeweled::BoardView",
@@ -63,7 +66,10 @@
             ],
             "size": 27794,
             "inheritance": "bejeweled::Drawable",
-            "dependency": []
+            "dependency": [
+                "bejeweled::BoardModel",
+                "bejeweled::TileViewDrawer"
+            ]
         },
         {
             "className": "bejeweled::Drawable",
@@ -73,7 +79,7 @@
             ],
             "field": [],
             "size": 4514,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -95,8 +101,12 @@
                 "m_curScene"
             ],
             "size": 14957,
-            "inheritance": null,
-            "dependency": []
+            "inheritance": "N/A",
+            "dependency": [
+                "bejeweled::ResourceManager",
+                "bejeweled::Timer",
+                "bejeweled::GameObject"
+            ]
         },
         {
             "className": "bejeweled::GameBoard",
@@ -136,7 +146,12 @@
             ],
             "size": 45255,
             "inheritance": "bejeweled::GameObject",
-            "dependency": []
+            "dependency": [
+                "bejeweled::TileViewDrawer",
+                "bejeweled::BoardModel",
+                "bejeweled::BoardView",
+                "bejeweled::ResourceManager"
+            ]
         },
         {
             "className": "bejeweled::GameButton",
@@ -183,7 +198,10 @@
             ],
             "size": 47354,
             "inheritance": "bejeweled::GameObject",
-            "dependency": []
+            "dependency": [
+                "bejeweled::ResourceManager",
+                "bejeweled::Timer"
+            ]
         },
         {
             "className": "bejeweled::GameException",
@@ -214,7 +232,7 @@
                 "m_originY"
             ],
             "size": 16687,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -242,7 +260,11 @@
             ],
             "size": 23167,
             "inheritance": "bejeweled::GameObject",
-            "dependency": []
+            "dependency": [
+                "bejeweled::ResourceManager",
+                "bejeweled::GameBoard",
+                "bejeweled::GameButton"
+            ]
         },
         {
             "className": "bejeweled::Grid",
@@ -262,7 +284,7 @@
                 "m_array"
             ],
             "size": 17964,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -284,7 +306,7 @@
                 "m_effects"
             ],
             "size": 16325,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -315,7 +337,7 @@
             ],
             "field": [],
             "size": 9863,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -338,7 +360,7 @@
                 "m_col"
             ],
             "size": 18584,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -376,8 +398,11 @@
                 "m_emptyTile"
             ],
             "size": 10458,
-            "inheritance": null,
-            "dependency": []
+            "inheritance": "N/A",
+            "dependency": [
+                "bejeweled::SelectedTileView",
+                "bejeweled::TileView"
+            ]
         },
         {
             "className": "bejeweled::Timer",
@@ -398,7 +423,7 @@
                 "m_started"
             ],
             "size": 12305,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         }
     ]

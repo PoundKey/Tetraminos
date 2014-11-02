@@ -1,23 +1,38 @@
-#include "rapidjson/document.h"
-#include "rapidjson/filestream.h"
-#include "ClassProfile.cpp"
-#include <iostream>
-#include <map>
-#include <cstdio>
-#include <windows.h>
-#include <tlhelp32.h>
-// #include "Sonifier/OSCmessenger.cpp"
-#include "../../Fuser/DynamicAnalyser/DynamicRunner.h"
+#include "JSONParser.h"
+
+// To determine if a vector contains a Matching string
+int JSONParser::containsMatch(std::vector<std::vector<std::string> > block, std::string lookingFor, int& placeInt){
+
+   for(std::vector<std::vector<string> >::size_type f = 0; f != block.size(); f++){ 
+    for(std::vector<string>::size_type m = 0; m != block[f].size(); m++){
+        if(block[f][m].compare(lookingFor) == 0){
+            placeInt = f;
+            return f; 
+        }
+    }
+}
+ return -1;
+}
 
 int main(int argc, char * argv[]) {
     std::map<std::string,std::string> classmap;
     std::map<std::string,std::string>::iterator it;
+    std::map<std::string,ClassProfile::ClassProfile> profilemap;
+    std::map<std::string,ClassProfile::ClassProfile>::iterator pmit;
+
+    JSONParser jp;
+
+    std::map<int, std::vector<ClassProfile::ClassProfile> > inheritanceCounts;
+    std::vector<ClassProfile::ClassProfile>::iterator icit;
+    int maxInheritances = 0; 
+
+    // Name of JSON File to be parsed
     std::string jsonName = argv[2];
 
 
     //TODO: IMPORT JSON FILE
     // http://stackoverflow.com/questions/18107079/rapidjson-working-code-for-reading-document-from-file
-    FILE * pFile = fopen (argv[2] , "r");
+    FILE * pFile = fopen(argv[2] , "r");
     rapidjson::FileStream is(pFile);
     rapidjson::Document d;
     d.ParseStream<0>(is);
@@ -35,10 +50,16 @@ int main(int argc, char * argv[]) {
             //New cl object
             ClassProfile::ClassProfile cl;
             const rapidjson::Value& temp = b[i];
-            std::cout << temp["className"].GetString() << "\n";
-
+            std::string className = temp["className"].GetString();
+            std::string tempinheritance = temp["inheritance"].GetString();
+            if (tempinheritance.compare("N/A") != 0){
+              cl.setInheritance(tempinheritance);
+            }
+            std::cout << className << "\n";
+            // Add classname key to profile name
+            profilemap[className];
             // Create Profile
-            cl.setProfile(temp["className"].GetString());
+            cl.setProfile(className);
             // Line space for instrument creationtempField[h].GetString() to access field
 
             const rapidjson::Value& tempMethod = temp["method"];
@@ -60,24 +81,60 @@ int main(int argc, char * argv[]) {
                 cl.setField(tempField[h].GetString());
                 // Line space for instrument creationtempField[h].GetString() to access field
             }
-            const rapidjson::Value& tempInhert = temp["inheritance"];
-            for (rapidjson::SizeType k = 0; k < tempInhert.Size(); k++){
-                printf("inheritance[%d] = %s\n", k, tempInhert[k].GetString());
-                // Line space for instrument creationtempField[h].GetString() to access field
-                cl.setField(tempInhert[k].GetString()); 
-            }
             const rapidjson::Value& tempDep = temp["dependency"];
             for (rapidjson::SizeType k = 0; k < tempDep.Size(); k++){
                 printf("dependency[%d] = %s\n", k, tempDep[k].GetString());
 
-                cl.setField(tempDep[k].GetString());
+                cl.setDependency(tempDep[k].GetString());
                 // Line space for instrument creationtempField[h].GetString() to access field
             }
+
+
             listClasses.push_back(cl);
+            profilemap[className] = cl;
+            if (!cl.getInheritance().empty()){
+                maxInheritances = 1;
+                inheritanceCounts[1].push_back(cl);
+            } else {
+            inheritanceCounts[0].push_back(cl);
+        }
+
     }
 
-    // Send list of profiles to OSCMessenger to create instruments
-    createInstruments();
+    // Construct Inheritance "Trees" to pass for Instrument Creation
+    std::vector<std::vector<std::string> > inheritanceTree;
+    std::vector<ClassProfile::ClassProfile> leftovers;
+    for (int i = 0; i <= maxInheritances; i++){
+        if (i==0){
+        for(std::vector<ClassProfile>::size_type h = 0; h != inheritanceCounts[i].size(); h++){
+            std::vector<std::string> tempClassName;
+            tempClassName.push_back(inheritanceCounts[i][h].getProfile());
+            inheritanceTree.push_back(tempClassName);
+        }
+    }else {
+        for(std::vector<ClassProfile::ClassProfile>::size_type l = 0; l != leftovers.size(); l++){
+            int placeInt1;
+            if(0 < jp.containsMatch(inheritanceTree, leftovers[l].getInheritance(), placeInt1)){
+                inheritanceTree[placeInt1].push_back(leftovers[l].getProfile());
+                leftovers.erase(leftovers.begin()+l);
+            }
+        }   
+
+
+        for(std::vector<ClassProfile>::size_type m = 0; m != inheritanceCounts[i].size(); m++){
+            int placeInt2;
+            if(0 < jp.containsMatch(inheritanceTree, inheritanceCounts[i][m].getInheritance(), placeInt2)){
+                inheritanceTree[placeInt2].push_back(inheritanceCounts[i][m].getProfile());
+            } else {
+                leftovers.push_back(inheritanceCounts[i][m]);
+            }
+            
+        }
+        
+        }
+    }
+
+   
 
 
     // TODO: Pass listClasses too Dyninst.
@@ -101,6 +158,7 @@ int main(int argc, char * argv[]) {
 
 
 // GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
+    /* UNCOMMENT
     std::string exeName = argv[1];
     std::string pid;
     PROCESSENTRY32 entry;
@@ -123,7 +181,9 @@ int main(int argc, char * argv[]) {
         }
     }
 
+    createInstruments(profilemap, INHERITANCE TREE); 
     DynamicRunner(pid, exeName);
+    */
 
     // CloseHandle(snapshot);
 

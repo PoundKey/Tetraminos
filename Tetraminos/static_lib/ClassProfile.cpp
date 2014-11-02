@@ -6,7 +6,7 @@ class ClassProfile {
     std::string profile;
     std::vector<std::string> methods;
     std::vector<std::string> fields; 
-    std::vector<std::string> inheritance; 
+    std::string inheritance; 
     std::vector<std::string> dependencies;
     int size;
   public:
@@ -14,7 +14,7 @@ class ClassProfile {
     std::string getProfile() const;
     vector<std::string> getMethods() const;
     vector<std::string> getFields() const;
-    vector<std::string> getInheritance() const;
+    std::string getInheritance() const;
     vector<std::string>	 getDependency() const;
     int getSize();
     void setMethod(std::string);
@@ -41,7 +41,7 @@ std::vector<std::string> ClassProfile::getFields() const{
 	return methods; 
 }
 
-std::vector<std::string> ClassProfile::getInheritance() const{
+std::string ClassProfile::getInheritance() const{
 	return inheritance; 
 }
 
@@ -62,7 +62,7 @@ void ClassProfile::setField (std::string d){
 }
 
 void ClassProfile::setInheritance (std::string d){
-	inheritance.push_back(d);
+	inheritance = d;
 }
 
 void ClassProfile::setDependency (std::string d){
