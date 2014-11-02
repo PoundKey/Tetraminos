@@ -1,27 +1,28 @@
-
 #include <vector>
 #include <map>
+
 using namespace std;
 
 class InstrumentProfile {
 	std::string className;
 	std::map<string, int> methodToNoteMap;
 	int inheritanceFamily;
-	int dependencyFamily;
+	int trackTemplate;
 	int registerBooster;
 	int channel;
+
 public:
 	map<string, int> getMethodToNoteMap() const;
 
 	string getClassName() const;
 	int getInheritanceFamily();
-	int getDependencyFamily();
+	int getTrackTemplate();
 	int getRegisterBooster();
 	int getChannel();
 
 	void setClassName(string);
 	void setInheritanceFamily(int);
-	void setDependencyFamily(int);
+	void setTrackTemplate(int);
 	void setRegisterBooster(int);
 	void setChannel(int);
 
@@ -35,8 +36,8 @@ void InstrumentProfile::setInheritanceFamily(int fam) {
 	inheritanceFamily = fam;
 }
 
-void InstrumentProfile::setDependencyFamily(int fam) {
-	dependencyFamily = fam;
+void InstrumentProfile::setTrackTemplate(int fam) {
+	trackTemplate = fam;
 }
 
 void InstrumentProfile::setRegisterBooster(int boost) {
@@ -50,8 +51,8 @@ void InstrumentProfile::setChannel(int chan) {
 string InstrumentProfile::getClassName() const {
 	return className;
 }
-int InstrumentProfile::getDependencyFamily(){
-	return dependencyFamily;
+int InstrumentProfile::getTrackTemplate(){
+	return trackTemplate;
 }
 int InstrumentProfile::getInheritanceFamily(){
 	return inheritanceFamily;

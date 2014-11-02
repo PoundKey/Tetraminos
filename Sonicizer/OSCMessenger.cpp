@@ -20,165 +20,112 @@ use in creating notes
 class OSCMessenger
 {
 	map<string, InstrumentProfile> instrumentMap;
+
 	private:
 		int getNoteFromMap(string, string, map<string, InstrumentProfile>::const_iterator);
 		void sendMIDINote(int, int, int);
 		void sendAddInstrumentCommand(int, int);
 	public:
 		OSCMessenger();		
-		map<string, InstrumentProfile> createinstrumentMap(std::vector<ClassProfile>);
+		bool createInstruments(map<string, ClassProfile>, vector<vector<string>>, vector<vector<string>>);
 		void playNote(string, string);
 		void stopNote(string, string);
 		
 };
 
 // REAPER OSC ACTION IDS
-const int MIDI_CHANNEL_ASSIGNS[] = 
+const int MIDI_CHANNEL_ASSIGNS[16] = 
 { 
 	54376, 54377, 54378, 54379, 54380, 54381, 54382, 54383, 
 	54384, 54385, 54386, 54387, 54388, 54389, 54390, 54391
 };
 
-const int OMNISPHERE_TEMPLATE_ADDS[] = 
+const int OMNISPHERE_TEMPLATE_ADDS[10] = 
 {
 	53440, 53441, 53442, 53443, 53444,
 	53445, 53446, 53447, 53448, 53449
 };
 
-map<string,InstrumentProfile> OSCMessenger::createinstrumentMap(std::vector<ClassProfile> listClasses){
+// Musicical Scales
+const vector<vector<int>> SCALES =
+{
+	{ 2, 2, 1, 2, 2, 2, 1 }, // Ionian
+	{ 2, 1, 2, 2, 2, 1, 2 }, // Dorian
+	{ 1, 2, 2, 2, 1, 2, 2 }, // Phyrigian
+	{ 2, 2, 2, 1, 2, 2, 1 }, // Lydian
+	{ 2, 1, 2, 2, 2, 1, 2 }, // Mixolydian
+	{ 2, 1, 2, 2, 1, 2, 2 }, // Aeolian
+	{ 1, 2, 2, 1, 2, 2, 2 }, // Locrian
+	{ 2 }, // Whole Tone
+	{ 3, 2, 1, 1, 3}, // Blues
+	{ 2, 1, 2, 1, 2, 1, 2 }, // Octatonic 1
+	{ 1, 2, 1, 2, 1, 2, 1 }, // Octatonic 2
+	{1, 3, 2, 1, 2, 3}, // Persian
+	{2, 2, 3, 3, 1}, // Prometheus
+	{2, 1, 3, 1, 1, 3}, // Algerian
+	{1, 3, 2, 2, 1, 3}, // Flamenco
+	{2, 1, 3, 1, 1, 2} // Gypsy
+};
 
-	map<string, ClassProfile> classMap;
-	for (vector<ClassProfile>::const_iterator i = listClasses.begin(); i != listClasses.end(); ++i)
-	{
-		classMap[(*i).getProfile] = (*i);
-	}
+bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<vector<string>> inheritanceTree, vector<vector<string>> dependencyTree){
 
-	
 	int inheritanceFamilyCounter = 0;
-	
-	//INHERITANCE-BASED INSTRUMENT CONSTRUCTION
-	for (map<string, ClassProfile>::const_iterator i = classMap.begin(); i != classMap.end(); ++i)
+	for (vector<vector<string>>::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i)
 	{
-		vector<string> listOfInheritances = i->second.getInheritance;
-		
-		// focuses on classes with inheritances to start instrument construction
-		if (!listOfInheritances.empty)
+		for (vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
 		{
-			// starts the instrument profile of the class pointed to by the iterator 
-			InstrumentProfile ip;
-			ip.setClassName = i->second.getProfile;
-			ip.setInheritanceFamily = inheritanceFamilyCounter;
-
-			//iterates over focus class's list of inheritances
-			for (vector<string>::const_iterator j = listOfInheritances.begin(); j != listOfInheritances.end(); ++j){
+			int registerInterval = 128/(*j).length;			 
+			int registerBooster = rand() % 60;
+			map<string, ClassProfile>::iterator pos = classMap.find((*j));
+			if (pos != classMap.end())
+			{
+				InstrumentProfile ip;
+				ip.setClassName = pos->first;
+				ip.setChannel = inheritanceFamilyCounter;	
+				ip.setRegisterBooster = registerBooster;
 				
-				// finds the class that is pointed to in the inheritance list
-				map<string, ClassProfile>::const_iterator classPos = classMap.find((*j));
-				
-				// temporary structure for remembering new instruments
-				vector<InstrumentProfile> newInstrumentMemory;
-
-				if (classPos != classMap.end())
+				vector<string> methods = pos->second.getMethods;
+				for (vector<string>::const_iterator k = methods.begin(); k != methods.end(); ++k)
 				{
-					//checks if this class already has a created instrument (meaning some other class inherits it)
-					map<string, InstrumentProfile>::const_iterator inPos = instrumentMap.find(classPos->first);
-					
-					// if it has an instrument, group all classes in the inheritance relationship into a inheritance family
-					if (inPos != instrumentMap.end())
-					{
-						ip.setInheritanceFamily = inPos->second.getInheritanceFamily;
-						
-						if (!newInstrumentMemory.empty)
-						{
-							//resets the new instrument memory's inheritances
-							for (vector<InstrumentProfile>::iterator k = newInstrumentMemory.begin(); k != newInstrumentMemory.end(); ++k)
-							{
-								k->setInheritanceFamily(inPos->second.getInheritanceFamily);
-							}
-						}
-					}
-					else{
-						// creates a new instrument for the superclass and groups it
-						// into the same inheritance family as its subclass
-						InstrumentProfile newIP;
-						newIP.setClassName(classPos->first);
-						newIP.setInheritanceFamily(ip.getInheritanceFamily);
-
-						// adds the new instrument to the temporary memory structure
-						newInstrumentMemory.push_back(newIP);
-					}
+					ip.getMethodToNoteMap[(*k)] = 0;
 				}
 
-				// add instruments from memory to larger map
-				for (vector<InstrumentProfile>::const_iterator k = newInstrumentMemory.begin(); k != newInstrumentMemory.end(); ++k)
-				{
-					instrumentMap[k->getClassName] = (*k);
-				}
+				instrumentMap[ip.getClassName] = ip;
 			}
-			
-			// add focus class's instrument
-			instrumentMap[ip.getClassName] = ip;			
-			
-			// starts a new family
-			inheritanceFamilyCounter++;
+			registerBooster += registerInterval;
+			registerBooster %= 128;
 		}
+		inheritanceFamilyCounter++;
 	}
 
-	// iterate back through to look for classes that haven't been converted to instruments yet
-	for (map<string, ClassProfile>::const_iterator i = classMap.begin(); i != classMap.end(); ++i)
-	{
-		vector<string> listOfInheritances = i->second.getInheritance;
-
-		if (listOfInheritances.empty && instrumentMap.find(i->first) == instrumentMap.end())
-		{		
-			// creates an instrument for the class 
-			InstrumentProfile ip;
-			ip.setClassName = i->second.getProfile;
-			ip.setInheritanceFamily = inheritanceFamilyCounter;
-			instrumentMap[ip.getClassName] = ip;
-
-			// starts a new family
-			inheritanceFamilyCounter++;
-		}
-	}	
-
-
-	// GROUPING BY DEPENDENCIES
 	int dependencyFamilyCounter = 0;
-
-	for (map<string, ClassProfile>::const_iterator i = classMap.begin(); i != classMap.end(); ++i)
+	for (vector<vector<string>>::const_iterator i = dependencyTree.begin(); i != dependencyTree.end(); ++i)
 	{
-		map<string, InstrumentProfile>::iterator instrument = instrumentMap.find(i->first);
-		
-		if (instrument->second.getDependencyFamily == NULL)
-		{
-			instrument->second.getDependencyFamily = dependencyFamilyCounter;
-		}
-		
-		vector<string> listOfDependencies = i->second.getDependency;
-
-		for (vector<string>::const_iterator j = listOfDependencies.begin(); j != listOfDependencies.end(); ++j)
-		{		
-			map<string, InstrumentProfile>::iterator pos = instrumentMap.find((*j));
-			if (pos->second.getDependencyFamily != NULL){}							
-				instrument->second.getDependencyFamily = pos->second.getDependencyFamily;
-		}
-		for (vector<string>::const_iterator j = listOfDependencies.begin(); j != listOfDependencies.end(); ++j)
+		for (vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
 		{
 			map<string, InstrumentProfile>::iterator pos = instrumentMap.find((*j));
 			if (pos != instrumentMap.end())
-				pos->second.setDependencyFamily(instrument->second.getDependencyFamily);
+			{
+				pos->second.setTrackTemplate = dependencyFamilyCounter;
+				int scaleIndex = 0;
+				int scaleTracker = 0;
+				for (map<string, int>::iterator k = pos->second.getMethodToNoteMap.begin(); k != pos->second.getMethodToNoteMap.end(); ++k)
+				{
+					k->second = (pos->second.getRegisterBooster + scaleTracker) % 128;
+					scaleTracker += SCALES.at(dependencyFamilyCounter).at(scaleIndex);
+					scaleIndex++;
+					scaleIndex %= SCALES.at(dependencyFamilyCounter).size;
+				}
+			}
 		}
-
 		dependencyFamilyCounter++;
+		if (dependencyFamilyCounter > 10)
+			dependencyFamilyCounter = 0;
 	}
 
-	// TODO: CONTINUE WITH INSTRUMENT CREATION .....
-	for (int i = 0; i < inheritanceFamilyCounter; i++){
-		
+	for (map<string, InstrumentProfile>::const_iterator i = instrumentMap.begin(); i != instrumentMap.end(); ++i){
+		sendAddInstrumentCommand(i->second.getChannel, i->second.getTrackTemplate);
 	}
-
-	return instrumentMap;
 }
 
 /*
