@@ -26,6 +26,9 @@ int main(int argc, char * argv[]) {
     std::vector<ClassProfile::ClassProfile>::iterator icit;
     int maxInheritances = 0; 
 
+    std::vector<std::string> dependencyVector;
+
+
     // Name of JSON File to be parsed
     std::string jsonName = argv[2];
 
@@ -60,6 +63,7 @@ int main(int argc, char * argv[]) {
             profilemap[className];
             // Create Profile
             cl.setProfile(className);
+            dependencyVector.push_back(className);
             // Line space for instrument creationtempField[h].GetString() to access field
 
             const rapidjson::Value& tempMethod = temp["method"];
@@ -92,6 +96,8 @@ int main(int argc, char * argv[]) {
 
             listClasses.push_back(cl);
             profilemap[className] = cl;
+
+            // Used Inheritance Groupings below
             if (!cl.getInheritance().empty()){
                 maxInheritances = 1;
                 inheritanceCounts[1].push_back(cl);
@@ -101,7 +107,9 @@ int main(int argc, char * argv[]) {
 
     }
 
-    // Construct Inheritance "Trees" to pass for Instrument Creation
+   
+
+    // Construct Inheritance Groupings to pass for Instrument Creation
     std::vector<std::vector<std::string> > inheritanceTree;
     std::vector<ClassProfile::ClassProfile> leftovers;
     for (int i = 0; i <= maxInheritances; i++){
@@ -112,15 +120,6 @@ int main(int argc, char * argv[]) {
             inheritanceTree.push_back(tempClassName);
         }
     }else {
-        for(std::vector<ClassProfile::ClassProfile>::size_type l = 0; l != leftovers.size(); l++){
-            int placeInt1;
-            if(0 < jp.containsMatch(inheritanceTree, leftovers[l].getInheritance(), placeInt1)){
-                inheritanceTree[placeInt1].push_back(leftovers[l].getProfile());
-                leftovers.erase(leftovers.begin()+l);
-            }
-        }   
-
-
         for(std::vector<ClassProfile>::size_type m = 0; m != inheritanceCounts[i].size(); m++){
             int placeInt2;
             if(0 < jp.containsMatch(inheritanceTree, inheritanceCounts[i][m].getInheritance(), placeInt2)){
@@ -130,9 +129,48 @@ int main(int argc, char * argv[]) {
             }
             
         }
+
+        for(std::vector<ClassProfile::ClassProfile>::size_type l = 0; l != leftovers.size(); l++){
+            int placeInt1;
+            if(0 < jp.containsMatch(inheritanceTree, leftovers[l].getInheritance(), placeInt1)){
+                inheritanceTree[placeInt1].push_back(leftovers[l].getProfile());
+                leftovers.erase(leftovers.begin()+l);
+            }
+        }
         
         }
     }
+
+
+    // Construct Dependency Groupings
+    std::map<std::string, ClassProfile::ClassProfile> dependencyMap = profilemap;
+    std::vector<std::vector<std::string> > dependencyTree;
+    std::vector<ClassProfile::ClassProfile> depleftovers;
+    for (std::vector<std::string>::const_iterator i = dependencyVector.begin(); i != dependencyVector.end(); ++i){
+        
+
+        std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = dependencyMap.find(*i);
+        if(searchit != dependencyMap.end())
+            {
+        std::string depProfName = dependencyMap[(*i)].getProfile();
+        std::vector<std::string> depDepNames = dependencyMap[(*i)].getDependency();
+        depDepNames.insert(depDepNames.begin(), depProfName);
+        dependencyMap.erase(*i);
+
+        for(std::vector<std::string>::const_iterator j = depDepNames.begin() + 1; j != depDepNames.end(); ++j){
+            std::vector<std::string> toAdd = dependencyMap[(*j)].getDependency();
+            depDepNames.insert( depDepNames.end(), toAdd.begin(), toAdd.end() );
+            dependencyMap.erase(*j);
+        }
+
+    }
+// TODO: FIGURE OUT HOW TO MERGE LISTS with already stored if strings are equal
+    std::set s1(depDepNames.begin(), depDepNames.end());
+    std::set s2(depDepNames.begin(), depDepNames.end());
+    std::vector<string> v3
+}
+
+   
 
    
 
@@ -145,6 +183,16 @@ int main(int argc, char * argv[]) {
         std::cout << (*i).getProfile() << endl;
         vector<std::string> methods = (*i).getMethods();
         for( std::vector<string>::const_iterator j = methods.begin(); j != methods.end(); ++j){
+             std::cout << *j << ' ' << std::endl;
+         }
+        }
+
+    // This is to check that all dependencies are grouped together properly    
+    std::cout << "This is the Dependencies" << endl;
+    for( std::vector<std::vector<std::string> >::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i){
+        std::cout << "Vector: ";
+        std::cout << i - inheritanceTree.begin() << endl;
+        for( std::vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j){
              std::cout << *j << ' ' << std::endl;
          }
         }
