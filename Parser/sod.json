@@ -4,14 +4,10 @@
             "className": "Band",
             "method": [
                 "Band",
-                "Band",
-                "Band",
                 "getBandSize",
                 "hasMembers",
                 "addMember",
                 "removeMember",
-                "removeMember",
-                "getMember",
                 "getMember",
                 "checkBandHealthy",
                 "getBandType",
@@ -30,14 +26,15 @@
             ],
             "size": 23920,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "Character",
+                "MapPos"
+            ]
         },
         {
             "className": "Character",
             "method": [
                 "displayTradeInventories",
-                "Character",
-                "Character",
                 "Character",
                 "~Character",
                 "getName",
@@ -60,7 +57,6 @@
                 "updateWit",
                 "updateWinItem",
                 "updateAllies",
-                "setPosition",
                 "setPosition",
                 "setTerrainTile",
                 "setBand",
@@ -98,7 +94,11 @@
             ],
             "size": 64644,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "MapPos",
+                "Band",
+                "Inventory"
+            ]
         },
         {
             "className": "ConsoleDisplay",
@@ -128,8 +128,6 @@
         {
             "className": "Dwarf",
             "method": [
-                "Dwarf",
-                "Dwarf",
                 "Dwarf",
                 "~Dwarf",
                 "kill"
@@ -176,7 +174,6 @@
                 "selectNewGame",
                 "newGame",
                 "setMap",
-                "setMap",
                 "setDifficulty",
                 "createPlayerBand",
                 "loadGameTurnState",
@@ -205,7 +202,6 @@
                 "inFightDrinkPotion",
                 "advanceFight",
                 "printPlrBandInventory",
-                "copyItem",
                 "copyItem",
                 "checkWin",
                 "win",
@@ -241,7 +237,20 @@
             ],
             "size": 104044,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "MersenneTwister",
+                "MapPos",
+                "ConsoleDisplay",
+                "GameMap",
+                "Statistics",
+                "GameHelp",
+                "GameSave",
+                "Character",
+                "Band",
+                "Player",
+                "ItemFunction",
+                "Inventory"
+            ]
         },
         {
             "className": "GameHelp",
@@ -258,7 +267,9 @@
             ],
             "size": 8885,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "ConsoleDisplay"
+            ]
         },
         {
             "className": "GameMap",
@@ -272,8 +283,6 @@
                 "setBandAt",
                 "checkBandAt",
                 "setTerrain",
-                "setTerrain",
-                "setTerrain",
                 "setVisitedAt",
                 "checkVisitedAt",
                 "reset"
@@ -283,7 +292,9 @@
             ],
             "size": 18468,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "MapTile"
+            ]
         },
         {
             "className": "GameSave",
@@ -306,7 +317,6 @@
         {
             "className": "Inventory",
             "method": [
-                "Inventory",
                 "Inventory",
                 "copyItemToInventory",
                 "addItemToInventory",
@@ -335,13 +345,14 @@
             ],
             "size": 26651,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "Item",
+                "Character"
+            ]
         },
         {
             "className": "IrateFarmer",
             "method": [
-                "IrateFarmer",
-                "IrateFarmer",
                 "IrateFarmer",
                 "~IrateFarmer",
                 "kill"
@@ -354,7 +365,6 @@
         {
             "className": "Item",
             "method": [
-                "Item",
                 "Item",
                 "use",
                 "onPickup",
@@ -388,12 +398,15 @@
             ],
             "size": 30702,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "ItemFunction",
+                "Inventory",
+                "MapPos"
+            ]
         },
         {
             "className": "ItemFunction",
             "method": [
-                "ItemFunction",
                 "ItemFunction",
                 "getFunctionID",
                 "getFunctionType",
@@ -418,12 +431,13 @@
             ],
             "size": 22297,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "Inventory"
+            ]
         },
         {
             "className": "MapPos",
             "method": [
-                "MapPos",
                 "MapPos"
             ],
             "field": [
@@ -437,7 +451,6 @@
         {
             "className": "MapTile",
             "method": [
-                "MapTile",
                 "MapTile",
                 "setTerrain",
                 "getTerrain",
@@ -459,13 +472,14 @@
             ],
             "size": 18189,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "Inventory",
+                "Band"
+            ]
         },
         {
             "className": "Mercenary",
             "method": [
-                "Mercenary",
-                "Mercenary",
                 "Mercenary",
                 "~Mercenary",
                 "kill"
@@ -498,9 +512,7 @@
                 "consumeFoodHasEnough",
                 "consumeFoodNotEnough",
                 "Player",
-                "Player",
                 "~Player",
-                "move",
                 "move",
                 "consumeDailyFood",
                 "getAllFood",
@@ -524,7 +536,9 @@
             ],
             "size": 37754,
             "inheritance": "Character",
-            "dependency": []
+            "dependency": [
+                "MapPos"
+            ]
         },
         {
             "className": "Statistics",
@@ -553,8 +567,6 @@
         {
             "className": "Swordsman",
             "method": [
-                "Swordsman",
-                "Swordsman",
                 "Swordsman",
                 "~Swordsman",
                 "kill"

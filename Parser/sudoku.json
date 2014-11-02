@@ -41,7 +41,9 @@
             ],
             "size": 6418,
             "inheritance": "QWidget",
-            "dependency": []
+            "dependency": [
+                "Element"
+            ]
         },
         {
             "className": "GameControl",
@@ -64,7 +66,10 @@
             ],
             "size": 18987,
             "inheritance": "QObject",
-            "dependency": []
+            "dependency": [
+                "MainWindow",
+                "Puzzle"
+            ]
         },
         {
             "className": "MainWindow",
@@ -100,7 +105,10 @@
             ],
             "size": 32566,
             "inheritance": "QMainWindow",
-            "dependency": []
+            "dependency": [
+                "Field",
+                "GameControl"
+            ]
         },
         {
             "className": "Puzzle",

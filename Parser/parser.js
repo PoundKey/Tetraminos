@@ -14,6 +14,52 @@ var staticInfo = [];
 var writeOutput;
 var fileList = fs.readdirSync(inputCodeBase);
 var fileSize = undefined;
+//the class list which contains all major classes in this codebase
+var classList = [];
+
+
+/**
+ * gather the class list from current codebase
+ */
+ var gatherClass = function() {
+
+    fileList.forEach(function (file) {
+
+        if (file.search('.xml') == -1) return;
+        var path = inputCodeBase + "/" + file;
+
+        var classFile = fs.readFileSync(path, 'utf8');
+        parseString(classFile, function (err, result) {
+
+            if (result.doxygen == undefined) return;
+            var obj = result.doxygen.compounddef[0];
+            switch (obj.$.kind) {
+                case 'class':
+                //console.dir("class: " + path);
+                var output = obj.compoundname[0];
+                classList.push(output);
+                break;
+
+                default :
+                break;
+            }
+        });
+    });
+};
+
+/**
+ * end of gather the class list from current codebase
+ */
+
+
+/*
+ * initialize the classList array
+ */
+gatherClass();
+
+/*
+ * Refactor a file class object from the xml and output information as a JSON object
+ */
 
 var classInfo = function (_class) {
 
@@ -49,8 +95,21 @@ var classInfo = function (_class) {
                 var typeCheck = attr.$.kind;
                 if (typeCheck != 'variable') return;
 
-                field.push(attr.name[0]);
-                //console.dir(field);
+                if (field.indexOf(attr.name[0]) == -1){
+                    field.push(attr.name[0]);
+                }
+
+                var fieldType;
+                //ref is an array contains the className information
+                var typeCheckField = attr.type[0].ref ;
+                //type check for class field, which outputs a class name if it has any.
+                typeCheckField ? fieldType = typeCheckField[0]._ : fieldType = null;
+                if (classList.indexOf(fieldType) > -1){
+                    if (dependency.indexOf(fieldType) == -1){
+                    dependency.push(fieldType);
+                }
+            }
+                    //console.log("Name: " + attr.name[0] + " ==> " + JSON.stringify(fieldType));
             });
 
 
@@ -59,7 +118,10 @@ var classInfo = function (_class) {
                 //console.dir(func);
                 var typeCheck = func.$.kind;
                 if (typeCheck != 'function') return;
-                method.push(func.name[0]);
+
+                if (method.indexOf(func.name[0]) == -1){
+                    method.push(func.name[0]);
+                }
 
             });
 

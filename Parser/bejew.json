@@ -15,7 +15,6 @@
                 "swapTiles",
                 "hasMoreMoves",
                 "markAllSequencesOnBoard",
-                "BoardModel",
                 "operator=",
                 "findAllSequences",
                 "markSequenceOnBoard",
@@ -48,7 +47,6 @@
                 "setTileDeselected",
                 "isTileSelected",
                 "deselectAllTiles",
-                "BoardView",
                 "operator="
             ],
             "field": [
@@ -84,7 +82,6 @@
                 "Engine",
                 "~Engine",
                 "run",
-                "Engine",
                 "operator="
             ],
             "field": [
@@ -105,7 +102,6 @@
             "className": "bejeweled::GameBoard",
             "method": [
                 "GameBoard",
-                "GameBoard",
                 "~GameBoard",
                 "handleEvent",
                 "update",
@@ -113,7 +109,6 @@
                 "isPointInObject",
                 "notifyPlayable",
                 "getBoardState",
-                "GameBoard",
                 "operator="
             ],
             "field": [
@@ -155,7 +150,6 @@
                 "isPointInObject",
                 "getButtonStatus",
                 "notifyNoMoves",
-                "GameButton",
                 "operator="
             ],
             "field": [
@@ -195,8 +189,6 @@
             "className": "bejeweled::GameException",
             "method": [
                 "GameException",
-                "GameException",
-                "GameException",
                 "~GameException"
             ],
             "field": [],
@@ -207,7 +199,6 @@
         {
             "className": "bejeweled::GameObject",
             "method": [
-                "GameObject",
                 "GameObject",
                 "~GameObject",
                 "setOrigin",
@@ -236,7 +227,6 @@
                 "draw",
                 "handleEvent",
                 "isPointInObject",
-                "GameScene",
                 "operator="
             ],
             "field": [
@@ -258,15 +248,12 @@
             "className": "bejeweled::Grid",
             "method": [
                 "Grid",
-                "Grid",
-                "Grid",
                 "operator=",
                 "getNumRows",
                 "getNumCols",
                 "isEmpty",
                 "clear",
                 "resize",
-                "operator[]",
                 "operator[]"
             ],
             "field": [
@@ -288,7 +275,6 @@
                 "loadFont",
                 "loadMusic",
                 "loadEffect",
-                "ResourceManager",
                 "operator="
             ],
             "field": [
@@ -304,8 +290,6 @@
         {
             "className": "bejeweled::SelectedTileView",
             "method": [
-                "SelectedTileView",
-                "SelectedTileView",
                 "SelectedTileView",
                 "operator=",
                 "~SelectedTileView",
@@ -327,7 +311,6 @@
                 "draw",
                 "getImageDimensions",
                 "SurfaceProxy",
-                "SurfaceProxy",
                 "operator="
             ],
             "field": [],
@@ -338,7 +321,6 @@
         {
             "className": "bejeweled::TileSequence",
             "method": [
-                "TileSequence",
                 "TileSequence",
                 "operator=",
                 "~TileSequence",
@@ -362,8 +344,6 @@
         {
             "className": "bejeweled::TileView",
             "method": [
-                "TileView",
-                "TileView",
                 "TileView",
                 "operator=",
                 "~TileView",
