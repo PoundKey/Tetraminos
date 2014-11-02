@@ -1,0 +1,549 @@
+{
+    "staticInfo": [
+        {
+            "className": "Band",
+            "method": [
+                "Band",
+                "Band",
+                "Band",
+                "getBandSize",
+                "hasMembers",
+                "addMember",
+                "removeMember",
+                "removeMember",
+                "getMember",
+                "getMember",
+                "checkBandHealthy",
+                "getBandType",
+                "setBandType",
+                "getBandName",
+                "generateBandName",
+                "dissolveBand",
+                "~Band"
+            ],
+            "field": [
+                "bandName",
+                "members",
+                "myPosition",
+                "myTerrainTile",
+                "bandType"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Character",
+            "method": [
+                "displayTradeInventories",
+                "Character",
+                "Character",
+                "Character",
+                "~Character",
+                "getName",
+                "getID",
+                "getEndurance",
+                "getCombatStrength",
+                "getWounds",
+                "getCharisma",
+                "getWit",
+                "getAlliesCount",
+                "getFoodCount",
+                "getPosition",
+                "getInventory",
+                "getBand",
+                "checkHealth",
+                "updateEndurance",
+                "updateCombatStrength",
+                "updateWounds",
+                "updateCharisma",
+                "updateWit",
+                "updateWinItem",
+                "updateAllies",
+                "setPosition",
+                "setPosition",
+                "setTerrainTile",
+                "setBand",
+                "setName",
+                "setID",
+                "trade",
+                "giveItemToTeamMember",
+                "receiveItemFromMember",
+                "scanForWinItem",
+                "scanForHintItem",
+                "checkWinItem",
+                "checkHintItem",
+                "printInventory",
+                "getCharStatsString",
+                "kill",
+                "exportToString"
+            ],
+            "field": [
+                "name",
+                "charID",
+                "endurance",
+                "combatStrength",
+                "wounds",
+                "charisma",
+                "wit",
+                "winItemIndex",
+                "myFood",
+                "hasWinItem",
+                "hasHintItem",
+                "currentPosition",
+                "currentTile",
+                "myBand",
+                "items",
+                "maxAttribute"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "ConsoleDisplay",
+            "method": [
+                "ConsoleDisplay",
+                "getDisplayHeight",
+                "getDisplayWidth",
+                "addString",
+                "setColorAt",
+                "setLineColor",
+                "alignLine",
+                "clearAt",
+                "clearString",
+                "clear",
+                "print"
+            ],
+            "field": [
+                "width",
+                "height",
+                "display",
+                "colours"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Dwarf",
+            "method": [
+                "Dwarf",
+                "Dwarf",
+                "Dwarf",
+                "~Dwarf",
+                "kill"
+            ],
+            "field": [],
+            "inheritance": "Character",
+            "dependency": []
+        },
+        {
+            "className": "GameCore",
+            "method": [
+                "extractFuncType",
+                "extractTerrainType",
+                "extractDifficulty",
+                "getFunction",
+                "updateSaveFiles",
+                "getSaveFileList",
+                "startSaveSequence",
+                "saveGame",
+                "getSaveStringDifficulty",
+                "getSaveStringMap",
+                "getSaveStringMainLocs",
+                "getSaveStringCharacters",
+                "getSaveStringBands",
+                "getSaveStringStats",
+                "startLoadSequence",
+                "loadDifficulty",
+                "loadStatistics",
+                "loadWinItemLoc",
+                "loadWinItemRand",
+                "loadPlrStartLoc",
+                "loadPlayer",
+                "loadNPCs",
+                "loadBands",
+                "loadMap",
+                "loadGame",
+                "loadFunctions",
+                "loadItems",
+                "loadHelp",
+                "loadDifficultyData",
+                "getNextRandInt",
+                "loadMainMenu",
+                "selectNewGame",
+                "newGame",
+                "setMap",
+                "setMap",
+                "setDifficulty",
+                "createPlayerBand",
+                "loadGameTurnState",
+                "restTurn",
+                "travel",
+                "managePlayerInventory",
+                "managePlayerBand",
+                "printGameMapState",
+                "hunt",
+                "startShopping",
+                "pauseMenu",
+                "generateScenario",
+                "printStatistics",
+                "setVisitedAtTile",
+                "getPlrStartPos",
+                "generateEvent",
+                "executeEvent",
+                "generateOrGetBandAt",
+                "defragmentBands",
+                "executeFight",
+                "calculateDamage",
+                "loadInitialFightScreen",
+                "loadFightBandStats",
+                "tryPersuade",
+                "tryRun",
+                "inFightDrinkPotion",
+                "advanceFight",
+                "printPlrBandInventory",
+                "copyItem",
+                "copyItem",
+                "checkWin",
+                "win",
+                "lose",
+                "reset",
+                "GameCore",
+                "initialSetup",
+                "go",
+                "getPlayerInput",
+                "waitForEnter"
+            ],
+            "field": [
+                "randomGenerator",
+                "inGame",
+                "difficulty",
+                "startingItems",
+                "minStats",
+                "playerStartingPos",
+                "SODLocation",
+                "SODLocHintRandomizer",
+                "lastEvent",
+                "display",
+                "map",
+                "stats",
+                "help",
+                "savedGames",
+                "npcCounter",
+                "NPCs",
+                "bands",
+                "gPlayer",
+                "functions",
+                "items"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "GameHelp",
+            "method": [
+                "getHelpString",
+                "prepareHelpString",
+                "callHelpDisplayString",
+                "GameHelp",
+                "callHelp"
+            ],
+            "field": [
+                "display",
+                "helpData"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "GameMap",
+            "method": [
+                "GameMap",
+                "getTerrainAt",
+                "getTerrainStringAt",
+                "getTerrainIntAt",
+                "getInventoryAt",
+                "getBandAt",
+                "setBandAt",
+                "checkBandAt",
+                "setTerrain",
+                "setTerrain",
+                "setTerrain",
+                "setVisitedAt",
+                "checkVisitedAt",
+                "reset"
+            ],
+            "field": [
+                "tiles"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "GameSave",
+            "method": [
+                "GameSave",
+                "getFilePath",
+                "getSaveName",
+                "getSlot",
+                "~GameSave"
+            ],
+            "field": [
+                "saveName",
+                "filePath",
+                "slot"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Inventory",
+            "method": [
+                "Inventory",
+                "Inventory",
+                "copyItemToInventory",
+                "addItemToInventory",
+                "moveItemFromInventory",
+                "deleteItemFromInventory",
+                "getItem",
+                "getOwner",
+                "setOwner",
+                "getCurrentWeight",
+                "getItemIndex",
+                "getItemIndexID",
+                "getInventorySize",
+                "getGold",
+                "modifyGold",
+                "setCurrentWeight",
+                "updateWeight",
+                "checkFull",
+                "defragmentInventory",
+                "~Inventory"
+            ],
+            "field": [
+                "itemSlots",
+                "owner",
+                "totalWeight",
+                "gold"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "IrateFarmer",
+            "method": [
+                "IrateFarmer",
+                "IrateFarmer",
+                "IrateFarmer",
+                "~IrateFarmer",
+                "kill"
+            ],
+            "field": [],
+            "inheritance": "Character",
+            "dependency": []
+        },
+        {
+            "className": "Item",
+            "method": [
+                "Item",
+                "Item",
+                "use",
+                "onPickup",
+                "onDrop",
+                "getName",
+                "getID",
+                "getDescription",
+                "getWeight",
+                "getDropChance",
+                "getDropChanceAt",
+                "getOwner",
+                "changeOwner",
+                "addItemFunction",
+                "getFunction",
+                "checkIfDropable",
+                "getItemDetails",
+                "~Item"
+            ],
+            "field": [
+                "name",
+                "ID",
+                "description",
+                "weight",
+                "function",
+                "dropData",
+                "defaultDropIndex",
+                "owner",
+                "isDropable",
+                "isOwned",
+                "myPosition"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "ItemFunction",
+            "method": [
+                "ItemFunction",
+                "ItemFunction",
+                "getFunctionID",
+                "getFunctionType",
+                "setParent",
+                "getFunctionValue",
+                "exportFunctionValues",
+                "overrideFunctionAmount",
+                "onPickup",
+                "onUse",
+                "onDropOrDestroy",
+                "~ItemFunction"
+            ],
+            "field": [
+                "parentInventory",
+                "name",
+                "type",
+                "amountMin",
+                "amountMax",
+                "winCondition",
+                "hintCondition",
+                "hint"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "MapPos",
+            "method": [
+                "MapPos",
+                "MapPos"
+            ],
+            "field": [
+                "x",
+                "y"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "MapTile",
+            "method": [
+                "MapTile",
+                "MapTile",
+                "setTerrain",
+                "getTerrain",
+                "getInventory",
+                "getBand",
+                "setBand",
+                "checkBand",
+                "removeBand",
+                "setVisited",
+                "checkVisited",
+                "reset"
+            ],
+            "field": [
+                "tile",
+                "items",
+                "tileBand",
+                "hasBand",
+                "wasVisited"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Mercenary",
+            "method": [
+                "Mercenary",
+                "Mercenary",
+                "Mercenary",
+                "~Mercenary",
+                "kill"
+            ],
+            "field": [],
+            "inheritance": "Character",
+            "dependency": []
+        },
+        {
+            "className": "MersenneTwister",
+            "method": [
+                "generate",
+                "MersenneTwister",
+                "randomize",
+                "nextUInt",
+                "nextFloat"
+            ],
+            "field": [
+                "seed",
+                "index"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Player",
+            "method": [
+                "consumeFoodHasEnough",
+                "consumeFoodNotEnough",
+                "Player",
+                "Player",
+                "~Player",
+                "move",
+                "move",
+                "consumeDailyFood",
+                "getAllFood",
+                "searchArea",
+                "setRested",
+                "setTeamHealthy",
+                "checkRested",
+                "checkTeamHealthy",
+                "getNextPosition",
+                "getMoveDirection",
+                "getMoveDirAsString",
+                "setMoveDirection",
+                "kill",
+                "exportPlayerToString"
+            ],
+            "field": [
+                "moveDirection",
+                "nextPosition",
+                "rested",
+                "teamHealthy"
+            ],
+            "inheritance": "Character",
+            "dependency": []
+        },
+        {
+            "className": "Statistics",
+            "method": [
+                "Statistics"
+            ],
+            "field": [
+                "totalTurns",
+                "totalRests",
+                "totalFoodBought",
+                "totalMoney",
+                "totalTravel",
+                "totalSearchAreas",
+                "totalHunt",
+                "totalHuntAttempts",
+                "totalEnemiesKilled",
+                "totalAlliesKilled",
+                "totalFights",
+                "fightsWon",
+                "fightsFled"
+            ],
+            "inheritance": null,
+            "dependency": []
+        },
+        {
+            "className": "Swordsman",
+            "method": [
+                "Swordsman",
+                "Swordsman",
+                "Swordsman",
+                "~Swordsman",
+                "kill"
+            ],
+            "field": [],
+            "inheritance": "Character",
+            "dependency": []
+        }
+    ]
+}

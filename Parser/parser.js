@@ -4,22 +4,15 @@
 
 var fs = require('fs');
 var parseString = require('xml2js').parseString;
-var readline = require('readline');
-var inputCodeBase = './xml_';
+var readlineSync = require('readline-sync');
+console.log("Codebase options: maryo, sod, bejew, sudoku");
+var cod = readlineSync.question('Enter the input source codebase: ');
 
-/**
-var prompts = readline.createInterface(process.stdin, process.stdout);
-
-prompts.question("Please enter a codebase (mario || pacman): ", function(answer) {
-	inputCodeBase = inputCodeBase + answer;
-  console.log("Thank you for your valuable feedback: ", answer);
-  prompts.close();
-});
-*/
+var inputCodeBase = './Doxygen/xml_' + cod;
 
 var staticInfo = [];
 var writeOutput;
-var fileList = fs.readdirSync('./xml');
+var fileList = fs.readdirSync(inputCodeBase);
 //console.dir(lists);
 
 var classInfo = function (_class) {
@@ -37,6 +30,7 @@ var classInfo = function (_class) {
     //entityArray, length in 2 or 1, each contains set of attributes or methods.
     var entityArray = _class.sectiondef;
 
+    if (!entityArray) return;
     entityArray.forEach(function (entity) {
 
         //type of the entity: attrib vs func
@@ -99,7 +93,9 @@ fileList.forEach(function (file) {
 
     if (file.search('.xml') == -1) return;
     //if (file != 'classc_spiny.xml') return;
-    var path = "./xml/" + file;
+    var path = inputCodeBase + "/" + file;
+    // console.log(path);
+    // return;
 
     var classFile = fs.readFileSync(path, 'utf8');
     parseString(classFile, function (err, result) {
@@ -138,7 +134,7 @@ fileList.forEach(function (file) {
 writeOutput = {'staticInfo': staticInfo};
 //console.dir(writeOutput);
 //console.dir(JSON.stringify(writeOutput, null, 4));
-var outputFilename = 'static_info.json';
+var outputFilename = cod + '.json';
 fs.writeFile(outputFilename, JSON.stringify(writeOutput, null, 4), 'utf8', function (err) {
 
     err ? console.dir(err) : console.dir("Static info successfully saved to: " + outputFilename);
