@@ -92,7 +92,7 @@ var classInfo = function (_class) {
     var className = _class.compoundname[0];
     var method = [];
     var field = [];
-    var inheritance = "N/A";
+    var inheritance;
     var dependency = [];
     var size;
     var output;
@@ -100,7 +100,7 @@ var classInfo = function (_class) {
     fileSize ? size = fileSize : size = undefined;
     //console.log("ClassName: " + className + " Size: "+ size);
     //console.log(JSON.stringify(_class, null, 4));
-    _class.basecompoundref ? inheritance = _class.basecompoundref[0]._ : inheritance=null;
+    _class.basecompoundref ? inheritance = _class.basecompoundref[0]._ : inheritance="N/A";
     //entityArray, length in 2 or 1, each contains set of attributes or methods.
     var entityArray = _class.sectiondef;
 
