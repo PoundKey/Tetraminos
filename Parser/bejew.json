@@ -30,6 +30,7 @@
                 "m_grid",
                 "m_matchingSequences"
             ],
+            "size": 29538,
             "inheritance": null,
             "dependency": []
         },
@@ -62,6 +63,7 @@
                 "m_tileHeight",
                 "m_tileWidth"
             ],
+            "size": 27794,
             "inheritance": "bejeweled::Drawable",
             "dependency": []
         },
@@ -72,6 +74,7 @@
                 "~Drawable"
             ],
             "field": [],
+            "size": 4514,
             "inheritance": null,
             "dependency": []
         },
@@ -94,6 +97,7 @@
                 "m_fpsTimer",
                 "m_curScene"
             ],
+            "size": 14957,
             "inheritance": null,
             "dependency": []
         },
@@ -135,6 +139,7 @@
                 "m_effectSelection",
                 "m_effectMatch"
             ],
+            "size": 45255,
             "inheritance": "bejeweled::GameObject",
             "dependency": []
         },
@@ -182,6 +187,7 @@
                 "m_textOffsetX",
                 "m_buttonStatus"
             ],
+            "size": 47354,
             "inheritance": "bejeweled::GameObject",
             "dependency": []
         },
@@ -194,6 +200,7 @@
                 "~GameException"
             ],
             "field": [],
+            "size": 6188,
             "inheritance": "runtime_error",
             "dependency": []
         },
@@ -215,6 +222,7 @@
                 "m_originX",
                 "m_originY"
             ],
+            "size": 16687,
             "inheritance": null,
             "dependency": []
         },
@@ -242,6 +250,7 @@
                 "m_gameBoard",
                 "m_button"
             ],
+            "size": 23167,
             "inheritance": "bejeweled::GameObject",
             "dependency": []
         },
@@ -265,6 +274,7 @@
                 "m_numCols",
                 "m_array"
             ],
+            "size": 17964,
             "inheritance": null,
             "dependency": []
         },
@@ -287,6 +297,7 @@
                 "m_music",
                 "m_effects"
             ],
+            "size": 16325,
             "inheritance": null,
             "dependency": []
         },
@@ -304,6 +315,7 @@
                 "TILE_BORDER_COLOR",
                 "TILE_BORDER_WIDTH"
             ],
+            "size": 14351,
             "inheritance": "bejeweled::TileView",
             "dependency": []
         },
@@ -319,6 +331,7 @@
                 "operator="
             ],
             "field": [],
+            "size": 9863,
             "inheritance": null,
             "dependency": []
         },
@@ -342,6 +355,7 @@
                 "m_row",
                 "m_col"
             ],
+            "size": 18584,
             "inheritance": null,
             "dependency": []
         },
@@ -363,6 +377,7 @@
                 "m_tileImg",
                 "m_isEmpty"
             ],
+            "size": 16058,
             "inheritance": "bejeweled::Drawable",
             "dependency": []
         },
@@ -380,6 +395,7 @@
                 "m_tileViews",
                 "m_emptyTile"
             ],
+            "size": 10458,
             "inheritance": null,
             "dependency": []
         },
@@ -401,6 +417,7 @@
                 "m_paused",
                 "m_started"
             ],
+            "size": 12305,
             "inheritance": null,
             "dependency": []
         }

@@ -28,6 +28,7 @@
                 "myTerrainTile",
                 "bandType"
             ],
+            "size": 23920,
             "inheritance": null,
             "dependency": []
         },
@@ -95,6 +96,7 @@
                 "items",
                 "maxAttribute"
             ],
+            "size": 64644,
             "inheritance": null,
             "dependency": []
         },
@@ -119,6 +121,7 @@
                 "display",
                 "colours"
             ],
+            "size": 18717,
             "inheritance": null,
             "dependency": []
         },
@@ -132,6 +135,7 @@
                 "kill"
             ],
             "field": [],
+            "size": 16978,
             "inheritance": "Character",
             "dependency": []
         },
@@ -235,6 +239,7 @@
                 "functions",
                 "items"
             ],
+            "size": 104044,
             "inheritance": null,
             "dependency": []
         },
@@ -251,6 +256,7 @@
                 "display",
                 "helpData"
             ],
+            "size": 8885,
             "inheritance": null,
             "dependency": []
         },
@@ -275,6 +281,7 @@
             "field": [
                 "tiles"
             ],
+            "size": 18468,
             "inheritance": null,
             "dependency": []
         },
@@ -292,6 +299,7 @@
                 "filePath",
                 "slot"
             ],
+            "size": 8951,
             "inheritance": null,
             "dependency": []
         },
@@ -325,6 +333,7 @@
                 "totalWeight",
                 "gold"
             ],
+            "size": 26651,
             "inheritance": null,
             "dependency": []
         },
@@ -338,6 +347,7 @@
                 "kill"
             ],
             "field": [],
+            "size": 17561,
             "inheritance": "Character",
             "dependency": []
         },
@@ -376,6 +386,7 @@
                 "isOwned",
                 "myPosition"
             ],
+            "size": 30702,
             "inheritance": null,
             "dependency": []
         },
@@ -405,6 +416,7 @@
                 "hintCondition",
                 "hint"
             ],
+            "size": 22297,
             "inheritance": null,
             "dependency": []
         },
@@ -418,6 +430,7 @@
                 "x",
                 "y"
             ],
+            "size": 4831,
             "inheritance": null,
             "dependency": []
         },
@@ -444,6 +457,7 @@
                 "hasBand",
                 "wasVisited"
             ],
+            "size": 18189,
             "inheritance": null,
             "dependency": []
         },
@@ -457,6 +471,7 @@
                 "kill"
             ],
             "field": [],
+            "size": 17358,
             "inheritance": "Character",
             "dependency": []
         },
@@ -473,6 +488,7 @@
                 "seed",
                 "index"
             ],
+            "size": 8179,
             "inheritance": null,
             "dependency": []
         },
@@ -506,6 +522,7 @@
                 "rested",
                 "teamHealthy"
             ],
+            "size": 37754,
             "inheritance": "Character",
             "dependency": []
         },
@@ -529,6 +546,7 @@
                 "fightsWon",
                 "fightsFled"
             ],
+            "size": 16281,
             "inheritance": null,
             "dependency": []
         },
@@ -542,6 +560,7 @@
                 "kill"
             ],
             "field": [],
+            "size": 17358,
             "inheritance": "Character",
             "dependency": []
         }

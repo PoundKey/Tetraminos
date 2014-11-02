@@ -13,7 +13,7 @@ var inputCodeBase = './Doxygen/xml_' + cod;
 var staticInfo = [];
 var writeOutput;
 var fileList = fs.readdirSync(inputCodeBase);
-//console.dir(lists);
+var fileSize = undefined;
 
 var classInfo = function (_class) {
 
@@ -23,8 +23,11 @@ var classInfo = function (_class) {
     var field = [];
     var inheritance;
     var dependency = [];
+    var size;
     var output;
 
+    fileSize ? size = fileSize : size = undefined;
+    //console.log("ClassName: " + className + " Size: "+ size);
     //console.log(JSON.stringify(_class, null, 4));
     _class.basecompoundref ? inheritance = _class.basecompoundref[0]._ : inheritance=null;
     //entityArray, length in 2 or 1, each contains set of attributes or methods.
@@ -68,7 +71,7 @@ var classInfo = function (_class) {
     });
 
     output = {
-        'className': className, 'method': method, 'field': field,
+        'className': className, 'method': method, 'field': field, 'size': size,
         'inheritance': inheritance, 'dependency': dependency
     };
 
@@ -94,8 +97,8 @@ fileList.forEach(function (file) {
     if (file.search('.xml') == -1) return;
     //if (file != 'classc_spiny.xml') return;
     var path = inputCodeBase + "/" + file;
-    // console.log(path);
-    // return;
+    var stats = fs.statSync(path);
+    fileSize = stats.size;
 
     var classFile = fs.readFileSync(path, 'utf8');
     parseString(classFile, function (err, result) {
