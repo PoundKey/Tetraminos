@@ -30,7 +30,7 @@
                 "m_matchingSequences"
             ],
             "size": 29538,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "bejeweled::Grid",
                 "bejeweled::TileSequence"
@@ -79,7 +79,7 @@
             ],
             "field": [],
             "size": 4514,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -101,7 +101,7 @@
                 "m_curScene"
             ],
             "size": 14957,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "bejeweled::ResourceManager",
                 "bejeweled::Timer",
@@ -232,7 +232,7 @@
                 "m_originY"
             ],
             "size": 16687,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -284,7 +284,7 @@
                 "m_array"
             ],
             "size": 17964,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -306,7 +306,7 @@
                 "m_effects"
             ],
             "size": 16325,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -337,7 +337,7 @@
             ],
             "field": [],
             "size": 9863,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -360,7 +360,7 @@
                 "m_col"
             ],
             "size": 18584,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -398,7 +398,7 @@
                 "m_emptyTile"
             ],
             "size": 10458,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "bejeweled::SelectedTileView",
                 "bejeweled::TileView"
@@ -423,7 +423,7 @@
                 "m_started"
             ],
             "size": 12305,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         }
     ]

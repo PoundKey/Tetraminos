@@ -125,7 +125,7 @@
                 "field"
             ],
             "size": 9217,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         null,
@@ -231,7 +231,7 @@
                 "frame_3_2_3"
             ],
             "size": 86190,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         }
     ]

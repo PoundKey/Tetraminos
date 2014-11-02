@@ -25,7 +25,7 @@
                 "bandType"
             ],
             "size": 23920,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "Character",
                 "MapPos"
@@ -93,7 +93,7 @@
                 "maxAttribute"
             ],
             "size": 64644,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "MapPos",
                 "Band",
@@ -122,7 +122,7 @@
                 "colours"
             ],
             "size": 18717,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -236,7 +236,7 @@
                 "items"
             ],
             "size": 104044,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "MersenneTwister",
                 "MapPos",
@@ -266,7 +266,7 @@
                 "helpData"
             ],
             "size": 8885,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "ConsoleDisplay"
             ]
@@ -291,7 +291,7 @@
                 "tiles"
             ],
             "size": 18468,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "MapTile"
             ]
@@ -311,7 +311,7 @@
                 "slot"
             ],
             "size": 8951,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -344,7 +344,7 @@
                 "gold"
             ],
             "size": 26651,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "Item",
                 "Character"
@@ -397,7 +397,7 @@
                 "myPosition"
             ],
             "size": 30702,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "ItemFunction",
                 "Inventory",
@@ -430,7 +430,7 @@
                 "hint"
             ],
             "size": 22297,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "Inventory"
             ]
@@ -445,7 +445,7 @@
                 "y"
             ],
             "size": 4831,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -471,7 +471,7 @@
                 "wasVisited"
             ],
             "size": 18189,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": [
                 "Inventory",
                 "Band"
@@ -503,7 +503,7 @@
                 "index"
             ],
             "size": 8179,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
@@ -561,7 +561,7 @@
                 "fightsFled"
             ],
             "size": 16281,
-            "inheritance": null,
+            "inheritance": "N/A",
             "dependency": []
         },
         {
