@@ -31,7 +31,10 @@
             ],
             "size": 29538,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "bejeweled::Grid",
+                "bejeweled::TileSequence"
+            ]
         },
         {
             "className": "bejeweled::BoardView",
@@ -63,7 +66,10 @@
             ],
             "size": 27794,
             "inheritance": "bejeweled::Drawable",
-            "dependency": []
+            "dependency": [
+                "bejeweled::BoardModel",
+                "bejeweled::TileViewDrawer"
+            ]
         },
         {
             "className": "bejeweled::Drawable",
@@ -96,7 +102,11 @@
             ],
             "size": 14957,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "bejeweled::ResourceManager",
+                "bejeweled::Timer",
+                "bejeweled::GameObject"
+            ]
         },
         {
             "className": "bejeweled::GameBoard",
@@ -136,7 +146,12 @@
             ],
             "size": 45255,
             "inheritance": "bejeweled::GameObject",
-            "dependency": []
+            "dependency": [
+                "bejeweled::TileViewDrawer",
+                "bejeweled::BoardModel",
+                "bejeweled::BoardView",
+                "bejeweled::ResourceManager"
+            ]
         },
         {
             "className": "bejeweled::GameButton",
@@ -183,7 +198,10 @@
             ],
             "size": 47354,
             "inheritance": "bejeweled::GameObject",
-            "dependency": []
+            "dependency": [
+                "bejeweled::ResourceManager",
+                "bejeweled::Timer"
+            ]
         },
         {
             "className": "bejeweled::GameException",
@@ -242,7 +260,11 @@
             ],
             "size": 23167,
             "inheritance": "bejeweled::GameObject",
-            "dependency": []
+            "dependency": [
+                "bejeweled::ResourceManager",
+                "bejeweled::GameBoard",
+                "bejeweled::GameButton"
+            ]
         },
         {
             "className": "bejeweled::Grid",
@@ -377,7 +399,10 @@
             ],
             "size": 10458,
             "inheritance": null,
-            "dependency": []
+            "dependency": [
+                "bejeweled::SelectedTileView",
+                "bejeweled::TileView"
+            ]
         },
         {
             "className": "bejeweled::Timer",

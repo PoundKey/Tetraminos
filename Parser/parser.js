@@ -16,7 +16,31 @@ var fileList = fs.readdirSync(inputCodeBase);
 var fileSize = undefined;
 //the class list which contains all major classes in this codebase
 var classList = [];
+//the namespace used in front of class
+var namespace;
 
+
+/**
+ * change the namespace with corresponding codebases
+ */
+var defineNameSpace = function(){
+    switch(cod){
+        case "bejew":
+            namespace = "bejeweled::";
+            break;
+        case "maryo":
+            namespace = "SMC::";
+            break;
+        case "sudoku":
+            namespace = "";
+            break;
+        default:
+            namespace = "";
+            break;
+    }
+}
+
+defineNameSpace();
 
 /**
  * gather the class list from current codebase
@@ -56,6 +80,7 @@ var classList = [];
  * initialize the classList array
  */
 gatherClass();
+//console.log(classList);
 
 /*
  * Refactor a file class object from the xml and output information as a JSON object
@@ -67,7 +92,7 @@ var classInfo = function (_class) {
     var className = _class.compoundname[0];
     var method = [];
     var field = [];
-    var inheritance;
+    var inheritance = "N/A";
     var dependency = [];
     var size;
     var output;
@@ -102,11 +127,14 @@ var classInfo = function (_class) {
                 var fieldType;
                 //ref is an array contains the className information
                 var typeCheckField = attr.type[0].ref ;
+
                 //type check for class field, which outputs a class name if it has any.
                 typeCheckField ? fieldType = typeCheckField[0]._ : fieldType = null;
-                if (classList.indexOf(fieldType) > -1){
-                    if (dependency.indexOf(fieldType) == -1){
-                    dependency.push(fieldType);
+                //console.log("Name: " + attr.name[0] + " ==> " + JSON.stringify(fieldType));
+                var NS_fieldType = namespace + fieldType;
+                if (classList.indexOf(NS_fieldType) > -1){
+                    if (dependency.indexOf(NS_fieldType) == -1){
+                    dependency.push(NS_fieldType);
                 }
             }
                     //console.log("Name: " + attr.name[0] + " ==> " + JSON.stringify(fieldType));
