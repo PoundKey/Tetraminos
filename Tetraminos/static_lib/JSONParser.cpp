@@ -14,6 +14,19 @@ int JSONParser::containsMatch(std::vector<std::vector<std::string> > block, std:
  return -1;
 }
 
+void JSONParser::addDependencies(ClassProfile::ClassProfile cp, std::map<std::string, ClassProfile::ClassProfile>& dmap, std::set<std::string>& tad, std::vector<std::string>& depvec){
+    tad.insert(first.getProfile());
+    std::vector<std::string>::iterator it = depvec.find(first.getProfile());
+    depvec.erase(it);
+
+    std::vector<std::string> deps = first.getDependency()
+    for(std::vector<string>::size_type i = 0; i != deps.size(); i++){
+        newFirst = dmap[deps[i]]; 
+        JSONParser::addDependencies(newFirst, dmap, tad)
+
+    }
+}
+
 int main(int argc, char * argv[]) {
     std::map<std::string,std::string> classmap;
     std::map<std::string,std::string>::iterator it;
@@ -144,12 +157,19 @@ int main(int argc, char * argv[]) {
 
     // Construct Dependency Groupings
     std::map<std::string, ClassProfile::ClassProfile> dependencyMap = profilemap;
-    std::vector<std::vector<std::string> > dependencyTree;
-    std::vector<ClassProfile::ClassProfile> depleftovers;
+    std::vector<std::set<std::string> > dependencyTree;
     for (std::vector<std::string>::const_iterator i = dependencyVector.begin(); i != dependencyVector.end(); ++i){
         
 
         std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = dependencyMap.find(*i);
+        ClassProfile::ClassProfile first = dependencyMap[(*i)];
+        std::set<std::string> toAdd;
+        addDependencies(first, &dependencyMap, &toAdd, &dependencyVector);
+        dependencyTree.push_back(toAdd);
+
+
+
+      /*  // Not Working
         if(searchit != dependencyMap.end())
             {
         std::string depProfName = dependencyMap[(*i)].getProfile();
@@ -163,12 +183,10 @@ int main(int argc, char * argv[]) {
             dependencyMap.erase(*j);
         }
 
+    }*/
     }
-// TODO: FIGURE OUT HOW TO MERGE LISTS with already stored if strings are equal
-    std::set s1(depDepNames.begin(), depDepNames.end());
-    std::set s2(depDepNames.begin(), depDepNames.end());
-    std::vector<string> v3
-}
+
+
 
    
 
