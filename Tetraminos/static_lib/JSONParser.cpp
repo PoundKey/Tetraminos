@@ -14,15 +14,15 @@ int JSONParser::containsMatch(std::vector<std::vector<std::string> > block, std:
  return -1;
 }
 
-void JSONParser::addDependencies(ClassProfile::ClassProfile cp, std::map<std::string, ClassProfile::ClassProfile>& dmap, std::set<std::string>& tad, std::vector<std::string>& depvec){
+void JSONParser::addDependencies(ClassProfile::ClassProfile first, std::map<std::string, ClassProfile::ClassProfile>& dmap, std::set<std::string>& tad, std::vector<std::string>& depvec){
     tad.insert(first.getProfile());
-    std::vector<std::string>::iterator it = depvec.find(first.getProfile());
+    std::vector<std::string>::iterator it = find(depvec.begin(), depvec.end(), first.getProfile());
     depvec.erase(it);
 
-    std::vector<std::string> deps = first.getDependency()
+    std::vector<std::string> deps = first.getDependency();
     for(std::vector<string>::size_type i = 0; i != deps.size(); i++){
-        newFirst = dmap[deps[i]]; 
-        JSONParser::addDependencies(newFirst, dmap, tad)
+        ClassProfile::ClassProfile newFirst = dmap[deps[i]]; 
+        JSONParser::addDependencies(newFirst, dmap, tad, depvec);
 
     }
 }
@@ -31,7 +31,6 @@ int main(int argc, char * argv[]) {
     std::map<std::string,std::string> classmap;
     std::map<std::string,std::string>::iterator it;
     std::map<std::string,ClassProfile::ClassProfile> profilemap;
-    std::map<std::string,ClassProfile::ClassProfile>::iterator pmit;
 
     JSONParser jp;
 
@@ -43,7 +42,7 @@ int main(int argc, char * argv[]) {
 
 
     // Name of JSON File to be parsed
-    std::string jsonName = argv[2];
+    // std::string jsonName = argv[2];
 
 
     //TODO: IMPORT JSON FILE
@@ -154,19 +153,30 @@ int main(int argc, char * argv[]) {
         }
     }
 
+     // This is to check that all Inheritances are grouped together properly    
+    std::cout << "This is the Inheritances" << endl;
+    for( std::vector<std::vector<std::string> >::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i){
+        std::cout << "Vector: ";
+        std::cout << i - inheritanceTree.begin() << endl;
+        for( std::vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j){
+             std::cout << *j << ' ' << std::endl;
+         }
+        }
+
+
 
     // Construct Dependency Groupings
-    std::map<std::string, ClassProfile::ClassProfile> dependencyMap = profilemap;
+    // std::map<std::string, ClassProfile::ClassProfile> dependencyMap = profilemap;
     std::vector<std::set<std::string> > dependencyTree;
     for (std::vector<std::string>::const_iterator i = dependencyVector.begin(); i != dependencyVector.end(); ++i){
         
 
-        std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = dependencyMap.find(*i);
-        ClassProfile::ClassProfile first = dependencyMap[(*i)];
+        std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = profilemap.find(*i);
+        ClassProfile::ClassProfile first = profilemap[(*i)];
         std::set<std::string> toAdd;
-        addDependencies(first, &dependencyMap, &toAdd, &dependencyVector);
+        jp.addDependencies(first, profilemap, toAdd, dependencyVector);
         dependencyTree.push_back(toAdd);
-
+}
 
 
       /*  // Not Working
@@ -184,7 +194,7 @@ int main(int argc, char * argv[]) {
         }
 
     }*/
-    }
+    
 
 
 
@@ -205,15 +215,19 @@ int main(int argc, char * argv[]) {
          }
         }
 
-    // This is to check that all dependencies are grouped together properly    
+   
+
+
+/* UNCOMMENT
     std::cout << "This is the Dependencies" << endl;
-    for( std::vector<std::vector<std::string> >::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i){
-        std::cout << "Vector: ";
-        std::cout << i - inheritanceTree.begin() << endl;
-        for( std::vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j){
-             std::cout << *j << ' ' << std::endl;
-         }
+    for(std::vector<std::set<std::string> >::const_iterator k = dependencyTree.begin(); k != dependencyTree.end(); ++k){
+        std::cout << "Vector: " << k - dependencyTree.begin() << endl;
+        for( std::set<std::string>::const_iterator q = (*k).begin(); q != (*k).end(); ++k){
+            std::cout << *q << ' '<< std::endl;
         }
+    }*/
+
+
 
    
     /* Call to dyninst passing pid and listClasses

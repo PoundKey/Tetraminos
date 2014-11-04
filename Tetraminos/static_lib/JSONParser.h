@@ -5,6 +5,7 @@
 #include <map>
 #include <cstdio>
 #include <algorithm>
+#include <set>
 //#include <windows.h>
 //#include <tlhelp32.h>
 // #include "Sonifier/OSCmessenger.cpp"
@@ -14,5 +15,5 @@ class JSONParser
 {
 public:
   int containsMatch(std::vector<std::vector<std::string> >, std::string, int&);
-  void JSONParser::addDependencies(ClassProfile::ClassProfile, std::map<std::string, ClassProfile::ClassProfile>&, std::set<std::string>&, std::vector<std::string>&);
+  void addDependencies(ClassProfile::ClassProfile, std::map<std::string, ClassProfile::ClassProfile>&, std::set<std::string>&, std::vector<std::string>&);
 };
