@@ -168,9 +168,9 @@ int main(int argc, char * argv[]) {
     // Construct Dependency Groupings
     // std::map<std::string, ClassProfile::ClassProfile> dependencyMap = profilemap;
     std::vector<std::set<std::string> > dependencyTree;
+    //printf("Vector size: %lu", dependencyVector.size());
     for (std::vector<std::string>::const_iterator i = dependencyVector.begin(); i != dependencyVector.end(); ++i){
         
-
         std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = profilemap.find(*i);
         ClassProfile::ClassProfile first = profilemap[(*i)];
         std::set<std::string> toAdd;
