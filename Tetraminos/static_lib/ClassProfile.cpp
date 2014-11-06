@@ -66,7 +66,7 @@ void ClassProfile::setInheritance (std::string d){
 }
 
 void ClassProfile::setDependency (std::string d){
-	methods.push_back(d);
+	dependencies.push_back(d);
 }
 
 void ClassProfile::setSize(int i){

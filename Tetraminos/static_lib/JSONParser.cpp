@@ -14,17 +14,18 @@ int JSONParser::containsMatch(std::vector<std::vector<std::string> > block, std:
  return -1;
 }
 
-void JSONParser::addDependencies(ClassProfile::ClassProfile first, std::map<std::string, ClassProfile::ClassProfile>& dmap, std::set<std::string>& tad, std::vector<std::string>& depvec){
-    tad.insert(first.getProfile());
-    std::vector<std::string>::iterator it = find(depvec.begin(), depvec.end(), first.getProfile());
-    depvec.erase(it);
-
-    std::vector<std::string> deps = first.getDependency();
-    for(std::vector<string>::size_type i = 0; i != deps.size(); i++){
-        ClassProfile::ClassProfile newFirst = dmap[deps[i]]; 
-        JSONParser::addDependencies(newFirst, dmap, tad, depvec);
+void JSONParser::addDependencies(ClassProfile::ClassProfile first, std::map<std::string, ClassProfile::ClassProfile>& dmap, std::set<std::string>& tad, std::vector<std::string>& depvec, std::vector<std::string>& convec){
+    if(find(convec.begin(), convec.end(), first.getProfile()) == convec.end()){
+        //std::cout << "I'm Here and first is: " << first.getProfile() << endl;
+        tad.insert(first.getProfile());
+        convec.push_back(first.getProfile());
+        std::vector<std::string> deps = first.getDependency();
+        for(std::vector<string>::size_type i = 0; i != deps.size(); i++){
+            ClassProfile::ClassProfile newFirst = dmap[deps[i]]; 
+            JSONParser::addDependencies(newFirst, dmap, tad, depvec, convec);
 
     }
+}
 }
 
 int main(int argc, char * argv[]) {
@@ -168,14 +169,22 @@ int main(int argc, char * argv[]) {
     // Construct Dependency Groupings
     // std::map<std::string, ClassProfile::ClassProfile> dependencyMap = profilemap;
     std::vector<std::set<std::string> > dependencyTree;
+    std::vector<std::string> containerVec;
     //printf("Vector size: %lu", dependencyVector.size());
+    int count = 0;
     for (std::vector<std::string>::const_iterator i = dependencyVector.begin(); i != dependencyVector.end(); ++i){
         
         std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = profilemap.find(*i);
         ClassProfile::ClassProfile first = profilemap[(*i)];
         std::set<std::string> toAdd;
-        jp.addDependencies(first, profilemap, toAdd, dependencyVector);
+        jp.addDependencies(first, profilemap, toAdd, dependencyVector, containerVec);
+        std::cout << "Vector: " << count << endl;
+        count = count + 1;
+        for( std::set<string>::iterator p = toAdd.begin(); p != toAdd.end(); ++p){
+             std::cout << *p << ' ' << std::endl;
+         }
         dependencyTree.push_back(toAdd);
+        
 }
 
 
@@ -205,7 +214,7 @@ int main(int argc, char * argv[]) {
 
     // TODO: Pass listClasses too Dyninst.
     //This is for Dyninst to use for iterating over it's functions
-    std::cout << "This is printing from the list of Class" << endl;
+   /* std::cout << "This is printing from the list of Class" << endl;
     for( std::vector<ClassProfile::ClassProfile>::const_iterator i = listClasses.begin(); i != listClasses.end(); ++i){
         std::cout << "This is profile: ";
         std::cout << (*i).getProfile() << endl;
@@ -213,20 +222,20 @@ int main(int argc, char * argv[]) {
         for( std::vector<string>::const_iterator j = methods.begin(); j != methods.end(); ++j){
              std::cout << *j << ' ' << std::endl;
          }
-        }
+        }*/
 
    
 
 
-/* UNCOMMENT
+/*
     std::cout << "This is the Dependencies" << endl;
     for(std::vector<std::set<std::string> >::const_iterator k = dependencyTree.begin(); k != dependencyTree.end(); ++k){
         std::cout << "Vector: " << k - dependencyTree.begin() << endl;
         for( std::set<std::string>::const_iterator q = (*k).begin(); q != (*k).end(); ++k){
             std::cout << *q << ' '<< std::endl;
         }
-    }*/
-
+    }
+*/
 
 
    

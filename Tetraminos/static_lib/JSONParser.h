@@ -15,5 +15,5 @@ class JSONParser
 {
 public:
   int containsMatch(std::vector<std::vector<std::string> >, std::string, int&);
-  void addDependencies(ClassProfile::ClassProfile, std::map<std::string, ClassProfile::ClassProfile>&, std::set<std::string>&, std::vector<std::string>&);
+  void addDependencies(ClassProfile::ClassProfile, std::map<std::string, ClassProfile::ClassProfile>&, std::set<std::string>&, std::vector<std::string>&, std::vector<std::string>&);
 };
