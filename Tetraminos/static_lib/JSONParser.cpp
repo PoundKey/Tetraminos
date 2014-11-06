@@ -177,6 +177,7 @@ int main(int argc, char * argv[]) {
         std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = profilemap.find(*i);
         ClassProfile::ClassProfile first = profilemap[(*i)];
         std::set<std::string> toAdd;
+        if(find(containerVec.begin(), containerVec.end(), first.getProfile()) == containerVec.end()){
         jp.addDependencies(first, profilemap, toAdd, dependencyVector, containerVec);
         std::cout << "Vector: " << count << endl;
         count = count + 1;
@@ -184,7 +185,7 @@ int main(int argc, char * argv[]) {
              std::cout << *p << ' ' << std::endl;
          }
         dependencyTree.push_back(toAdd);
-        
+}
 }
 
 
