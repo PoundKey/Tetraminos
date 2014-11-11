@@ -8,20 +8,22 @@
 #include "BPatch_point.h"
 #include <iostream>
 #include <string>
+#include "../../Tetraminos/static_lib/ClassProfile.cpp"
 
 class DynamicRunner {
 
 public:
-	DynamicRunner(int pid, std::string exeName);
+	DynamicRunner(int pid, std::vector<ClassProfile>& c);
 	void analyse();
 
 private:
 	BPatch_process *appProc;
 	BPatch_image *appImage;
-	std::vector<BPatch_function *> functions;
+	std::vector<ClassProfile> classes;
 	std::vector<BPatch_point *> *points;
 
 	void injectFuncIntoFunc(BPatch_funcCallExpr funcToInject, std::vector<BPatch_point *> *func_points);
+	BPatch_function* findFunctionWithClassName(std::string funcName, std::string className, std::vector<BPatch_function *> funcsMatchingName);
 
 	//void injectIntoFunction(BPatch_variableExpr *toInject, BPatch_arithExpr arithExpr, std::vector<BPatch_point *> *points);
 };
