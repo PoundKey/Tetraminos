@@ -240,15 +240,13 @@ int main(int argc, char * argv[]) {
 
 
    
-    /* Call to dyninst passing pid and listClasses
 
-    callToDyninst(pid, listClasses);
-    */
+    
 
 
 
 // GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
-    /* UNCOMMENT
+
     std::string exeName = argv[1];
     std::string pid;
     PROCESSENTRY32 entry;
@@ -273,11 +271,14 @@ int main(int argc, char * argv[]) {
 
     createInstruments(profilemap, INHERITANCE TREE); 
     DynamicRunner(pid, exeName);
-    */
+
 
     // CloseHandle(snapshot);
 
-    
+// Call to dyninst passing pid and listClasses
+
+DynamicRunner::DynamicRunner dr = DynamicRunner::DynamicRunner(pid, listClasses);
+dr.analyze();
 
 
 
