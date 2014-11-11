@@ -269,15 +269,15 @@ int main(int argc, char * argv[]) {
         }
     }
 
-    createInstruments(profilemap, INHERITANCE TREE); 
-    DynamicRunner(pid, exeName);
+    // UNCOMMENT createInstruments(profilemap, INHERITANCE TREE); 
+    
 
 
     // CloseHandle(snapshot);
 
 // Call to dyninst passing pid and listClasses
 
-DynamicRunner::DynamicRunner dr = DynamicRunner::DynamicRunner(pid, listClasses);
+DynamicRunner dr = DynamicRunner(pid, listClasses);
 dr.analyze();
 
 
