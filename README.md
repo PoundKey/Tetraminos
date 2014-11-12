@@ -38,6 +38,9 @@ codebase selection buttons. It calls the execution cmd to invoke the game (codeb
 
 4. Dynamic Analyser: See last paragraph of Dynamic Analyser section for brief description of testing process.
 
+5. Unit Test location: Parser/test/parser-test.js
+![Unit Test Result](Parser/test/unit-test.png)
+
 Codebase
 ================
 Ideally our analyzer works on every legitimate C++ code base.
