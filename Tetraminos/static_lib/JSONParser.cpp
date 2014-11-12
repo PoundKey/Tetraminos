@@ -1,5 +1,50 @@
 #include "JSONParser.h"
 
+// Get PID of process running http://proswdev.blogspot.ca/2012/02/get-process-id-by-name-in-linux-using-c.html
+int JSONParser::getProcIdByName(string procName)
+{
+    int pid = -1;
+
+    // Open the /proc directory
+    DIR *dp = opendir("/proc");
+    if (dp != NULL)
+    {
+        // Enumerate all entries in directory until process found
+        struct dirent *dirp;
+        while (pid < 0 && (dirp = readdir(dp)))
+        {
+            // Skip non-numeric entries
+            int id = atoi(dirp->d_name);
+            if (id > 0)
+            {
+                // Read contents of virtual /proc/{pid}/cmdline file
+                string cmdPath = string("/proc/") + dirp->d_name + "/cmdline";
+                ifstream cmdFile(cmdPath.c_str());
+                string cmdLine;
+                getline(cmdFile, cmdLine);
+                if (!cmdLine.empty())
+                {
+                    // Keep first cmdline item which contains the program path
+                    size_t pos = cmdLine.find('\0');
+                    if (pos != string::npos)
+                        cmdLine = cmdLine.substr(0, pos);
+                    // Keep program name only, removing the path
+                    pos = cmdLine.rfind('/');
+                    if (pos != string::npos)
+                        cmdLine = cmdLine.substr(pos + 1);
+                    // Compare against requested process name
+                    if (procName == cmdLine)
+                        pid = id;
+                }
+            }
+        }
+    }
+
+    closedir(dp);
+
+    return pid;
+}
+
 // To determine if a vector contains a Matching string
 int JSONParser::containsMatch(std::vector<std::vector<std::string> > block, std::string lookingFor, int& placeInt){
 
@@ -41,7 +86,8 @@ int main(int argc, char * argv[]) {
     std::map<std::string,ClassProfile> profilemap;
 
     JSONParser jp;
-
+    int pid = jp.getProcIdByName(argv[1]);
+    cout << "pid: " << pid << endl;
     std::map<int, std::vector<ClassProfile> > inheritanceCounts;
     std::vector<ClassProfile>::iterator icit;
     int maxInheritances = 0; 
@@ -278,7 +324,7 @@ int main(int argc, char * argv[]) {
 
 
 
-// GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
+// WINDOWS: GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
 
     /*std::string exeName = argv[1];
     std::string pid;
