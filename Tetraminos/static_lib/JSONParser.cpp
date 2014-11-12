@@ -1,5 +1,50 @@
 #include "JSONParser.h"
 
+// Get PID of process running http://proswdev.blogspot.ca/2012/02/get-process-id-by-name-in-linux-using-c.html
+int JSONParser::getProcIdByName(string procName)
+{
+    int pid = -1;
+
+    // Open the /proc directory
+    DIR *dp = opendir("/proc");
+    if (dp != NULL)
+    {
+        // Enumerate all entries in directory until process found
+        struct dirent *dirp;
+        while (pid < 0 && (dirp = readdir(dp)))
+        {
+            // Skip non-numeric entries
+            int id = atoi(dirp->d_name);
+            if (id > 0)
+            {
+                // Read contents of virtual /proc/{pid}/cmdline file
+                string cmdPath = string("/proc/") + dirp->d_name + "/cmdline";
+                ifstream cmdFile(cmdPath.c_str());
+                string cmdLine;
+                getline(cmdFile, cmdLine);
+                if (!cmdLine.empty())
+                {
+                    // Keep first cmdline item which contains the program path
+                    size_t pos = cmdLine.find('\0');
+                    if (pos != string::npos)
+                        cmdLine = cmdLine.substr(0, pos);
+                    // Keep program name only, removing the path
+                    pos = cmdLine.rfind('/');
+                    if (pos != string::npos)
+                        cmdLine = cmdLine.substr(pos + 1);
+                    // Compare against requested process name
+                    if (procName == cmdLine)
+                        pid = id;
+                }
+            }
+        }
+    }
+
+    closedir(dp);
+
+    return pid;
+}
+
 // To determine if a vector contains a Matching string
 int JSONParser::containsMatch(std::vector<std::vector<std::string> > block, std::string lookingFor, int& placeInt){
 
@@ -14,29 +59,37 @@ int JSONParser::containsMatch(std::vector<std::vector<std::string> > block, std:
  return -1;
 }
 
-void JSONParser::addDependencies(ClassProfile::ClassProfile first, std::map<std::string, ClassProfile::ClassProfile>& dmap, std::set<std::string>& tad, std::vector<std::string>& depvec, std::vector<std::string>& convec){
+void JSONParser::addDependencies(ClassProfile first, std::map<std::string, ClassProfile>& dmap, std::set<std::string>& tad, std::vector<std::string>& depvec, std::vector<std::string>& convec, std::vector<std::set<std::string> >& dtree, std::set<int>& pov){
     if(find(convec.begin(), convec.end(), first.getProfile()) == convec.end()){
         //std::cout << "I'm Here and first is: " << first.getProfile() << endl;
         tad.insert(first.getProfile());
         convec.push_back(first.getProfile());
         std::vector<std::string> deps = first.getDependency();
         for(std::vector<string>::size_type i = 0; i != deps.size(); i++){
-            ClassProfile::ClassProfile newFirst = dmap[deps[i]]; 
-            JSONParser::addDependencies(newFirst, dmap, tad, depvec, convec);
+            ClassProfile newFirst = dmap[deps[i]]; 
+            JSONParser::addDependencies(newFirst, dmap, tad, depvec, convec, dtree, pov);
 
     }
-}
+}else{
+        // Loops to see if already in a different vector in the tree, if so we need to add the position so we can add this array to it. 
+        for(std::vector<std::set<std::string> >::size_type k = 0; k < dtree.size(); k++){
+            if(find(dtree[k].begin(), dtree[k].end(), first.getProfile()) != dtree[k].end())
+                pov.insert(k);
+        }
+    }
+
 }
 
 int main(int argc, char * argv[]) {
     std::map<std::string,std::string> classmap;
     std::map<std::string,std::string>::iterator it;
-    std::map<std::string,ClassProfile::ClassProfile> profilemap;
+    std::map<std::string,ClassProfile> profilemap;
 
     JSONParser jp;
-
-    std::map<int, std::vector<ClassProfile::ClassProfile> > inheritanceCounts;
-    std::vector<ClassProfile::ClassProfile>::iterator icit;
+    int pid = jp.getProcIdByName(argv[1]);
+    cout << "pid: " << pid << endl;
+    std::map<int, std::vector<ClassProfile> > inheritanceCounts;
+    std::vector<ClassProfile>::iterator icit;
     int maxInheritances = 0; 
 
     std::vector<std::string> dependencyVector;
@@ -60,11 +113,11 @@ int main(int argc, char * argv[]) {
     rapidjson::Document child;
     const rapidjson::Value& b = d["staticInfo"];
     assert(b.IsArray());
-    std::vector<ClassProfile::ClassProfile> listClasses;
+    std::vector<ClassProfile> listClasses;
     for (rapidjson::SizeType i = 0; i < b.Size(); i++){ // rapidjson uses SizeType instead of size_t.
             
             //New cl object
-            ClassProfile::ClassProfile cl;
+            ClassProfile cl;
             const rapidjson::Value& temp = b[i];
             std::string className = temp["className"].GetString();
             std::string tempinheritance = temp["inheritance"].GetString();
@@ -124,7 +177,7 @@ int main(int argc, char * argv[]) {
 
     // Construct Inheritance Groupings to pass for Instrument Creation
     std::vector<std::vector<std::string> > inheritanceTree;
-    std::vector<ClassProfile::ClassProfile> leftovers;
+    std::vector<ClassProfile> leftovers;
     for (int i = 0; i <= maxInheritances; i++){
         if (i==0){
         for(std::vector<ClassProfile>::size_type h = 0; h != inheritanceCounts[i].size(); h++){
@@ -143,7 +196,7 @@ int main(int argc, char * argv[]) {
             
         }
 
-        for(std::vector<ClassProfile::ClassProfile>::size_type l = 0; l != leftovers.size(); l++){
+        for(std::vector<ClassProfile>::size_type l = 0; l != leftovers.size(); l++){
             int placeInt1;
             if(0 < jp.containsMatch(inheritanceTree, leftovers[l].getInheritance(), placeInt1)){
                 inheritanceTree[placeInt1].push_back(leftovers[l].getProfile());
@@ -167,26 +220,52 @@ int main(int argc, char * argv[]) {
 
 
     // Construct Dependency Groupings
-    // std::map<std::string, ClassProfile::ClassProfile> dependencyMap = profilemap;
+    // std::map<std::string, ClassProfile> dependencyMap = profilemap;
     std::vector<std::set<std::string> > dependencyTree;
     std::vector<std::string> containerVec;
     //printf("Vector size: %lu", dependencyVector.size());
     int count = 0;
     for (std::vector<std::string>::const_iterator i = dependencyVector.begin(); i != dependencyVector.end(); ++i){
         
-        std::map<std::string, ClassProfile::ClassProfile>::iterator searchit = profilemap.find(*i);
-        ClassProfile::ClassProfile first = profilemap[(*i)];
+        std::map<std::string, ClassProfile>::iterator searchit = profilemap.find(*i);
+        ClassProfile first = profilemap[(*i)];
         std::set<std::string> toAdd;
         if(find(containerVec.begin(), containerVec.end(), first.getProfile()) == containerVec.end()){
-        jp.addDependencies(first, profilemap, toAdd, dependencyVector, containerVec);
+        std::set<int> posOfVecs;
+        jp.addDependencies(first, profilemap, toAdd, dependencyVector, containerVec, dependencyTree, posOfVecs);
         std::cout << "Vector: " << count << endl;
         count = count + 1;
         for( std::set<string>::iterator p = toAdd.begin(); p != toAdd.end(); ++p){
              std::cout << *p << ' ' << std::endl;
          }
+
+         // Merge Step 
+         if(posOfVecs.size() > 0){
+            std::set<int>::iterator setit = posOfVecs.begin();
+            dependencyTree[*setit].insert(toAdd.begin(), toAdd.end());
+            if(posOfVecs.size() > 1){
+                for (std::set<int>::iterator k = std::next(posOfVecs.begin()); k != posOfVecs.end(); ++k){
+                    dependencyTree[*setit].insert(dependencyTree[*k].begin(), dependencyTree[*k].end());
+                    dependencyTree[*k].clear();
+                }
+            }
+         }else{
         dependencyTree.push_back(toAdd);
+    }
+ }
 }
+
+    int counter = 0;
+    for(std::vector<std::set<std::string> >::const_iterator dtit = dependencyTree.begin(); dtit != dependencyTree.end(); ++dtit){
+        if ((*dtit).size() == 0) { dependencyTree.erase(dtit);}
 }
+    for(std::vector<std::set<std::string> >::const_iterator dtit = dependencyTree.begin(); dtit != dependencyTree.end(); ++dtit){
+        std::cout << endl << "FinVector " << counter << endl;
+        counter = counter + 1;
+        for(std::set<std::string>::const_iterator sdtit = (*dtit).begin(); sdtit != (*dtit).end(); ++sdtit){
+            std::cout << *sdtit << endl; 
+        }
+    }
 
 
       /*  // Not Working
@@ -216,7 +295,7 @@ int main(int argc, char * argv[]) {
     // TODO: Pass listClasses too Dyninst.
     //This is for Dyninst to use for iterating over it's functions
    /* std::cout << "This is printing from the list of Class" << endl;
-    for( std::vector<ClassProfile::ClassProfile>::const_iterator i = listClasses.begin(); i != listClasses.end(); ++i){
+    for( std::vector<ClassProfile>::const_iterator i = listClasses.begin(); i != listClasses.end(); ++i){
         std::cout << "This is profile: ";
         std::cout << (*i).getProfile() << endl;
         vector<std::string> methods = (*i).getMethods();
@@ -245,9 +324,9 @@ int main(int argc, char * argv[]) {
 
 
 
-// GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
+// WINDOWS: GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
 
-    std::string exeName = argv[1];
+    /*std::string exeName = argv[1];
     std::string pid;
     PROCESSENTRY32 entry;
     entry.dwSize = sizeof(PROCESSENTRY32);
@@ -268,7 +347,7 @@ int main(int argc, char * argv[]) {
             }
         }
     }
-
+*/
     // UNCOMMENT createInstruments(profilemap, INHERITANCE TREE); 
     
 
@@ -277,8 +356,8 @@ int main(int argc, char * argv[]) {
 
 // Call to dyninst passing pid and listClasses
 
-DynamicRunner dr = DynamicRunner(pid, listClasses);
-dr.analyze();
+//DynamicRunner dr = DynamicRunner(pid, listClasses);
+//dr.analyze();
 
 
 
