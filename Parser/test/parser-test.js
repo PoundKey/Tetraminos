@@ -198,7 +198,7 @@ var classInfo = function (_class) {
                 }
 
                 describe('Parsing method member definitions: ', function(){
-                    it("should contain the variable definition ", function(){
+                    it("should contain the function definition ", function(){
                         assert(typeCheck != undefined);
                         expect(typeCheck ).to.be.a('String');
                         assert(typeCheck == 'function');
