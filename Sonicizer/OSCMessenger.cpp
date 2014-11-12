@@ -1,14 +1,11 @@
-#include "osc/OscOutboundPacketStream.h"
-#include "ip/UdpSocket.h"
-#include "Fuser/ClassProfile.cpp"
-#include "InstrumentProfile.cpp"
-
-using namespace std;
+#include "OSCMessenger.h"
 
 #define ADDRESS "127.0.0.1"
 #define PORT 8000
 
 #define OUTPUT_BUFFER_SIZE 1024
+
+using namespace std;
 
 /*
 Class for facilitating communication between the Fuser and Reaper through the OSC protocol.
@@ -16,22 +13,6 @@ Class for facilitating communication between the Fuser and Reaper through the OS
 Generates the instruments out of class data and stores this instrument information for
 use in creating notes
 */
-
-class OSCMessenger
-{
-	map<string, InstrumentProfile> instrumentMap;
-
-	private:
-		int getNoteFromMap(string, string, map<string, InstrumentProfile>::const_iterator);
-		void sendMIDINote(int, int, int);
-		void sendAddInstrumentCommand(int, int);
-	public:
-		OSCMessenger();		
-		bool createInstruments(map<string, ClassProfile>, vector<vector<string>>, vector<vector<string>>);
-		void playNote(string, string);
-		void stopNote(string, string);
-		
-};
 
 // REAPER OSC ACTION IDS
 const int MIDI_CHANNEL_ASSIGNS[16] = 
@@ -74,23 +55,23 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 	{
 		for (vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
 		{
-			int registerInterval = 128/(*j).length;			 
+			int registerInterval = 128/(*j).length();			 
 			int registerBooster = rand() % 60;
 			map<string, ClassProfile>::iterator pos = classMap.find((*j));
 			if (pos != classMap.end())
 			{
 				InstrumentProfile ip;
-				ip.setClassName = pos->first;
-				ip.setChannel = inheritanceFamilyCounter;	
-				ip.setRegisterBooster = registerBooster;
+				ip.setClassName(pos->first);
+				ip.setChannel(inheritanceFamilyCounter);	
+				ip.setRegisterBooster(registerBooster);
 				
-				vector<string> methods = pos->second.getMethods;
+				vector<string> methods = pos->second.getMethods();
 				for (vector<string>::const_iterator k = methods.begin(); k != methods.end(); ++k)
 				{
-					ip.getMethodToNoteMap[(*k)] = 0;
+					ip.getMethodToNoteMap()[(*k)] = 0;
 				}
 
-				instrumentMap[ip.getClassName] = ip;
+				instrumentMap[ip.getClassName()] = ip;
 			}
 			registerBooster += registerInterval;
 			registerBooster %= 128;
@@ -106,15 +87,16 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 			map<string, InstrumentProfile>::iterator pos = instrumentMap.find((*j));
 			if (pos != instrumentMap.end())
 			{
-				pos->second.setTrackTemplate = dependencyFamilyCounter;
+				pos->second.setTrackTemplate(dependencyFamilyCounter);
 				int scaleIndex = 0;
 				int scaleTracker = 0;
-				for (map<string, int>::iterator k = pos->second.getMethodToNoteMap.begin(); k != pos->second.getMethodToNoteMap.end(); ++k)
+				for (map<string, int>::iterator k = pos->second.getMethodToNoteMap().begin(); k != pos->second.getMethodToNoteMap().end(); ++k)
 				{
-					k->second = (pos->second.getRegisterBooster + scaleTracker) % 128;
+					
+					k->second = (pos->second.getRegisterBooster() + scaleTracker) % 128;
 					scaleTracker += SCALES.at(dependencyFamilyCounter).at(scaleIndex);
 					scaleIndex++;
-					scaleIndex %= SCALES.at(dependencyFamilyCounter).size;
+					scaleIndex %= SCALES.at(dependencyFamilyCounter).size();
 				}
 			}
 		}
@@ -123,8 +105,8 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 			dependencyFamilyCounter = 0;
 	}
 
-	for (map<string, InstrumentProfile>::const_iterator i = instrumentMap.begin(); i != instrumentMap.end(); ++i){
-		sendAddInstrumentCommand(i->second.getChannel, i->second.getTrackTemplate);
+	for (map<string, InstrumentProfile>::iterator i = instrumentMap.begin(); i != instrumentMap.end(); ++i){
+		sendAddInstrumentCommand(i->second.getChannel(), i->second.getTrackTemplate());
 	}
 }
 
@@ -149,9 +131,9 @@ void OSCMessenger::sendAddInstrumentCommand(int channel, int templateNumber){
 /*
 Fetches note associated with the given function in the given class
 */
-int OSCMessenger::getNoteFromMap(string clas, string func, map<string, InstrumentProfile>::const_iterator instrumentToPlay){
+int OSCMessenger::getNoteFromMap(string clas, string func, map<string, InstrumentProfile>::iterator instrumentToPlay){
 
-	map<string, int> noteMap = instrumentToPlay->second.getMethodToNoteMap;
+	map<string, int> noteMap = instrumentToPlay->second.getMethodToNoteMap();
 	map<string, int>::const_iterator noteToPlay = noteMap.find(func);
 
 	// function not found!
@@ -161,7 +143,7 @@ int OSCMessenger::getNoteFromMap(string clas, string func, map<string, Instrumen
 	}
 
 	int note = noteToPlay->second;
-	note += instrumentToPlay->second.getRegisterBooster;
+	note += instrumentToPlay->second.getRegisterBooster();
 
 	// invalid note!
 	if (note < 0 || note > 128){
@@ -192,7 +174,7 @@ Triggers a note on event in Omnisphere
 */
 void OSCMessenger::playNote(string clas, string func)
 {
-	map<string, InstrumentProfile>::const_iterator instrumentToPlay = instrumentMap.find(clas);
+	map<string, InstrumentProfile>::iterator instrumentToPlay = instrumentMap.find(clas);
 	// instrument not found!
 	if (instrumentToPlay == instrumentMap.end()){
 		printf("Instrument not found for class: %s", clas);
@@ -200,7 +182,7 @@ void OSCMessenger::playNote(string clas, string func)
 	}
 	int note = getNoteFromMap(clas, func, instrumentToPlay);
 	if (note == -1) return;
-	sendMIDINote(note, 100, instrumentToPlay->second.getChannel);
+	sendMIDINote(note, 100, instrumentToPlay->second.getChannel());
 }
 
 /*
@@ -208,7 +190,7 @@ Triggers a note off event in Omnisphere
 */
 void OSCMessenger::stopNote(string clas, string func)
 {
-	map<string, InstrumentProfile>::const_iterator instrumentToPlay = instrumentMap.find(clas);
+	map<string, InstrumentProfile>::iterator instrumentToPlay = instrumentMap.find(clas);
 	// instrument not found!
 	if (instrumentToPlay == instrumentMap.end()){
 		printf("Instrument not found for class: %s", clas);
@@ -216,15 +198,24 @@ void OSCMessenger::stopNote(string clas, string func)
 	}
 	int note = getNoteFromMap(clas, func, instrumentToPlay);
 	if (note == -1) return;
-	sendMIDINote(note, 0, instrumentToPlay->second.getChannel);
+	sendMIDINote(note, 0, instrumentToPlay->second.getChannel());
 }
 
-/*
+
 int main(int argc, char* argv[])
 {
     
+	UdpTransmitSocket transmitSocket(IpEndpointName(ADDRESS, PORT));
+	char buffer[OUTPUT_BUFFER_SIZE];
+	osc::OutboundPacketStream p(buffer, OUTPUT_BUFFER_SIZE);
+
+	p << osc::BeginBundleImmediate
+		<< osc::BeginMessage("i/action") << 40685
+		<< osc::EndMessage
+		<< osc::EndBundle;
+
+	transmitSocket.Send(p.Data(), p.Size());
     
 
 }
 
-*/
