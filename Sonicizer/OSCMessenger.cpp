@@ -201,6 +201,11 @@ void OSCMessenger::stopNote(string clas, string func)
 	sendMIDINote(note, 0, instrumentToPlay->second.getChannel());
 }
 
+map<string, InstrumentProfile> OSCMessenger::getInstrumentMap(){
+	return instrumentMap;
+}
+	
+
 
 int main(int argc, char* argv[])
 {

@@ -21,5 +21,5 @@ public:
 	bool createInstruments(map<string, ClassProfile>, vector<vector<string>>, vector<vector<string>>);
 	void playNote(string, string);
 	void stopNote(string, string);
-
+	map<string, InstrumentProfile> getInstrumentMap();
 };
