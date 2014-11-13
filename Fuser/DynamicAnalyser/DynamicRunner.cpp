@@ -29,36 +29,35 @@ DynamicRunner::DynamicRunner(int pid, std::vector<ClassProfile>& c) {
 }
 
 // The workhorse function
-void DynamicRunner::analyse() {
+void DynamicRunner::analyze() {
+	std::cout << "size is: " << classes.size() << "\n";
 	for (int i = 0; i < classes.size(); i++) {
 		ClassProfile thisClass = classes[i];
 		// find the name of the class
 		std::string className = thisClass.getProfile();
 		std::vector<std::string> classFunctions = thisClass.getMethods();
+		//printf("Are we here?\n");
 		for (int s = 0; s < classFunctions.size(); s++) {
 			std::string thisFuncName = classFunctions[s];
 			std::vector<BPatch_function *> funcsMatchingName;
-			appImage->findFunction(thisFuncName.c_str(), funcsMatchingName);
-			BPatch_function *thisFunc = funcsMatchingName[0];
+			std::string fullFuncName = className;
+			fullFuncName.append("::");
+			fullFuncName.append(thisFuncName);
+			appImage->findFunction(fullFuncName.c_str(), funcsMatchingName);
+			BPatch_function *this_function = funcsMatchingName[0];
+			/**
 			BPatch_module *funcMod = thisFunc->getModule();
 			char nameBuffer[256];
 			funcMod->getName(nameBuffer, 256);
 			std::cout << "Module name for function: " << thisFuncName << " is: ";
 			printf("%s", nameBuffer);
 			printf("\n");
-
-			/**
-			if (funcsMatchingName.size() > 1) {
-				// we have found two matches - compare to the class name
-				// and figure out which one it is
-				thisFunc = findFunctionWithClassName(thisFuncName, className, funcsMatchingName);
-			}
-			else {
-				thisFunc = funcsMatchingName[0];
-			}
+			**/
+			
+		
 
 			// Load up this function into a BPatch_function variable
-			BPatch_function *this_function = functions[i];
+			//BPatch_function *this_function = functions[i];
 			
 			// setup a vector of funcpoints and set to the entry point of this_function
 			// NOTE - the 'entry' point is essentially a memory address
@@ -67,9 +66,10 @@ void DynamicRunner::analyse() {
 			// Create a snippet that calls printf every time a function is called
 			std::vector<BPatch_snippet *> printfArgs;
 			// Setup the funcString - format is "Function Called! Name is: _____\n"
-			std::string funcString = "Function Called! Name is:";
+			std::string funcString = className;
+			funcString.append(",");
 			funcString.append(this_function->getName());
-			funcString.append("\n");
+			funcString.append(",on\n");
 			// Create a BPatch_constExpr using the funcString
 			BPatch_snippet *fmt = new BPatch_constExpr(funcString.c_str());
 			printfArgs.push_back(fmt);
@@ -80,6 +80,18 @@ void DynamicRunner::analyse() {
 			// create a BPatch_funcCallExpr using printf and the string argument defined earlier
 			BPatch_funcCallExpr printfCall(*(printfFuncs[0]), printfArgs);
 			injectFuncIntoFunc(printfCall, func_points);
+
+			funcString.erase(funcString.end()-3, funcString.end());
+			funcString.append(",off\n");
+
+			func_points = this_function->findPoint(BPatch_exit);
+			printfArgs.pop_back();
+			BPatch_snippet *fmt1 = new BPatch_constExpr(funcString.c_str());
+			printfArgs.push_back(fmt1);
+
+			BPatch_funcCallExpr printfCallEnd(*(printfFuncs[0]), printfArgs);
+
+			injectFuncIntoFunc(printfCallEnd, func_points);
 			/**
 			std::string comparor = "apply_surface";
 			// Here for speed purposes - "apply_surface" is the render function in pacman
@@ -88,6 +100,7 @@ void DynamicRunner::analyse() {
 				injectFuncIntoFunc(printfCall, func_points);
 			}
 			**/
+			
 		}
 	}
 
