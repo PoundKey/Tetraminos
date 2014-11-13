@@ -8,13 +8,13 @@
 #include "BPatch_point.h"
 #include <iostream>
 #include <string>
-#include "../../Tetraminos/static_lib/ClassProfile.cpp"
+#include "../../Tetraminos/static_lib/ClassProfile.h"
 
 class DynamicRunner {
 
 public:
 	DynamicRunner(int pid, std::vector<ClassProfile>& c);
-	void analyse();
+	void analyze();
 
 private:
 	BPatch_process *appProc;
