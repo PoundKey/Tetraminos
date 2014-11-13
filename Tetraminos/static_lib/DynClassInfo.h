@@ -1,11 +1,18 @@
 #include <string>
 #include <ctime>
+#include "boost/date_time/posix_time/posix_time.hpp"
 
 class DynClassInfo {
 public:
-	DynClassInfo(time_t ts, std::string cn, std::string funcName, bool on_off);
+	DynClassInfo();
+	DynClassInfo(boost::posix_time::ptime ts, std::string cn, std::string funcName, bool on_off);
+	std::string getFunctionName();
+	boost::posix_time::ptime getTimeStamp();
+	bool getOn();
+	void printClassInfo();
+
 private:
-	time_t timestamp;
+	boost::posix_time::ptime timestamp;
 	std::string className;
 	std::string functionName;
 	bool on;
