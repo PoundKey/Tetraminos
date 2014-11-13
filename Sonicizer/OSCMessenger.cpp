@@ -108,6 +108,8 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 	for (map<string, InstrumentProfile>::iterator i = instrumentMap.begin(); i != instrumentMap.end(); ++i){
 		sendAddInstrumentCommand(i->second.getChannel(), i->second.getTrackTemplate());
 	}
+
+	return true;
 }
 
 /*
@@ -205,7 +207,6 @@ map<string, InstrumentProfile> OSCMessenger::getInstrumentMap(){
 	return instrumentMap;
 }
 	
-
 
 int main(int argc, char* argv[])
 {
