@@ -1,5 +1,5 @@
 #include "JSONParser.h"
-
+//#include <iterator>
 // Get PID of process running http://proswdev.blogspot.ca/2012/02/get-process-id-by-name-in-linux-using-c.html
 int JSONParser::getProcIdByName(string procName)
 {
@@ -254,11 +254,13 @@ int main(int argc, char * argv[]) {
     }
  }
 }
-
+    //std::cout << "here?\n";
     int counter = 0;
-    for(std::vector<std::set<std::string> >::const_iterator dtit = dependencyTree.begin(); dtit != dependencyTree.end(); ++dtit){
-        if ((*dtit).size() == 0) { dependencyTree.erase(dtit);}
-}
+    //for(std::vector<std::set<std::string> >::const_iterator dtit = dependencyTree.begin(); dtit != dependencyTree.end(); ++dtit){
+     //   if ((*dtit).size() == 0) { 
+     //        dependencyTree.erase(dtit);
+     //   }
+//}
     for(std::vector<std::set<std::string> >::const_iterator dtit = dependencyTree.begin(); dtit != dependencyTree.end(); ++dtit){
         std::cout << endl << "FinVector " << counter << endl;
         counter = counter + 1;
@@ -354,12 +356,24 @@ int main(int argc, char * argv[]) {
 
     // CloseHandle(snapshot);
 
-// Call to dyninst passing pid and listClasses
+    /** Let's just assume this has run and output a file for now
+    DynamicRunner *dr = new DynamicRunner(pid, listClasses);
+    dr->analyze();
+    **/
 
-//DynamicRunner dr = DynamicRunner(pid, listClasses);
-//dr.analyze();
-
-
+    DynamicParser parser;
+    std::map<std::string, std::vector<DynClassInfo> > *dynMap = parser.parseFile("dynamicOutput.txt");
+    /**
+    typedef std::map<std::string, std::vector<DynClassInfo> >::iterator it_type;
+    for (it_type iterator = dynMap.begin(); iterator != dynMap.end(); iterator++) {
+        std::vector<DynClassInfo> info = iterator->second;
+        for (int i = 0; i < info.size(); i++) {
+            // get the instrument profile
+            DynClassInfo tinfo = info[i];
+            tinfo.printClassInfo();
+        }
+    }
+    **/
 
 
 /* Experimental
