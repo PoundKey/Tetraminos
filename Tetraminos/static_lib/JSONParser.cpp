@@ -399,8 +399,13 @@ int main(int argc, char * argv[]) {
             //std::cout << " Note: " << note << "\n";
             s++;
 
+            long totalTime = timeDuration.total_milliseconds();
+            if (totalTime < 10) {
+                totalTime = 10;
+            }
+
             // <note> <velocity> <channel> <duration> <track template>
-            std::cout << note << ",100," << iprof.getChannel() << "," << timeDuration.total_milliseconds() <<
+            std::cout << note << ",100," << iprof.getChannel() << "," << totalTime <<
             "," << iprof.getTrackTemplate() << "," << onts << "\n";
         }
     }
