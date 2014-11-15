@@ -269,7 +269,7 @@ int main(int argc, char * argv[]) {
         }
     }
 
-    createInstruments()
+    //createInstruments();
 
 
       /*  // Not Working
@@ -327,7 +327,6 @@ int main(int argc, char * argv[]) {
     
 
 
-
 // WINDOWS: GET Process ID of launched exe  http://stackoverflow.com/questions/865152/how-can-i-get-a-process-handle-by-its-name-in-c
 
     /*std::string exeName = argv[1];
@@ -353,10 +352,10 @@ int main(int argc, char * argv[]) {
     }
 */
    OSCMessenger messenger;
-   if (messenger.createInstruments(profileMap, inheritanceTree, dependencyTree)){
-    printf("Successfully created Instruments");
+   if (messenger.createInstruments(profilemap, inheritanceTree, dependencyTree)){
+    printf("Successfully created Instruments\n");
    } else {
-    printf("Failed Instrument Creation");
+    printf("Failed Instrument Creation\n");
    }
     
 
@@ -370,6 +369,43 @@ int main(int argc, char * argv[]) {
 
     DynamicParser parser;
     std::map<std::string, std::vector<DynClassInfo> > *dynMap = parser.parseFile("dynamicOutput.txt");
+    typedef std::map<std::string, std::vector<DynClassInfo> >::iterator it_type;
+    std::map<std::string, InstrumentProfile> instrumentMap = messenger.getInstrumentMap();
+    for (it_type i = dynMap->begin(); i != dynMap->end(); i++){
+        std::vector<DynClassInfo> classVec = i->second;
+        for (int s = 0; s < classVec.size(); s++) {
+            DynClassInfo oninfo = classVec[s];
+            boost::posix_time::ptime onts = oninfo.getTimeStamp();
+            DynClassInfo offinfo = classVec[s+1];
+            boost::posix_time::ptime offts = offinfo.getTimeStamp();
+            boost::posix_time::time_duration timeDuration = offts-onts;
+            //std::cout << "Total Time duration: " << timeDuration.total_milliseconds();
+            std::string className = oninfo.getClassName();
+            InstrumentProfile iprof = instrumentMap.at(className);
+            std::string fullFuncName = oninfo.getFunctionName();
+            int needle = fullFuncName.find("::");
+            std::string ss = fullFuncName.substr(needle+2, fullFuncName.size());
+            while (ss.find("::") != std::string::npos) {
+                needle = ss.find("::");
+                ss = ss.substr(needle+2, ss.size());
+            }
+            //std::cout << " Func Name: " << ss;
+            std::map<std::string, int> mtnm = iprof.getMethodToNoteMap();
+            //for (std::map<std::string, int>::iterator ite = mtnm.begin(); ite !=mtnm.end(); ite++) {
+            //    std::string key = ite->first;
+            //    std::cout << " instrument key: " << key << "\n";
+            //}
+            int note = mtnm.at(ss);
+            //std::cout << " Note: " << note << "\n";
+            s++;
+
+            // <note> <velocity> <channel> <duration> <track template>
+            std::cout << note << ",100," << iprof.getChannel() << "," << timeDuration.total_milliseconds() <<
+            "," << iprof.getTrackTemplate() << "," << onts << "\n";
+        }
+    }
+
+
     /**
     typedef std::map<std::string, std::vector<DynClassInfo> >::iterator it_type;
     for (it_type iterator = dynMap.begin(); iterator != dynMap.end(); iterator++) {

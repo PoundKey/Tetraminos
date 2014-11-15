@@ -18,6 +18,10 @@ boost::posix_time::ptime DynClassInfo::getTimeStamp() {
 	return timestamp;
 }
 
+std::string DynClassInfo::getClassName() {
+	return className;
+}
+
 bool DynClassInfo::getOn() {
 	return on;
 }

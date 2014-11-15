@@ -48,7 +48,7 @@ const vector<vector<int>> SCALES =
 	{2, 1, 3, 1, 1, 2} // Gypsy
 };
 
-bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<vector<string>> inheritanceTree, vector<vector<string>> dependencyTree){
+bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<vector<string>> inheritanceTree, vector<set<string>> dependencyTree){
 
 	int inheritanceFamilyCounter = 0;
 	for (vector<vector<string>>::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i)
@@ -80,9 +80,9 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 	}
 
 	int dependencyFamilyCounter = 0;
-	for (vector<vector<string>>::const_iterator i = dependencyTree.begin(); i != dependencyTree.end(); ++i)
+	for (vector<set<string>>::const_iterator i = dependencyTree.begin(); i != dependencyTree.end(); ++i)
 	{
-		for (vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
+		for (set<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
 		{
 			map<string, InstrumentProfile>::iterator pos = instrumentMap.find((*j));
 			if (pos != instrumentMap.end())
@@ -106,7 +106,7 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 	}
 
 	for (map<string, InstrumentProfile>::iterator i = instrumentMap.begin(); i != instrumentMap.end(); ++i){
-		sendAddInstrumentCommand(i->second.getChannel(), i->second.getTrackTemplate());
+		//sendAddInstrumentCommand(i->second.getChannel(), i->second.getTrackTemplate());
 	}
 
 	return true;
@@ -140,7 +140,7 @@ int OSCMessenger::getNoteFromMap(string clas, string func, map<string, Instrumen
 
 	// function not found!
 	if (noteToPlay == noteMap.end()){
-		printf("Note not found for function: %s", func);
+		printf("Note not found for function: %s", func.c_str());
 		return -1;
 	}
 
@@ -149,7 +149,7 @@ int OSCMessenger::getNoteFromMap(string clas, string func, map<string, Instrumen
 
 	// invalid note!
 	if (note < 0 || note > 128){
-		printf("Note for function %s is out of MIDI range", func);
+		printf("Note for function %s is out of MIDI range", func.c_str());
 		return -1;
 	}
 	return note;
@@ -179,7 +179,7 @@ void OSCMessenger::playNote(string clas, string func)
 	map<string, InstrumentProfile>::iterator instrumentToPlay = instrumentMap.find(clas);
 	// instrument not found!
 	if (instrumentToPlay == instrumentMap.end()){
-		printf("Instrument not found for class: %s", clas);
+		printf("Instrument not found for class: %s", clas.c_str());
 		return;
 	}
 	int note = getNoteFromMap(clas, func, instrumentToPlay);
@@ -195,7 +195,7 @@ void OSCMessenger::stopNote(string clas, string func)
 	map<string, InstrumentProfile>::iterator instrumentToPlay = instrumentMap.find(clas);
 	// instrument not found!
 	if (instrumentToPlay == instrumentMap.end()){
-		printf("Instrument not found for class: %s", clas);
+		printf("Instrument not found for class: %s", clas.c_str());
 		return;
 	}
 	int note = getNoteFromMap(clas, func, instrumentToPlay);
@@ -207,7 +207,7 @@ map<string, InstrumentProfile> OSCMessenger::getInstrumentMap(){
 	return instrumentMap;
 }
 	
-
+/**
 int main(int argc, char* argv[])
 {
     
@@ -224,4 +224,4 @@ int main(int argc, char* argv[])
     
 
 }
-
+**/

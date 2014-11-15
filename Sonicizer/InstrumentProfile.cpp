@@ -37,6 +37,6 @@ int InstrumentProfile::getRegisterBooster(){
 int InstrumentProfile::getChannel(){
 	return channel;
 }
-map<string, int> InstrumentProfile::getMethodToNoteMap() const{
+map<string, int>& InstrumentProfile::getMethodToNoteMap() {
 	return methodToNoteMap;
 }

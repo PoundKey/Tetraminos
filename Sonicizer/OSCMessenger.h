@@ -1,9 +1,12 @@
 #include "osc/OscOutboundPacketStream.h"
 #include "ip/UdpSocket.h"
-#include "Fuser/ClassProfile.cpp"
+#include <sys/socket.h>
+#include "../Tetraminos/static_lib/ClassProfile.h"
 #include "InstrumentProfile.h"
 #include <vector>
 #include <map>
+#include <set>
+#include "ip/IpEndpointName.h"
 
 
 using namespace std;
@@ -17,8 +20,8 @@ private:
 	void sendMIDINote(int, int, int);
 	void sendAddInstrumentCommand(int, int);
 public:
-	OSCMessenger();
-	bool createInstruments(map<string, ClassProfile>, vector<vector<string>>, vector<vector<string>>);
+	//OSCMessenger();
+	bool createInstruments(map<string, ClassProfile>, vector<vector<string>>, vector<set<string>>);
 	void playNote(string, string);
 	void stopNote(string, string);
 	map<string, InstrumentProfile> getInstrumentMap();

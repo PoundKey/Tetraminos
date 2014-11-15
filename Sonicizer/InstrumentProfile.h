@@ -12,7 +12,7 @@ class InstrumentProfile {
 	int channel;
 
 public:
-	map<string, int> getMethodToNoteMap() const;
+	map<string, int>& getMethodToNoteMap();
 
 	string getClassName() const;
 	int getInheritanceFamily();
