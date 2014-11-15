@@ -107,7 +107,7 @@ int main(int argc, char * argv[]) {
     d.ParseStream<0>(is);
 
     // This is test data
-	// const char myJson[] = "{\"staticInfo\":[{\"className\":\"cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\":[  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]},{\"className\":\"cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\":[  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]}]}";
+    // const char myJson[] = "{\"staticInfo\":[{\"className\""cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\"  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]},{\"className\""cBlood\", \"method\":[\"cBlood\", \"update\", \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\"  \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],\"dependency\":[]}]}";
 
 
     rapidjson::Document child;
@@ -269,6 +269,8 @@ int main(int argc, char * argv[]) {
         }
     }
 
+    createInstruments()
+
 
       /*  // Not Working
         if(searchit != dependencyMap.end())
@@ -350,7 +352,12 @@ int main(int argc, char * argv[]) {
         }
     }
 */
-    // UNCOMMENT createInstruments(profilemap, INHERITANCE TREE); 
+   OSCMessenger messenger;
+   if (messenger.createInstruments(profileMap, inheritanceTree, dependencyTree)){
+    printf("Successfully created Instruments");
+   } else {
+    printf("Failed Instrument Creation");
+   }
     
 
 
@@ -398,7 +405,4 @@ int main(int argc, char * argv[]) {
     // for (rapidjson::SizeType i = 0; i < fields.Size(); i++) // rapidjson uses SizeType instead of size_t.    
     //         printf(\"a[%d] = %s\n\", i, fields[i].GetString());
 }
-
-
-
 
