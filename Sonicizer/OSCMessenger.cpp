@@ -27,6 +27,8 @@ const int OMNISPHERE_TEMPLATE_ADDS[10] =
 	53445, 53446, 53447, 53448, 53449
 };
 
+const int INSERT_MIDI_ITEM = 40214;
+
 // Musicical Scales
 const vector<vector<int>> SCALES =
 {
@@ -48,9 +50,21 @@ const vector<vector<int>> SCALES =
 	{2, 1, 3, 1, 1, 2} // Gypsy
 };
 
+OSCMessenger::OSCMessenger(){
+
+//quick FISHER-YATES shuffle implementation taken from stack overflow
+//http://stackoverflow.com/questions/8861568/fisher-yates-variation
+	
+	int n = SCALES.size();
+	for (int i = n - 1; i > 0; --i)
+	{
+		swap(SCALES[i], SCALES[rand() % (i + 1)]);
+	}
+}
+
 bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<vector<string>> inheritanceTree, vector<set<string>> dependencyTree){
 
-	int inheritanceFamilyCounter = 0;
+	int inheritanceFamilyCounter = 1;
 	for (vector<vector<string>>::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i)
 	{
 		for (vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
@@ -68,7 +82,7 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 				vector<string> methods = pos->second.getMethods();
 				for (vector<string>::const_iterator k = methods.begin(); k != methods.end(); ++k)
 				{
-					ip.getMethodToNoteMap()[(*k)] = 0;
+					ip.putInMethodToNoteMap((*k), 0);
 				}
 
 				instrumentMap[ip.getClassName()] = ip;
@@ -77,22 +91,31 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 			registerBooster %= 128;
 		}
 		inheritanceFamilyCounter++;
+		if (inheritanceFamilyCounter > 8)
+			inheritanceFamilyCounter = 1;
 	}
 
 	int dependencyFamilyCounter = 0;
 	for (vector<set<string>>::const_iterator i = dependencyTree.begin(); i != dependencyTree.end(); ++i)
 	{
+		int tonicSetter = -13;
 		for (set<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
 		{
 			map<string, InstrumentProfile>::iterator pos = instrumentMap.find((*j));
 			if (pos != instrumentMap.end())
 			{
+				int regBoost = pos->second.getRegisterBooster();
+				if (tonicSetter == -13)
+					tonicSetter = regBoost % 12;
+			
+				int noteDiff = tonicSetter - (regBoost % 12);
+				pos->second.setRegisterBooster(regBoost + noteDiff);
 				pos->second.setTrackTemplate(dependencyFamilyCounter);
+
 				int scaleIndex = 0;
 				int scaleTracker = 0;
 				for (map<string, int>::iterator k = pos->second.getMethodToNoteMap().begin(); k != pos->second.getMethodToNoteMap().end(); ++k)
-				{
-					
+				{					
 					k->second = (pos->second.getRegisterBooster() + scaleTracker) % 128;
 					scaleTracker += SCALES.at(dependencyFamilyCounter).at(scaleIndex);
 					scaleIndex++;
@@ -101,12 +124,16 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 			}
 		}
 		dependencyFamilyCounter++;
-		if (dependencyFamilyCounter > 10)
+		if (dependencyFamilyCounter > 9)
 			dependencyFamilyCounter = 0;
 	}
 
+	int trackNumber = 0;
+
 	for (map<string, InstrumentProfile>::iterator i = instrumentMap.begin(); i != instrumentMap.end(); ++i){
+		i->second.setTrackNumber(trackNumber);
 		//sendAddInstrumentCommand(i->second.getChannel(), i->second.getTrackTemplate());
+		trackNumber++;
 	}
 
 	return true;
@@ -124,7 +151,10 @@ void OSCMessenger::sendAddInstrumentCommand(int channel, int templateNumber){
 	p << osc::BeginBundleImmediate
 		<< osc::BeginMessage("i/action") << OMNISPHERE_TEMPLATE_ADDS[templateNumber]
 		<< osc::EndMessage 
-		<< osc::BeginMessage("i/action") << MIDI_CHANNEL_ASSIGNS[channel]
+		<< osc::BeginMessage("i/action") << MIDI_CHANNEL_ASSIGNS[channel-1]
+		<< osc::EndMessage
+		<< osc::BeginMessage("i/action") << INSERT_MIDI_ITEM
+		<< osc::EndMessage
 		<< osc::EndBundle;
 
 	transmitSocket.Send(p.Data(), p.Size());
@@ -203,25 +233,7 @@ void OSCMessenger::stopNote(string clas, string func)
 	sendMIDINote(note, 0, instrumentToPlay->second.getChannel());
 }
 
-map<string, InstrumentProfile> OSCMessenger::getInstrumentMap(){
+map<string, InstrumentProfile>& OSCMessenger::getInstrumentMap(){
 	return instrumentMap;
 }
 	
-/**
-int main(int argc, char* argv[])
-{
-    
-	UdpTransmitSocket transmitSocket(IpEndpointName(ADDRESS, PORT));
-	char buffer[OUTPUT_BUFFER_SIZE];
-	osc::OutboundPacketStream p(buffer, OUTPUT_BUFFER_SIZE);
-
-	p << osc::BeginBundleImmediate
-		<< osc::BeginMessage("i/action") << 40685
-		<< osc::EndMessage
-		<< osc::EndBundle;
-
-	transmitSocket.Send(p.Data(), p.Size());
-    
-
-}
-**/

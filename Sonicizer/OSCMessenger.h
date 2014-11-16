@@ -20,9 +20,9 @@ private:
 	void sendMIDINote(int, int, int);
 	void sendAddInstrumentCommand(int, int);
 public:
-	//OSCMessenger();
+	OSCMessenger();
 	bool createInstruments(map<string, ClassProfile>, vector<vector<string>>, vector<set<string>>);
 	void playNote(string, string);
 	void stopNote(string, string);
-	map<string, InstrumentProfile> getInstrumentMap();
+	map<string, InstrumentProfile>& getInstrumentMap();
 };

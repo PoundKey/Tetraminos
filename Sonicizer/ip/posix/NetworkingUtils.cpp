@@ -42,8 +42,6 @@
 
 #include <cstring>
 
-
-
 NetworkInitializer::NetworkInitializer() {}
 
 NetworkInitializer::~NetworkInitializer() {}
