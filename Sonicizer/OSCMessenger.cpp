@@ -151,7 +151,7 @@ void OSCMessenger::sendAddInstrumentCommand(int channel, int templateNumber){
 	p << osc::BeginBundleImmediate
 		<< osc::BeginMessage("i/action") << OMNISPHERE_TEMPLATE_ADDS[templateNumber]
 		<< osc::EndMessage 
-		<< osc::BeginMessage("i/action") << MIDI_CHANNEL_ASSIGNS[channel]
+		<< osc::BeginMessage("i/action") << MIDI_CHANNEL_ASSIGNS[channel-1]
 		<< osc::EndMessage
 		<< osc::BeginMessage("i/action") << INSERT_MIDI_ITEM
 		<< osc::EndMessage
