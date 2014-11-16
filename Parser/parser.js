@@ -54,7 +54,7 @@ defineNameSpace();
 
         var classFile = fs.readFileSync(path, 'utf8');
         parseString(classFile, function (err, result) {
-
+					console.log('Current File: ' + path);
             if (result.doxygen == undefined) return;
             var obj = result.doxygen.compounddef[0];
             switch (obj.$.kind) {
