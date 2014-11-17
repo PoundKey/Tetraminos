@@ -5,7 +5,7 @@
 var fs = require('fs');
 var parseString = require('xml2js').parseString;
 var readlineSync = require('readline-sync');
-console.log("Codebase options: maryo, sod, bejew, sudoku");
+//console.log("Codebase options: maryo, sod, bejew, sudoku");
 var cod = readlineSync.question('Enter the input source codebase: ');
 
 var inputCodeBase = './Doxygen/xml_' + cod;
