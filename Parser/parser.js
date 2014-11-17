@@ -3,8 +3,8 @@
  */
 
 var fs = require('fs');
-var parseString = require('xml2js').parseString;
-var readlineSync = require('readline-sync');
+var parseString = require('./node_modules/xml2js').parseString;
+var readlineSync = require('./node_modules/readline-sync');
 //console.log("Codebase options: maryo, sod, bejew, sudoku");
 var cod = readlineSync.question('Enter the input source codebase: ');
 
