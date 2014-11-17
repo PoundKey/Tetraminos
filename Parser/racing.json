@@ -15,7 +15,7 @@
                 "near",
                 "far"
             ],
-            "size": 8904,
+            "size": 9524,
             "inheritance": "N/A",
             "dependency": []
         },
@@ -39,7 +39,7 @@
                 "speed",
                 "angle"
             ],
-            "size": 13266,
+            "size": 14196,
             "inheritance": "N/A",
             "dependency": []
         },
@@ -56,7 +56,7 @@
                 "b",
                 "a"
             ],
-            "size": 7823,
+            "size": 8381,
             "inheritance": "N/A",
             "dependency": []
         },
@@ -72,7 +72,7 @@
                 "color",
                 "texture"
             ],
-            "size": 6072,
+            "size": 6506,
             "inheritance": "N/A",
             "dependency": []
         },
@@ -86,7 +86,7 @@
             "field": [
                 "color"
             ],
-            "size": 4367,
+            "size": 4677,
             "inheritance": "N/A",
             "dependency": []
         },
@@ -99,7 +99,7 @@
             "field": [
                 "color"
             ],
-            "size": 3331,
+            "size": 3579,
             "inheritance": "N/A",
             "dependency": []
         },
@@ -121,7 +121,7 @@
                 "insideCar",
                 "current"
             ],
-            "size": 11295,
+            "size": 12101,
             "inheritance": "N/A",
             "dependency": []
         }

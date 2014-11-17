@@ -8,7 +8,7 @@ var readlineSync = require('./node_modules/readline-sync');
 //console.log("Codebase options: maryo, sod, bejew, sudoku");
 var cod = readlineSync.question('Enter the input source codebase: ');
 
-var inputCodeBase = './Doxygen/xml_' + cod;
+var inputCodeBase = './Source/xml_' + cod;
 
 var staticInfo = [];
 var writeOutput;

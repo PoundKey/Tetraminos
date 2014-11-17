@@ -8,7 +8,7 @@ PROJECT_NAME           = "My Project"
 PROJECT_NUMBER         = 
 PROJECT_BRIEF          = 
 PROJECT_LOGO           = 
-OUTPUT_DIRECTORY       = 
+OUTPUT_DIRECTORY       = ../
 CREATE_SUBDIRS         = NO
 ALLOW_UNICODE_NAMES    = NO
 OUTPUT_LANGUAGE        = English
@@ -284,7 +284,7 @@ MAN_LINKS              = NO
 # Configuration options related to the XML output
 #---------------------------------------------------------------------------
 GENERATE_XML           = YES
-XML_OUTPUT             = xml
+XML_OUTPUT             = xml_
 XML_PROGRAMLISTING     = YES
 #---------------------------------------------------------------------------
 # Configuration options related to the DOCBOOK output
