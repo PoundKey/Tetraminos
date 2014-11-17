@@ -25,7 +25,7 @@ if (child != undefined) child.kill();
 child = exec("doxygen config", {cwd: path}, function (error, stdout, stderr) {
     //console.log(stdout);
     if (error !== null) {
-        console.log('exec error: ' + error);
+        console.log('exec error: doxygen config -> Please double check');
     }
 		console.log('The process is done.');
 		
@@ -33,9 +33,9 @@ child = exec("doxygen config", {cwd: path}, function (error, stdout, stderr) {
 		fs.renameSync(xmlPath, xmlPath + cod);
 		
 		exec("node parser.js " + cod, function(error, stdout, stderr){
-			console.log(stdout);
+			//console.log(stdout);
 	    if (error !== null) {
-	        console.log('exec error: ' + error);
+	        console.log('exec error: node parser.js -> Please double check');
 	    }
 			console.log('Please check the JSON folder for the output.');
 			var _xml = xmlPath + cod;
