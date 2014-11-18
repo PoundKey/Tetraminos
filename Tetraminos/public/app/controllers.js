@@ -10,13 +10,13 @@ angular.module('myApp.controllers', [])
             $scope.content = undefined;
 
 
-            $scope.marioAnalyzer = function () {
+            $scope.pongAnalyzer = function () {
 
                 var msg = undefined;
-                $http.get('/api/mario')
+                $http.get('/api/pong')
                     .success(function (data, status, headers, config) {
                         //alert("Start analyzing Mario source code: " + msg.title + " @ " + msg.content);
-                        $scope.message = "Start analyzing Mario source code...";
+                        $scope.message = "Start analyzing Pong source code...";
                         $scope.message = data.title;
                         $scope.content = data.content;
                     })
@@ -27,12 +27,12 @@ angular.module('myApp.controllers', [])
 
             };
 
-            $scope.bejewAnalyzer = function () {
+            $scope.racingAnalyzer = function () {
 
                 var msg = undefined;
-                $http.get('/api/bejew')
+                $http.get('/api/racing')
                     .success(function (data, status, headers, config) {
-                        $scope.message = "Start analyzing Bejew source code...";
+                        $scope.message = "Start analyzing Racing source code...";
                         $scope.message = data.title;
                         $scope.content = data.content;
                     })
@@ -43,12 +43,12 @@ angular.module('myApp.controllers', [])
 
             };
 
-            $scope.sodAnalyzer = function () {
+            $scope.pokemonAnalyzer = function () {
 
                 var msg = undefined;
-                $http.get('/api/sod')
+                $http.get('/api/pokemon')
                     .success(function (data, status, headers, config) {
-                        $scope.message = "Start analyzing SOD source code...";
+                        $scope.message = "Start analyzing Pokemon source code...";
                         $scope.message = data.title;
                         $scope.content = data.content;
                     })
@@ -73,7 +73,7 @@ angular.module('myApp.controllers', [])
                     });
 
 
-            };            
+            };
 
             $scope.pacmanAnalyzer = function () {
                 var msg = undefined;

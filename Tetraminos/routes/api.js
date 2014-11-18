@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
     res.send('respond with a resource');
 });
 
-router.get('/mario', function (req, res) {
+router.get('/pong', function (req, res) {
     //if (process.getuid) {
     //    console.log('Current uid: ' + process.getuid());
     //}
@@ -27,11 +27,11 @@ router.get('/mario', function (req, res) {
     });
 
 
-    res.json({title: 'Mario Analyzer', content: 'Not ready yet.' });
+    res.json({title: 'Pong Analyzer Starting...', content: null });
 
 });
 
-router.get('/bejew', function (req, res) {
+router.get('/racing', function (req, res) {
     if (child != undefined) child.kill();
     var output = undefined;
     child = exec("Bejeweled.exe", {cwd: "static_lib/Games/Bejeweled"}, function (error, stdout, stderr) {
@@ -42,11 +42,11 @@ router.get('/bejew', function (req, res) {
     });
 
 
-    res.json({title: 'Bejeweled Analyzer Starting...', content: null });
+    res.json({title: 'Racing Analyzer Starting...', content: null });
 
 });
 
-router.get('/sod', function (req, res) {
+router.get('/pokemon', function (req, res) {
     if (child != undefined) child.kill();
     var output = undefined;
     child = exec('start cmd.exe /k "SOD.exe"', {cwd: "static_lib/Games/SOD"}, function (error, stdout, stderr) {
@@ -56,35 +56,10 @@ router.get('/sod', function (req, res) {
         }
     });
 
-
-    res.json({title: 'Sword of Destiny Analyzer Starting...', content: null });;
-
-});
-
-
-router.get('/sudoku', function (req, res) {
-    if (child != undefined) child.kill();
-    var output = undefined;
-    child = exec("sudoku.exe", {cwd: "static_lib/Games/Sudoku"}, function (error, stdout, stderr) {
-        console.log(stdout);
-        if (error !== null) {
-            console.log('exec error: ' + error);
-        }
-    });
-
-    res.json({title: 'Sudoku Analyzer Starting...', content: null });
+    res.json({title: 'Pokemon Analyzer Starting...', content: null });;
 
 });
 
 
-
-
-
-
-
-router.get('/pacman', function (req, res) {
-    res.json({title: 'Pacman Analyzer', content: 'Dynamic invocation for Pacman put here'});
-
-});
 
 module.exports = router;
