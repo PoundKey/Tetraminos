@@ -26,6 +26,7 @@ child = exec("doxygen config", {cwd: path}, function (error, stdout, stderr) {
     //console.log(stdout);
     if (error !== null) {
         console.log('exec error: doxygen config -> Please double check');
+				console.log(error);
     }
 		console.log('The process is done.');
 		
