@@ -10,7 +10,7 @@ jQuery(document).ready(function($){
 	/***   ------------------------------------------------------   ***/
 	var options = {
 		startDate : new Date(),
-		endDate: new Date("November 17, 2014 21:00:00"),
+		endDate: new Date("December 1, 2015 21:00:00"),
 
 		/***   TRANSLATION : Enable following line by delete //   ***/
 		// ,titleDays : 'hari', titleHours : 'jam', titleMinutes : 'menit', titleSeconds : 'detik'
