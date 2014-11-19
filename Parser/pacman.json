@@ -123,7 +123,6 @@
             "inheritance": "Object",
             "dependency": []
         },
-        null,
         {
             "className": "Corner1",
             "method": [
@@ -242,7 +241,6 @@
             "inheritance": "EndWall",
             "dependency": []
         },
-        null,
         {
             "className": "Element",
             "method": [
@@ -348,7 +346,6 @@
                 "G_Board"
             ]
         },
-        null,
         {
             "className": "G_BonusLife",
             "method": [
@@ -369,7 +366,6 @@
             "inheritance": "G_Bonus",
             "dependency": []
         },
-        null,
         {
             "className": "G_Food",
             "method": [
@@ -395,7 +391,6 @@
             "inheritance": "G_Moveables",
             "dependency": []
         },
-        null,
         {
             "className": "G_Pacman",
             "method": [
@@ -437,8 +432,6 @@
             "inheritance": "G_Edible",
             "dependency": []
         },
-        null,
-        null,
         {
             "className": "Gamedata",
             "method": [
@@ -566,7 +559,6 @@
                 "Board"
             ]
         },
-        null,
         {
             "className": "Pacman",
             "method": [
@@ -625,8 +617,6 @@
             "inheritance": "StaticElement",
             "dependency": []
         },
-        null,
-        null,
         {
             "className": "StraightWall",
             "method": [
@@ -698,7 +688,6 @@
             "inheritance": "G_Walls",
             "dependency": []
         },
-        null,
         {
             "className": "UserInterface",
             "method": [
