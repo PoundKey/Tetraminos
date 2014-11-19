@@ -10,6 +10,24 @@ NodeJS now is running at:
 ```
 http://localhost:3000
 ```
+![ExpressJS](Tetraminos/public/images/entry.png)
+Running the static parser
+===============
+>As the entry point of this project, we need to parse and extract information from the codebases that will be used for further dynamic analysis. [Doxygen](http://www.stack.nl/~dimitri/doxygen/) provides us with clear APIs and configuration in order to accomplish this job. Codebases get converted into a set of XML files that organize each class into a tree structure and encapsulate its corresponding attributes, methods, etc. With ‘xml2js’ module, such a tree structure can be easily converted and manipulated as a JavaScript object. Reading all the input files, classifying them, and extracting the desired information require focus and patience. A unit test is applied to ensure correct output.Finding and defining the dependencies between classes also requires customized algorithm to do so. The entire procedure is highly encapsulated into a fully automated pipe and filter process.
+
+
+```bash
+brew install doxygen (Mac OS X)
+apt-get doyxgen (Ubuntu)
+```
+Copy and paste any C++ source code (__dirname__) into directory: Parser/Source/( 'mkdir Source' if needed)
+```bash
+cd Parser
+node config.js
+```
+Enter input __dirname__ and a __name__ for the output JSON file.
+The static anaylsis result is now saved into directory: Parser/JSON/__name__.json
+
 Dynamic Analyser
 ================
 
