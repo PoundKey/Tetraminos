@@ -19,13 +19,13 @@ Running the static parser
 ```bash
 brew install doxygen (Mac OS X)
 apt-get doyxgen (Ubuntu)
-cd Parser
 ```
-Copy and paste any C++ source code into directory: Parser/Source ( 'mkdir Source' if needed)
+Copy and paste any C++ source code into directory: Parser/Source/__dir__ ( 'mkdir Source' if needed)
 ```bash
+cd Parser
 node config.js
 ```
-Enter the folder of the input source code and a __name__ for the output JSON file.
+Enter the folder of the input source code (__dir__) and a __name__ for the output JSON file.
 The static anaylsis result is now saved into directory: Parser/JSON/__name__.json
 
 Dynamic Analyser
