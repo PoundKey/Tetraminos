@@ -16,10 +16,7 @@
 #include <stdio.h>
 #include <iterator> 
 #include "DynamicParser.h"
-//#include <windows.h>
-//#include <tlhelp32.h>
 #include "../../Sonicizer/OSCMessenger.h"
-//#include "../../Sonicizer/InstrumentProfile.h"
 #include "../../Fuser/DynamicAnalyser/DynamicRunner.h"
 #include "boost/date_time/posix_time/posix_time.hpp"
 using namespace std;
