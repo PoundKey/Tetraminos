@@ -427,47 +427,46 @@ for(std::vector<std::set<std::string> >::const_iterator dtit = dependencyTree.be
 // Get PID of process running http://proswdev.blogspot.ca/2012/02/get-process-id-by-name-in-linux-using-c.html
 int JSONParser::getProcIdByName(std::string procName)
 {
-//    int pid = -1;
-//
-//// Open the /proc directory
-//    DIR *dp = opendir("/proc");
-//    if (dp != NULL)
-//    {
-//// Enumerate all entries in directory until process found
-//        struct dirent *dirp;
-//        while (pid < 0 && (dirp = readdir(dp)))
-//        {
-//// Skip non-numeric entries
-//            int id = atoi(dirp->d_name);
-//            if (id > 0)
-//            {
-//// Read contents of virtual /proc/{pid}/cmdline file
-//                std::string cmdPath = std::string("/proc/") + dirp->d_name + "/cmdline";
-//                ifstream cmdFile(cmdPath.c_str());
-//                std::string cmdLine;
-//                getline(cmdFile, cmdLine);
-//                if (!cmdLine.empty())
-//                {
-//// Keep first cmdline item which contains the program path
-//                    size_t pos = cmdLine.find('\0');
-//                    if (pos != std::string::npos)
-//                        cmdLine = cmdLine.substr(0, pos);
-//// Keep program name only, removing the path
-//                    pos = cmdLine.rfind('/');
-//                    if (pos != std::string::npos)
-//                        cmdLine = cmdLine.substr(pos + 1);
-//// Compare against requested process name
-//                    if (procName == cmdLine)
-//                        pid = id;
-//                }
-//            }
-//        }
-//    }
-//
-//    closedir(dp);
-//
-//    return pid;
-return 0;
+    int pid = -1;
+
+// Open the /proc directory
+    DIR *dp = opendir("/proc");
+    if (dp != NULL)
+    {
+// Enumerate all entries in directory until process found
+        struct dirent *dirp;
+        while (pid < 0 && (dirp = readdir(dp)))
+        {
+// Skip non-numeric entries
+            int id = atoi(dirp->d_name);
+            if (id > 0)
+            {
+// Read contents of virtual /proc/{pid}/cmdline file
+                std::string cmdPath = std::string("/proc/") + dirp->d_name + "/cmdline";
+                ifstream cmdFile(cmdPath.c_str());
+                std::string cmdLine;
+                getline(cmdFile, cmdLine);
+                if (!cmdLine.empty())
+                {
+// Keep first cmdline item which contains the program path
+                    size_t pos = cmdLine.find('\0');
+                    if (pos != std::string::npos)
+                        cmdLine = cmdLine.substr(0, pos);
+// Keep program name only, removing the path
+                    pos = cmdLine.rfind('/');
+                    if (pos != std::string::npos)
+                        cmdLine = cmdLine.substr(pos + 1);
+// Compare against requested process name
+                    if (procName == cmdLine)
+                        pid = id;
+                }
+            }
+        }
+    }
+
+    closedir(dp);
+
+    return pid;
 }
 
 // To determine if a vector contains a Matching std::string
@@ -601,7 +600,7 @@ std::vector<std::vector<std::string> > JSONParser::constructInheritance(int maxI
 }
 
 void JSONParser::createInstrumentCommands(OSCMessenger messenger){
-    /*DynamicParser parser;
+    DynamicParser parser;
     std::map<std::string, std::vector<DynClassInfo> > *dynMap = parser.parseFile("/home/james00794/Downloads/spongebob_doodleJump/dynamicOutput.txt");
     //if (!dynMap)
     //    std::cout << "NULL!\n";
@@ -648,7 +647,7 @@ void JSONParser::createInstrumentCommands(OSCMessenger messenger){
             std::cout << note << ",100," << iprof.getChannel() << "," << totalTime <<
             "," << iprof.getTrackTemplate() << "," << onts << "\n";
         }
-    }*/
+    }
 }
 
 std::vector<std::set<std::string> > JSONParser::constructDependency(std::map<std::string,ClassProfile>& profilemap, std::vector<std::string>& dependencyVector){
@@ -698,15 +697,14 @@ int main(int argc, char * argv[]) {
     std::cout << "pid: " << pid << std::endl;
     std::map<int, std::vector<ClassProfile> > inheritanceCounts;
     std::vector<ClassProfile>::iterator icit;
-    int maxInheritances = 0;
+    int maxInheritances = -1;
     std::vector<std::string> dependencyVector;
 // Name of JSON File to be parsed
 // std::string jsonName = argv[2];
 
 //Import JSON File
 // http://stackoverflow.com/questions/18107079/rapidjson-working-code-for-reading-document-from-file
-	FILE * pFile; 
-	fopen_s(&pFile, argv[2], "r");
+    FILE * pFile = fopen(argv[2] , "r");
     rapidjson::FileStream is(pFile);
     rapidjson::Document d;
     d.ParseStream<0>(is);

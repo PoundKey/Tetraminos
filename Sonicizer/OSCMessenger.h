@@ -1,13 +1,13 @@
 #include "osc/OscOutboundPacketStream.h"
 #include "ip/UdpSocket.h"
-//#include <sys/socket.h>
+#include <sys/socket.h>
 #include "../Tetraminos/static_lib/ClassProfile.h"
 #include "InstrumentProfile.h"
 #include <vector>
 #include <map>
 #include <set>
 #include "ip/IpEndpointName.h"
-//#include "ClassProfile.h"
+
 
 using namespace std;
 

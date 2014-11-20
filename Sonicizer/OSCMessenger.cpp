@@ -29,11 +29,8 @@ const int OMNISPHERE_TEMPLATE_ADDS[10] =
 
 const int INSERT_MIDI_ITEM = 40214;
 
-const int REWIND = 40042;
-
-
 // Musicical Scales
-vector<vector<int>> SCALES =
+const vector<vector<int>> SCALES =
 {
 	{ 2, 2, 1, 2, 2, 2, 1 }, // Ionian
 	{ 2, 1, 2, 2, 2, 1, 2 }, // Dorian
@@ -65,56 +62,39 @@ OSCMessenger::OSCMessenger(){
 	}
 }
 
-/*
-Takes apart the list of class profiles, as well as the dependency and inhertance structures, and
-uses their relationships to create a map of instrument profiles, which are assigned a specific track template, 
-track templates, scale, MIDI channel and a collection of available notes.
-
-Orders OSC commands to be sent to REAPER to create a certain number of tracks for the number of instruments.
-*/
 bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<vector<string>> inheritanceTree, vector<set<string>> dependencyTree){
 
-	// takes apart inheritance structure first
 	int inheritanceFamilyCounter = 1;
 	for (vector<vector<string>>::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i)
 	{
 		for (vector<string>::const_iterator j = (*i).begin(); j != (*i).end(); ++j)
 		{
-			// assigns a part of the keyboard to the related instruments
 			int registerInterval = 128/(*j).length();			 
 			int registerBooster = rand() % 60;
 			map<string, ClassProfile>::iterator pos = classMap.find((*j));
 			if (pos != classMap.end())
 			{
-				// creates a new instrument profile for each class and its subclasses
-				// if class B inherits from class B -> same instrument
 				InstrumentProfile ip;
 				ip.setClassName(pos->first);
 				ip.setChannel(inheritanceFamilyCounter);	
 				ip.setRegisterBooster(registerBooster);
 				
-				// sets up a note map for each function in the class
 				vector<string> methods = pos->second.getMethods();
 				for (vector<string>::const_iterator k = methods.begin(); k != methods.end(); ++k)
 				{
 					ip.putInMethodToNoteMap((*k), 0);
 				}
 
-				// adds instrument to instrument map
 				instrumentMap[ip.getClassName()] = ip;
 			}
-			// moves register up to a new part of the keyboard
 			registerBooster += registerInterval;
 			registerBooster %= 128;
 		}
-
 		inheritanceFamilyCounter++;
 		if (inheritanceFamilyCounter > 8)
 			inheritanceFamilyCounter = 1;
 	}
 
-	// takes apart dependency structure and makes instruments sound like one another if 
-	// they share dependencies
 	int dependencyFamilyCounter = 0;
 	for (vector<set<string>>::const_iterator i = dependencyTree.begin(); i != dependencyTree.end(); ++i)
 	{
@@ -124,8 +104,6 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 			map<string, InstrumentProfile>::iterator pos = instrumentMap.find((*j));
 			if (pos != instrumentMap.end())
 			{
-				// this makes sure that instruments that share dependecies are in the same key
-				// i.e. same starting note and same scale
 				int regBoost = pos->second.getRegisterBooster();
 				if (tonicSetter == -13)
 					tonicSetter = regBoost % 12;
@@ -134,7 +112,6 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 				pos->second.setRegisterBooster(regBoost + noteDiff);
 				pos->second.setTrackTemplate(dependencyFamilyCounter);
 
-				// maps functions to ascending notes on the scale
 				int scaleIndex = 0;
 				int scaleTracker = 0;
 				for (map<string, int>::iterator k = pos->second.getMethodToNoteMap().begin(); k != pos->second.getMethodToNoteMap().end(); ++k)
@@ -151,11 +128,11 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 			dependencyFamilyCounter = 0;
 	}
 
-	// create instruments in Reaper, each one with its own track
 	int trackNumber = 0;
+
 	for (map<string, InstrumentProfile>::iterator i = instrumentMap.begin(); i != instrumentMap.end(); ++i){
 		i->second.setTrackNumber(trackNumber);
-		sendAddInstrumentCommand(i->second.getChannel(), i->second.getTrackTemplate());
+		//sendAddInstrumentCommand(i->second.getChannel(), i->second.getTrackTemplate());
 		trackNumber++;
 	}
 
@@ -164,10 +141,9 @@ bool OSCMessenger::createInstruments(map<string, ClassProfile> classMap, vector<
 
 /*
 	Sends a command to Reaper to add a new templated track with Omnisphere pre-loaded
-	and adds a MIDI track to allow notes to be written to it 
+	and assigns it to the appropriate MIDI channel to receive notes 
 */
 void OSCMessenger::sendAddInstrumentCommand(int channel, int templateNumber){
-
 	UdpTransmitSocket transmitSocket(IpEndpointName(ADDRESS, PORT));
 	char buffer[OUTPUT_BUFFER_SIZE];
 	osc::OutboundPacketStream p(buffer, OUTPUT_BUFFER_SIZE);
@@ -175,9 +151,9 @@ void OSCMessenger::sendAddInstrumentCommand(int channel, int templateNumber){
 	p << osc::BeginBundleImmediate
 		<< osc::BeginMessage("i/action") << OMNISPHERE_TEMPLATE_ADDS[templateNumber]
 		<< osc::EndMessage 
-		<< osc::BeginMessage("i/action") << INSERT_MIDI_ITEM
+		<< osc::BeginMessage("i/action") << MIDI_CHANNEL_ASSIGNS[channel-1]
 		<< osc::EndMessage
-		<< osc::BeginMessage("i/action") << REWIND
+		<< osc::BeginMessage("i/action") << INSERT_MIDI_ITEM
 		<< osc::EndMessage
 		<< osc::EndBundle;
 
@@ -257,10 +233,6 @@ void OSCMessenger::stopNote(string clas, string func)
 	sendMIDINote(note, 0, instrumentToPlay->second.getChannel());
 }
 
-
-/*
-Retrieves a reference to the collection of instruments
-*/
 map<string, InstrumentProfile>& OSCMessenger::getInstrumentMap(){
 	return instrumentMap;
 }

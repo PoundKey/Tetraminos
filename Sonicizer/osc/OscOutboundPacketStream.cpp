@@ -36,10 +36,6 @@
 */
 #include "OscOutboundPacketStream.h"
 
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
-
 #if defined(__WIN32__) || defined(WIN32) || defined(_WIN32)
 #include <malloc.h> // for alloca
 #else

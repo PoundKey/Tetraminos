@@ -41,9 +41,6 @@
 #include <iostream>
 #include <iomanip>
 
-#ifdef _MSC_VER
-#define _CRT_SECURE_NO_WARNINGS
-#endif
 #if defined(__BORLANDC__) // workaround for BCB4 release build intrinsics bug
 namespace std {
 using ::__strcpy__;  // avoid error: E2316 '__strcpy__' is not a member of 'std'.
