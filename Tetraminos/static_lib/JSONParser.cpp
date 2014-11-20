@@ -442,6 +442,7 @@ int main(int argc, char * argv[]) {
     // \"newBlood\", \"oneNewBlood\", \"reset\"],\"field\" \"bloodparts\",\"BLOODcount\"],\"inheritance\":[],
     // \"dependency\":[]}]}";
 
+
 // This is to check that all Inheritances are grouped together properly
 std::cout << "This is the Inheritances" << std::endl;
 for( std::vector<std::vector<std::string> >::const_iterator i = inheritanceTree.begin(); i != inheritanceTree.end(); ++i){
@@ -477,19 +478,5 @@ std::cout << *q << ' '<< std::endl;
 }
 */
 
-
-// Reference Code That You Can Ignore
-// assert(a.IsArray());
-// rapidjson::SizeType s = 0;
-// std::cout << a[s].GetString() << "\n";
-
-// //assert(d[\"1\"].IsObject());
-// const rapidjson::Value& b = d[\"classDate\"];
-// assert(b[\"1\"].IsObject());
-// const rapidjson::Value& a = b[\"1\"];
-// const rapidjson::Value& fields = a[\"fields\"];
-// assert(fields.IsArray());
-// for (rapidjson::SizeType i = 0; i < fields.Size(); i++) // rapidjson uses SizeType instead of size_t.
-// printf(\"a[%d] = %s\n\", i, fields[i].GetString());
 }
 
