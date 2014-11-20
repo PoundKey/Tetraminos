@@ -35,25 +35,32 @@ node config.js
 Enter input __dirname__ and a __name__ for the output JSON file.
 The static anaylsis result is now saved into directory: Parser/JSON/__name__.json
 
-## Running the Fuser
-```bash
-cd Tetraminos/static_lib
-.JSONParser
-```
-The results for the class profile creations will be printed out throught the console.
+## Running the Fuser/Dynamic Analyzer
 
-The Fuser is integrated into the Framework.
+The fuser and dynamic analyzer are compiled together as one binary file. Once the fuser has constructed the necessary objects needed by the dynamic analyzer to identify functions and classes, it starts the dynamic analysis. As a result, compilation of this portion requires all of the dependencies needed for the dynamic analyzer to be installed on the system. These are:
+
+Dyninst: http://www.dyninst.org/downloads/dyninst-8.x
+Dyninst requires various environment variables to be set. They are listed in the installation section at the bottom of the Dyninst API, located here: http://www.dyninst.org/sites/default/files/manuals/dyninst/DyninstAPI.pdf
+
+Boost: http://www.boost.org/
+Dyninst itself requires Boost, as does the fuser. The fuser requires a compiled version of boost, so the user cannot simply use the Boost headers.
+
+OSCPack: http://www.rossbencina.com/code/oscpack
+Needed to construct the instrument profiles, which are used by the Dynamic parser to create midi commands.
+
+Once all the dependencies have been installed, the program can be compiled with the following line, assuming the user is currently in the Tetraminos/static_lib directory.
+
+g++ -std=c++11 -I <dyninst_include_location> -I <boost_directory> -o run JSONParser.cpp ../../Fuser/DynamicAnalyser/DynamicRunner.cpp ClassProfile.cpp DynamicParser.cpp  DynClassInfo.cpp ../../Sonicizer/OSCMessenger.cpp ../../Sonicizer/InstrumentProfile.cpp <boost_directory/stage/lib/libboost_date_time.a> -L<dyninst_lib_directory> -ldyninstAPI -lcommon -lsymtabAPI -lpatchAPI -lparseAPI -lstackwalk -lpcontrol -linstructionAPI -ldynC_API -ldynDwarf -ldynElf -lsymLite -lsymtabAPI ../../Sonicizer/osc/OscOutboundPacketStream.o ../../Sonicizer/ip/IpEndpointName.o ../../Sonicizer/ip/posix/UdpSocket.o ../../Sonicizer/osc/OscTypes.o ../../Sonicizer/ip/posix/NetworkingUtils.o
+
+This will result in the creation of the binary 'run'. The project can be started by running:
+./run <name_of_binary_to_analyze> <path_to_binary_json>
 
 
-## Running the Dynamic Analyzer
+## Additional notes regarding the Dynamic Analyzer
 
 In the real world, the entire system would be sitting on a web server somewhere, but for development purposes we are just using a local development server.
 
 The Dynamic Analyser is reliant on the user having Dyninst installed on their system. It can be installed here: http://www.dyninst.org/downloads/dyninst-8.x
-
-Once installation is complete, compile (on Ubuntu) using the following command (adjust source files as needed)
-
-g++ -I/usr/local/dyninst/include [___.cpp files] -L/usr/local/dyninst/lib -ldyninstAPI -lcommon -lsymtabAPI -lpatchAPI -lparseAPI -lstackwalk -lpcontrol -linstructionAPI -ldynC_API -ldynDwarf -ldynElf -lsymLite -lsymtabAPI
 
 Dynamic Analyser code exists in Fuser/DynamicAnalyser. Note that test.cpp and main.cpp are unused in the context of the entire project, but are there for testing purposes so that we don't need to compile and load an entire game every time we want to attach to a process and check that dyninst is working as it should.
   - The test.cpp file sets up a program that just continuously calls a function testFunction(), every 2 seconds. The commented out portion of main.cpp sets up the dynamic analyser, attaches to the test.cpp binary file/executable, and printfs to test.cpps consolento every time that testFunction() is called. 
