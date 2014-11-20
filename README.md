@@ -53,10 +53,10 @@ Needed to construct the instrument profiles, which are used by the Dynamic parse
 
 Once all the dependencies have been installed, the program can be compiled with the following line, assuming the user is currently in the Tetraminos/static_lib directory.
 
-g++ -std=c++11 -I <dyninst_include_location> -I <boost_directory> -o run JSONParser.cpp ../../Fuser/DynamicAnalyser/DynamicRunner.cpp ClassProfile.cpp DynamicParser.cpp  DynClassInfo.cpp ../../Sonicizer/OSCMessenger.cpp ../../Sonicizer/InstrumentProfile.cpp <boost_directory/stage/lib/libboost_date_time.a> -L<dyninst_lib_directory> -ldyninstAPI -lcommon -lsymtabAPI -lpatchAPI -lparseAPI -lstackwalk -lpcontrol -linstructionAPI -ldynC_API -ldynDwarf -ldynElf -lsymLite -lsymtabAPI ../../Sonicizer/osc/OscOutboundPacketStream.o ../../Sonicizer/ip/IpEndpointName.o ../../Sonicizer/ip/posix/UdpSocket.o ../../Sonicizer/osc/OscTypes.o ../../Sonicizer/ip/posix/NetworkingUtils.o
+g++ -std=c++11 -I [dyninst_include_location] -I [boost_directory] -o run JSONParser.cpp ../../Fuser/DynamicAnalyser/DynamicRunner.cpp ClassProfile.cpp DynamicParser.cpp  DynClassInfo.cpp ../../Sonicizer/OSCMessenger.cpp ../../Sonicizer/InstrumentProfile.cpp [boost_directory/stage/lib/libboost_date_time.a] -L[dyninst_lib_directory] -ldyninstAPI -lcommon -lsymtabAPI -lpatchAPI -lparseAPI -lstackwalk -lpcontrol -linstructionAPI -ldynC_API -ldynDwarf -ldynElf -lsymLite -lsymtabAPI ../../Sonicizer/osc/OscOutboundPacketStream.o ../../Sonicizer/ip/IpEndpointName.o ../../Sonicizer/ip/posix/UdpSocket.o ../../Sonicizer/osc/OscTypes.o ../../Sonicizer/ip/posix/NetworkingUtils.o
 
 This will result in the creation of the binary 'run'. The project can be started by running:
-./run <name_of_binary_to_analyze> <path_to_binary_json>
+./run [name_of_binary_to_analyze] [path_to_binary_json]
 
 
 ## Additional notes regarding the Dynamic Analyzer
