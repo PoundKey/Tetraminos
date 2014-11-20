@@ -4,11 +4,10 @@
 
 var fs = require('fs');
 var parseString = require('./node_modules/xml2js').parseString;
-var readlineSync = require('./node_modules/readline-sync');
-//console.log("Codebase options: maryo, sod, bejew, sudoku");
-var cod = readlineSync.question('Enter the input source codebase: ');
-
-var inputCodeBase = './Doxygen/xml_' + cod;
+// var readlineSync = require('./node_modules/readline-sync');
+// var cod = readlineSync.question('Enter the input source codebase: ');
+var cod = process.argv[2];
+var inputCodeBase = './Source/xml_' + cod;
 
 var staticInfo = [];
 var writeOutput;
@@ -54,7 +53,7 @@ defineNameSpace();
 
         var classFile = fs.readFileSync(path, 'utf8');
         parseString(classFile, function (err, result) {
-					console.log('Current File: ' + path);
+			//console.log('Current File: ' + path);
             if (result.doxygen == undefined) return;
             var obj = result.doxygen.compounddef[0];
             switch (obj.$.kind) {
@@ -227,7 +226,7 @@ fileList.forEach(function (file) {
 writeOutput = {'staticInfo': staticInfo};
 //console.dir(writeOutput);
 //console.dir(JSON.stringify(writeOutput, null, 4));
-var outputFilename = cod + '.json';
+var outputFilename = './JSON/' + cod + '.json';
 fs.writeFile(outputFilename, JSON.stringify(writeOutput, null, 4), 'utf8', function (err) {
 
     err ? console.dir(err) : console.dir("Static info successfully saved to: " + outputFilename);

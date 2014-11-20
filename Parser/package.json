@@ -10,7 +10,7 @@
   "license": "ISC",
 	"dependencies": {
 		"xml2js" : "",
-		"readline-sync" : ""		
+		"readline-sync" : ""
 	}
 			
 }

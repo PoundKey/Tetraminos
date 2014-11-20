@@ -3,6 +3,11 @@
 #include <unistd.h>
 #include <iostream>
 
+/**
+* This is unused in the final submission. It is left here to indicate the testing done
+* for the dynamic analyzer
+**/
+
 int testFunction() {
 	//std::cout << "Called me!\n";
 	return 1;

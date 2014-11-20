@@ -3,6 +3,10 @@
 #include <iostream>
 #include "DynamicRunner.h"
 
+/**
+* This is unused in the final submission. It is left here to indicate the testing done
+* for the dynamic analyzer
+**/
 
 using namespace Dyninst;
 

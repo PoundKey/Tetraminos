@@ -2,6 +2,11 @@
 #include <ctime>
 #include "boost/date_time/posix_time/posix_time.hpp"
 
+/**
+* Simple wrapper class that holds all the information that I need
+* to extract from the file that is output from the dynamic analyzer
+**/
+
 class DynClassInfo {
 public:
 	DynClassInfo();
