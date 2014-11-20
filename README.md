@@ -40,12 +40,15 @@ The static anaylsis result is now saved into directory: Parser/JSON/__name__.jso
 The fuser and dynamic analyzer are compiled together as one binary file. Once the fuser has constructed the necessary objects needed by the dynamic analyzer to identify functions and classes, it starts the dynamic analysis. As a result, compilation of this portion requires all of the dependencies needed for the dynamic analyzer to be installed on the system. These are:
 
 Dyninst: http://www.dyninst.org/downloads/dyninst-8.x
+
 Dyninst requires various environment variables to be set. They are listed in the installation section at the bottom of the Dyninst API, located here: http://www.dyninst.org/sites/default/files/manuals/dyninst/DyninstAPI.pdf
 
 Boost: http://www.boost.org/
+
 Dyninst itself requires Boost, as does the fuser. The fuser requires a compiled version of boost, so the user cannot simply use the Boost headers.
 
 OSCPack: http://www.rossbencina.com/code/oscpack
+
 Needed to construct the instrument profiles, which are used by the Dynamic parser to create midi commands.
 
 Once all the dependencies have been installed, the program can be compiled with the following line, assuming the user is currently in the Tetraminos/static_lib directory.
