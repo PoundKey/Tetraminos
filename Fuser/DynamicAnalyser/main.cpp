@@ -4,10 +4,10 @@
 #include "DynamicRunner.h"
 
 
-using namespace Dyninst;
+
 
 int main(int argc, const char *argv[]) {
-	DynamicRunner *newRunner = new DynamicRunner(7352, "test");
+//	DynamicRunner *newRunner = new DynamicRunner(7352, "test");
 
 	/**
 	std::vector<BPatch_process*> *getProcesses();

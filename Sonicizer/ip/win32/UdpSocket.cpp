@@ -49,13 +49,13 @@
 #include <stdexcept>
 #include <vector>
 
-#include "ip/UdpSocket.h" // usually I'd include the module header first
+#include "../UdpSocket.h" // usually I'd include the module header first
                           // but this is causing conflicts with BCB4 due to
                           // std::size_t usage.
 
-#include "ip/NetworkingUtils.h"
-#include "ip/PacketListener.h"
-#include "ip/TimerListener.h"
+#include "../NetworkingUtils.h"
+#include "../PacketListener.h"
+#include "../TimerListener.h"
 
 
 typedef int socklen_t;
@@ -118,7 +118,7 @@ public:
 
 	~Implementation()
 	{
-		if (socket_ != INVALID_SOCKET) closesocket(socket_);
+		//if (socket_ != INVALID_SOCKET) closesocket(socket_);
 	}
 
 	void SetEnableBroadcast( bool enableBroadcast )
@@ -339,11 +339,7 @@ class SocketReceiveMultiplexer::Implementation{
 
 	double GetCurrentTimeMs() const
 	{
-#ifndef WINCE
-		return timeGetTime(); // FIXME: bad choice if you want to run for more than 40 days
-#else
         return 0;
-#endif
     }
 
 public:

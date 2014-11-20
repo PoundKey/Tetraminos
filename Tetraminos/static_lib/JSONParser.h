@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <set>	
 #include <sys/types.h>
-#include <dirent.h>
+//#include <dirent.h>
 #include <errno.h>
 #include <vector>
 #include <string>
@@ -15,13 +15,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iterator> 
-#include "DynamicParser.h"
+//#include "DynamicParser.h"
 //#include <windows.h>
 //#include <tlhelp32.h>
 #include "../../Sonicizer/OSCMessenger.h"
 //#include "../../Sonicizer/InstrumentProfile.h"
-#include "../../Fuser/DynamicAnalyser/DynamicRunner.h"
-#include "boost/date_time/posix_time/posix_time.hpp"
+//#include "../../Fuser/DynamicAnalyser/DynamicRunner.h"
+//#include "boost/date_time/posix_time/posix_time.hpp"
 using namespace std;
 class JSONParser
 {

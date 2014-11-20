@@ -1,4 +1,4 @@
-#include "DynamicParser.h"
+include "DynamicParser.h"
 
 bool DynamicParser::parseFile(std::string filePath) {
 	std::ifstream file(filePath.c_str());

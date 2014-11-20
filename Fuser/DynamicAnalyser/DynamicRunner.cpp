@@ -1,4 +1,4 @@
-#include "DynamicRunner.h"
+nclude "DynamicRunner.h"
 
 // DynamicRunner initializer
 // sets up the app image and gets the functions from the
