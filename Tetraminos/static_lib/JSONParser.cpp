@@ -380,7 +380,7 @@ int main(int argc, char * argv[]) {
     JSONParser jp;
 
     if (argc < 2){
-        printf("Invalid number of arguements, please try again");
+        printf("Invalid number of arguments, please try again with 2 arguments");
         return -1;
     }
     
