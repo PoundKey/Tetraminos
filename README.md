@@ -72,7 +72,9 @@ Dynamic Analyser code exists in Fuser/DynamicAnalyser. Note that test.cpp and ma
   
 
 ## Running the Sonicizer
-The Sonicizer uses Open Sound Control to communicate with the VST plug-in Omniphere, which is hosted by a scriptable DAW called Reaper. Please refer to: [Omniphere](www.youtube.com/watch?v=R-dqcGGgDXk), [Reaper](http://www.reaper.fm/)
+The Sonicizer uses Open Sound Control to communicate with the VST plug-in Omniphere, which is hosted by a scriptable DAW called Reaper. Please refer to: [Omniphere](https://www.spectrasonics.net/products/omnisphere.php), [Reaper](http://www.reaper.fm/), [Setup Tutorial] (www.youtube.com/watch?v=R-dqcGGgDXk)
+
+Before the static analysis process begins, open an empty Reaper project. Run the composer.py script next. The script must be preconfigured to continually look for the MIDI command text document that the Dynamic Analyzer is expected to generate. If the Sonicizer is running on a separate system from the Analyzers, then a shared drive should be used to transmit the command list. To save the audio that is generate for later use, go to File>Render in Reaper and render the master mix to any standard audio format.
 
 Testing Process
 ================
@@ -98,7 +100,7 @@ Ideally our analyzer works on every legitimate C++ code base.
 
 Grand purpose of the project
 =======
-- _Tracking function calls at runtime_: This can be judged by the loudness, the louder it is the more functions being called at the same time.
-- _Measuring dependecies between classes_: Function calls are being called at a given time, this can be judged by the loudness, the louder it is the more functions being called at the same time.
+- _Tracking number of function calls at runtime_: This can be judged by the loudness and saturation of the audio output, the louder it is the more functions being called at the same time.
+- _Measuring dependecies between classes_: Codebases with higher coupling will have a more unified sound because classes that are dependant on one another play alike instruments, and play in the same key. The inverse is true for codebases with lower coupling which result in a hectic and cacophonous sound. 
 - _Specific function calls can be reconginzed through the corresponding note_
 
